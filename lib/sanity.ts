@@ -73,7 +73,8 @@ export async function getPostsByCategory(categoryId: string) {
 }
 
 export async function searchPosts(query: string) {
-  const posts = await client.fetch(`
+  const posts = await client.fetch(
+    `
     *[_type == "post" && (title match $query || body[].children[].text match $query)] | order(publishedAt desc) {
       _id,
       title,
@@ -94,7 +95,9 @@ export async function searchPosts(query: string) {
       },
       body
     }
-  `, { query: `*${query}*` })
+  `,
+    { query: `*${query}*` } as unknown as Record<string, unknown>
+  )
   return posts
 }
 
