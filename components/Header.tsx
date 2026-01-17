@@ -182,7 +182,7 @@ export default function Header() {
                               href={sub.link}
                               className="flex items-center justify-between px-3 py-2 rounded-md text-sm text-gray-800 hover:text-mainDark hover:bg-gray-50 transition-all cursor-pointer group"
                             >
-                              <span>{sub.name || sub}</span>
+                              <span>{typeof sub === "string" ? sub : sub.name}</span>
                               <svg
                                 className="h-4 w-4 text-gray-400 group-hover:text-mainDark transition-colors"
                                 fill="none"
@@ -266,7 +266,7 @@ export default function Header() {
                             className="block text-sm hover:text-mainDark transition-colors"
                             onClick={() => setOpen(false)}
                           >
-                            {s.name || s}
+                            {typeof s === "string" ? s : s.name}
                           </Link>
                         ))}
                       </div>
