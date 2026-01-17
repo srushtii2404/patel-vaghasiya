@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Submissions</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { color: #134c78; }
+        .submission { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px; margin: 10px 0; }
+        .submission-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .submission-id { font-weight: bold; color: #134c78; }
+        .submission-time { color: #6c757d; font-size: 0.9em; }
+        .field { margin: 5px 0; }
+        .field strong { color: #495057; }
+        .message { background: white; padding: 10px; border-radius: 4px; margin-top: 10px; border-left: 4px solid #134c78; }
+        .stats { background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .refresh-btn { background: #134c78; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 20px; }
+        .refresh-btn:hover { background: #0d3a5c; }
+        .no-data { text-align: center; color: #6c757d; padding: 40px; }
+    </style>
+</head>
+<body>
+    <h1>Contact Form Submissions</h1>
+    <button class="refresh-btn" onclick="loadSubmissions()">Refresh Submissions</button>
+
+    <div id="content"></div>
+
+    <script>
+        async function loadSubmissions() {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = '<p>Loading...</p>';
+
+            try {
+                const response = await fetch('/api/contact-submissions');
+                const data = await response.json();
+
+                if (data.total === 0) {
+                    contentDiv.innerHTML = `
+                        <div class="no-data">
+                            <h3>No submissions yet</h3>
+                            <p>Test the contact form to see submissions here.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let html = `
+                    <div class="stats">
+                        <h3>Total Submissions: ${data.total}</h3>
+                        <p>Last updated: ${new Date(data.timestamp).toLocaleString()}</p>
+                    </div>
+                `;
+
+                data.submissions.reverse().forEach(submission => {
+                    html += `
+                        <div class="submission">
+                            <div class="submission-header">
+                                <span class="submission-id">Submission #${submission.id}</span>
+                                <span class="submission-time">${new Date(submission.timestamp).toLocaleString()}</span>
+                            </div>
+                            <div class="field"><strong>Name:</strong> ${submission.firstName} ${submission.lastName}</div>
+                            <div class="field"><strong>Email:</strong> ${submission.email}</div>
+                            <div class="field"><strong>Phone:</strong> ${submission.phone || 'Not provided'}</div>
+                            <div class="field"><strong>Service:</strong> ${submission.service || 'Not specified'}</div>
+                            <div class="field"><strong>IP:</strong> ${submission.ip}</div>
+                            <div class="message">
+                                <strong>Message:</strong><br>
+                                ${submission.message}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                contentDiv.innerHTML = html;
+            } catch (error) {
+                contentDiv.innerHTML = `<p style="color: red;">Error loading submissions: ${error.message}</p>`;
+            }
+        }
+
+        // Load submissions on page load
+        loadSubmissions();
+
+        // Auto refresh every 30 seconds
+        setInterval(loadSubmissions, 30000);
+    </script>
+</body>
+</html>
+
+
+
+
