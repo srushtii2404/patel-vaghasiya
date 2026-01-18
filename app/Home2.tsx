@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 
 // Swiper
@@ -22,6 +22,8 @@ import {
   FaChartLine,
   FaFileInvoice,
   FaSearch,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 
 const Home2 = () => {
@@ -35,12 +37,20 @@ const Home2 = () => {
   ];
 
   const [active, setActive] = useState(0);
+  const tabRef = useRef<HTMLDivElement>(null);
 
-  const iconStyles = () =>
-    `w-12 h-12 rounded-full flex items-center justify-center text-2xl`;
+  const scrollTabs = (dir: "left" | "right") => {
+    if (!tabRef.current) return;
+    tabRef.current.scrollBy({
+      left: dir === "left" ? -150 : 150,
+      behavior: "smooth",
+    });
+  };
 
-  const data = [
-    // 1️⃣ REGISTER COMPANY
+  const iconStyles =
+    "w-12 h-12 rounded-full flex items-center justify-center text-2xl";
+
+const data = [
     [
       {
         title: "Private Limited Company Registration",
@@ -79,7 +89,6 @@ const Home2 = () => {
       },
     ],
 
-    // 2️⃣ LOAN FOR BUSINESS
     [
       {
         title: "Project Loan",
@@ -132,7 +141,6 @@ const Home2 = () => {
       },
     ],
 
-    // 3️⃣ GOVERNMENT SUBSIDY
     [
       {
         title: "Subsidy for MSME",
@@ -178,7 +186,6 @@ const Home2 = () => {
       },
     ],
 
-    // 4️⃣ TAXATION
     [
       {
         title: "GST Registration & Litigation",
@@ -196,7 +203,6 @@ const Home2 = () => {
       },
     ],
 
-    // 5️⃣ AUDIT & ASSURANCE
     [
       {
         title: "Statutory Audit",
@@ -228,7 +234,6 @@ const Home2 = () => {
       },
     ],
 
-    // 6️⃣ IPO ADVISORY
     [
       {
         title: "IPO Advisory & Support",
@@ -241,25 +246,47 @@ const Home2 = () => {
   ];
 
   return (
-    <div className="px-6 py-10 max-w-7xl mx-auto bg-white">
+    <div className="max-w-7xl mx-auto px-4 py-12 bg-offwhite">
+      {/* TABS */}
+      <div className="relative flex items-center justify-center mb-8">
+        {/* LEFT ARROW */}
+        <button
+          onClick={() => scrollTabs("left")}
+          className="md:hidden absolute -left-2 z-10 p-2 bg-white shadow rounded-full"
+        >
+          <FaChevronLeft />
+        </button>
 
-      {/* 🔶 TABS */}
-      <div className="flex gap-6 justify-center border-b pb-4 mb-6 flex-wrap">
-        {tabs.map((t, i) => (
-          <button
-            key={i}
-            onClick={() => setActive(i)}
-            className={`pb-2 font-medium ${active === i
-              ? "text-main border-b-2 border-main"
-              : "text-gray-600"
+        {/* TABS LIST */}
+        <div
+          ref={tabRef}
+          className="flex gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide px-8 border-b"
+        >
+          {tabs.map((tab, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`pb-3 font-medium transition ${
+                active === i
+                  ? "text-main border-b-2 border-main"
+                  : "text-gray-500"
               }`}
-          >
-            {t}
-          </button>
-        ))}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {/* RIGHT ARROW */}
+        <button
+          onClick={() => scrollTabs("right")}
+          className="md:hidden absolute -right-2 z-10 p-2 bg-white shadow rounded-full"
+        >
+          <FaChevronRight />
+        </button>
       </div>
 
-      {/* 🔶 SWIPER CAROUSEL */}
+      {/* CARDS */}
       <Swiper
         modules={[Pagination]}
         pagination={{ clickable: true }}
@@ -270,48 +297,47 @@ const Home2 = () => {
           1024: { slidesPerView: 3 },
         }}
       >
-        {data[active].map((box, index) => (
-          <SwiperSlide key={index}>
-            <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition h-full flex flex-col justify-between min-h-[250px]">
-
-              {/* ICON */}
+        {data[active].map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="h-full p-6 rounded-2xl bg-white shadow hover:shadow-lg transition flex flex-col">
               <div
-                className={iconStyles()}
-                style={{ backgroundColor: box.light, color: box.color }}
+                className={iconStyles}
+                style={{ backgroundColor: item.light, color: item.color }}
               >
-                {box.icon}
+                {item.icon}
               </div>
 
-              {/* TITLE */}
-              <h3 className="mt-4 font-semibold text-gray-900 text-lg">
-                {box.title}
+              <h3 className="mt-4 text-lg font-semibold text-gray-900">
+                {item.title}
               </h3>
 
-              {/* DESC */}
-              <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                {box.desc}
+              <p className="mt-2 text-sm text-gray-600 flex-grow">
+                {item.desc}
               </p>
 
-              {/* KNOW MORE LINK */}
-              <div className="mt-4">
-                <Link
-                  href={`/services/${box.title.toLowerCase().replace(/ /g, "-")}`}
-                  className="text-main font-medium text-md inline-flex items-center group"
-                >
-                  Know More
-                  <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-1">
-                    ➝
-                  </span>
-                </Link>
-              </div>
-
-
+              <Link
+                href={`/services/${item.title
+                  .toLowerCase()
+                  .replace(/ /g, "-")}`}
+                className="mt-4 text-main font-medium inline-flex items-center"
+              >
+                Know More <span className="ml-1">&rarr;</span>
+              </Link>
             </div>
           </SwiperSlide>
-
         ))}
-
       </Swiper>
+
+      {/* scrollbar hide */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </div>
   );
 };

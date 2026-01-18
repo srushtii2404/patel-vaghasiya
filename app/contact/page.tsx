@@ -12,7 +12,6 @@ export default function ContactUsPage() {
     const [submitStatus, setSubmitStatus] = React.useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
     const formRef = useRef<HTMLFormElement>(null);
 
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -69,16 +68,13 @@ export default function ContactUsPage() {
                     type: 'success',
                     message: 'Thank you for your message! We\'ve received your inquiry and will get back to you within 24 hours.'
                 });
-                // Reset form by clearing all fields
                 formRef.current?.reset();
             } else {
-                // If Formspree fails but local save worked, still show success
                 if (localResponse.ok) {
                     setSubmitStatus({
                         type: 'success',
                         message: 'Thank you for your message! We\'ve received your inquiry and will get back to you within 24 hours.'
                     });
-                    // Reset form by clearing all fields
                     e.currentTarget?.reset();
                 } else {
                     setSubmitStatus({
@@ -166,7 +162,6 @@ export default function ContactUsPage() {
 
             {/* Hero Section */}
             <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden mt-16">
-                {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
                         src="/assets/contacyus.jpg"
@@ -175,25 +170,22 @@ export default function ContactUsPage() {
                         className="object-cover"
                         priority
                     />
-                    {/* Dark overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0d1321]/85 via-[#134c78]/80 to-[#0d1321]/85"></div>
                 </div>
 
-                {/* Animated background elements */}
+                {/* Animated background elements - vertical only */}
                 <motion.div
                     animate={{
                         y: [0, -20, 0],
-                        x: [0, 10, 0],
                         scale: [1, 1.1, 1]
                     }}
                     transition={{ repeat: Infinity, duration: 8 }}
                     className="absolute top-20 left-20 w-32 h-32 bg-main/20 rounded-full blur-2xl"
                 />
 
-                {/* Content */}
                 <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="space-y-8"
@@ -211,7 +203,7 @@ export default function ContactUsPage() {
                         </motion.div>
 
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
@@ -220,7 +212,7 @@ export default function ContactUsPage() {
                         </motion.p>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
@@ -241,7 +233,6 @@ export default function ContactUsPage() {
                     </motion.div>
                 </div>
 
-                {/* Decorative bottom gradient */}
                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/30 to-transparent"></div>
             </section>
 
@@ -253,10 +244,10 @@ export default function ContactUsPage() {
                     <motion.section
                         id="contact-info"
                         className="space-y-12"
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                     >
                         <div className="text-center space-y-4">
                             <motion.div
@@ -278,10 +269,10 @@ export default function ContactUsPage() {
                             {contactInfo.map((info, idx) => (
                                 <motion.div
                                     key={idx}
-                                    initial={{ opacity: 0, y: 50 }}
+                                    initial={{ opacity: 0, y: 60 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                    transition={{ duration: 0.7, delay: idx * 0.1 }}
                                     className="glass-card p-6 text-center hover:scale-105 hover:shadow-xl transition-all duration-300 group cursor-pointer"
                                     onClick={() => {
                                         if (info.title === "Phone") {
@@ -324,10 +315,10 @@ export default function ContactUsPage() {
                         {/* Contact Form */}
                         <motion.section
                             id="contact-form"
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.9 }}
                         >
                             <div className="space-y-6">
                                 <div className="space-y-2">
@@ -460,10 +451,10 @@ export default function ContactUsPage() {
 
                         {/* Map & Additional Info */}
                         <motion.section
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.9 }}
                             className="space-y-6"
                         >
                             <div className="space-y-2">
@@ -475,7 +466,6 @@ export default function ContactUsPage() {
                                 </p>
                             </div>
 
-                            {/* Map Placeholder */}
                             {/* Google Map */}
                             <div className="glass-card rounded-xl overflow-hidden shadow-lg">
                                 <iframe
@@ -488,7 +478,6 @@ export default function ContactUsPage() {
                                     className="rounded-lg"
                                 />
                             </div>
-
 
                             {/* Quick Contact */}
                             <div className="glass-card p-6 space-y-4">
@@ -535,10 +524,10 @@ export default function ContactUsPage() {
                     {/* CTA Section */}
                     <motion.section
                         className="bg-main-dark p-12 rounded-2xl shadow-xl border border-mainDark/20 text-center"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                     >
                         <h2 className="text-4xl font-bold text-white mb-6">
                             Ready to Partner with Gujarat's Leading CA Firm?

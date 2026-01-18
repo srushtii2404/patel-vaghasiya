@@ -5,20 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 function chunkArray<T>(arr: T[], n: number): T[][] {
   const cols: T[][] = Array.from({ length: n }, () => [] as T[]);
-  arr.forEach((item, idx) => {
-    cols[idx % n].push(item);
-  });
+  arr.forEach((item, idx) => cols[idx % n].push(item));
   return cols;
 }
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   const navItems = [
     {
@@ -69,9 +70,7 @@ export default function Header() {
     },
     {
       name: "IPO",
-      items: [
-        { name: "IPO Advisory & Support", link: "/services/ipo-service" }
-      ]
+      items: [{ name: "IPO Advisory & Support", link: "/services/ipo-service" }],
     },
     { name: "About", link: "/about", items: null },
     { name: "Blogs", link: "/blog", items: null },
@@ -83,15 +82,20 @@ export default function Header() {
     exit: { opacity: 0, y: 6, scale: 0.98 },
   };
 
+  const accordionVariants = {
+    hidden: { height: 0, opacity: 0 },
+    visible: { height: "auto", opacity: 1 },
+    exit: { height: 0, opacity: 0 },
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 sm:px-6 lg:px-8">
-
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 z-50">
           <Image
             src="/assets/logo.png"
-            alt="Logo"
+            alt="Patel & Vaghasiya Logo"
             width={46}
             height={46}
             priority
@@ -105,8 +109,8 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-gray-800 relative">
+        {/* Desktop Navigation - Visible only on lg screens (≥1024px) */}
+        <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-gray-800 relative">
           {navItems.map((item) => (
             <div
               key={item.name}
@@ -114,39 +118,18 @@ export default function Header() {
               onMouseEnter={() => item.items && setHovered(item.name)}
               onMouseLeave={() => setHovered(null)}
             >
-              {/* MAIN MENU BUTTON */}
               {item.link ? (
                 <Link
                   href={item.link}
                   className="relative px-1 py-1 transition-colors hover:text-mainDark"
                 >
                   {item.name}
-
-                  {/* UNDERLINE ANIMATION */}
-                  <span
-                    className="
-                      absolute left-0 -bottom-1 h-[2px] w-0
-                      bg-main transition-all duration-300
-                      group-hover:w-full
-                    "
-                  ></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-main transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ) : (
-                <button
-                  aria-haspopup={!!item.items}
-                  aria-expanded={hovered === item.name}
-                  className="relative px-1 py-1 transition-colors"
-                >
+                <button className="relative px-1 py-1 transition-colors hover:text-mainDark">
                   {item.name}
-
-                  {/* UNDERLINE ANIMATION */}
-                  <span
-                    className="
-                      absolute left-0 -bottom-1 h-[2px] w-0
-                      bg-main transition-all duration-300
-                      group-hover:w-full
-                    "
-                  ></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-main transition-all duration-300 group-hover:w-full"></span>
                 </button>
               )}
 
@@ -160,60 +143,39 @@ export default function Header() {
                     variants={panelVariants}
                     transition={{ duration: 0.18 }}
                     className="
-                      absolute left-2/3 -translate-x-1/2 top-full mt-4
-                      w-[calc(100vw-4rem)] max-w-[800px]
+                      absolute left-1/2 -translate-x-1/2 top-full mt-4
+                      w-[90vw] max-w-[780px]
                       bg-white/95 backdrop-blur-md border border-gray-100
-                      rounded-xl shadow-2xl p-6 z-50
+                      rounded-xl shadow-2xl p-8 z-50
                     "
                     onMouseEnter={() => setHovered(item.name)}
                     onMouseLeave={() => setHovered(null)}
                   >
-                    <p className="text-sm font-semibold text-mainDark mb-4">
+                    <p className="text-base font-semibold text-mainDark mb-6">
                       {item.name} Services
                     </p>
 
-                    {/* Submenu grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {chunkArray(item.items, 2).map((col, ci) => (
-                        <div key={ci} className="space-y-2">
-                          {col.map((sub, si) => (
-                            <Link
-                              key={si}
-                              href={sub.link}
-                              className="flex items-center justify-between px-3 py-2 rounded-md text-sm text-gray-800 hover:text-mainDark hover:bg-gray-50 transition-all cursor-pointer group"
-                            >
-                              <span>{typeof sub === "string" ? sub : sub.name}</span>
-                              <svg
-                                className="h-4 w-4 text-gray-400 group-hover:text-mainDark transition-colors"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </Link>
-                          ))}
-                        </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {item.items.map((sub, si) => (
+                        <Link
+                          key={si}
+                          href={sub.link}
+                          className="flex items-center justify-between px-4 py-3 rounded-lg text-sm text-gray-800 hover:text-mainDark hover:bg-gray-50 transition-all"
+                        >
+                          <span>{sub.name}</span>
+                          <svg className="h-4 w-4 text-gray-400 group-hover:text-mainDark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
                       ))}
                     </div>
 
-                    {/* Footer CTA */}
-                    <div className="mt-5 border-t border-gray-100 pt-4 flex items-center justify-between">
-                      <p className="text-sm text-gray-600">
-                        Need help? Talk to our expert team.
-                      </p>
+                    <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+                      <p className="text-sm text-gray-600">Need help? Talk to our expert team.</p>
                       <Link href="/contact">
-                      <Button
-                        variant="outline"
-                          className="bg-main text-white rounded-lg hover:scale-105 transition-transform"
-                      >
-                        Talk To Expert
-                      </Button>
+                        <Button className="bg-main text-white hover:bg-mainDark transition">
+                          Talk To Expert
+                        </Button>
                       </Link>
                     </div>
                   </motion.div>
@@ -223,18 +185,15 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <Link href="/contact">
-        <Button
-          variant="outline"
-            className="hidden md:flex bg-main text-white rounded-lg px-5 py-2 hover:scale-105 transition-transform"
-        >
-          Talk To Expert
-        </Button>
+        {/* Desktop CTA - Visible on lg and above */}
+        <Link href="/contact" className="hidden lg:block">
+          <Button className="bg-main text-white hover:bg-mainDark transition">
+            Talk To Expert
+          </Button>
         </Link>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
+        {/* Mobile Menu - Visible below lg (i.e. <1024px) */}
+        <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -242,49 +201,91 @@ export default function Header() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent side="right" className="p-6 w-72">
-              <nav className="flex flex-col gap-4">
-                {navItems.map((it) => (
-                  <div key={it.name}>
-                    {it.link ? (
-                      <Link
-                        href={it.link}
-                        className="font-semibold hover:text-mainDark transition-colors"
-                        onClick={() => setOpen(false)}
-                      >
-                        {it.name}
-                      </Link>
-                    ) : (
-                      <p className="font-semibold">{it.name}</p>
-                    )}
-                    {it.items && (
-                      <div className="mt-2 ml-3 space-y-2 text-gray-600">
-                        {it.items.map((s, i) => (
-                          <Link
-                            key={i}
-                            href={s.link}
-                            className="block text-sm hover:text-mainDark transition-colors"
-                            onClick={() => setOpen(false)}
-                          >
-                            {typeof s === "string" ? s : s.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+            <SheetContent side="right" className="w-[85vw] max-w-sm p-0 bg-white">
+              <VisuallyHidden asChild>
+                <DialogTitle>Mobile Navigation Menu</DialogTitle>
+              </VisuallyHidden>
 
-                <Link href="/contact" onClick={() => setOpen(false)}>
-                  <Button className="mt-6 border border-mainDark text-mainDark bg-transparent rounded-lg hover:scale-105 transition-transform">
-                  Talk To Expert
-                </Button>
-                </Link>
-              </nav>
+              <div className="flex flex-col h-full">
+                {/* Logo Header */}
+                <div className="flex items-center gap-3 p-6 border-b border-gray-100">
+                  <Image src="/assets/logo.png" alt="Logo" width={48} height={48} className="object-contain" />
+                  <div className="leading-tight">
+                    <span className="text-base font-semibold">Patel & Vaghasiya</span>
+                    <p className="text-xs text-gray-600">Chartered Accountants</p>
+                  </div>
+                </div>
+
+                {/* Scrollable Nav */}
+                <nav className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 px-6 py-4">
+                  {navItems.map((item) => (
+                    <div key={item.name} className="border-b border-gray-100 pb-2 mb-2 last:mb-0 last:border-none">
+                      {item.link ? (
+                        <Link
+                          href={item.link}
+                          className="block py-3 text-lg font-medium hover:text-main transition-colors"
+                          onClick={() => setOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <button
+                          className="flex items-center justify-between w-full py-3 text-lg font-medium hover:text-main transition-colors"
+                          onClick={() => setExpanded(expanded === item.name ? null : item.name)}
+                        >
+                          <span>{item.name}</span>
+                          {item.items && (
+                            expanded === item.name ? (
+                              <ChevronUp className="h-5 w-5 text-gray-500" />
+                            ) : (
+                              <ChevronDown className="h-5 w-5 text-gray-500" />
+                            )
+                          )}
+                        </button>
+                      )}
+
+                      <AnimatePresence>
+                        {item.items && expanded === item.name && (
+                          <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            variants={accordionVariants}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="py-3 space-y-4 pl-4">
+                              {item.items.map((sub, i) => (
+                                <Link
+                                  key={i}
+                                  href={sub.link}
+                                  className="block text-base text-gray-700 hover:text-main transition-colors py-1"
+                                  onClick={() => setOpen(false)}
+                                >
+                                  {sub.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </nav>
+
+                {/* CTA */}
+                <div className="p-6 border-t border-gray-200 mt-auto">
+                  <Link href="/contact" onClick={() => setOpen(false)}>
+                    <Button className="w-full bg-main hover:bg-mainDark text-white py-6 text-lg font-medium">
+                      Talk To Expert
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
       </div>
-
     </header>
   );
 }

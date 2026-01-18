@@ -13,15 +13,15 @@ const Home3 = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#f5f9fc]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-10 bg-[#f5f9fc]">
+      <div className="max-w-7xl mx-auto px-0">
 
         {/* MAIN WRAPPER */}
         <div className="grid md:grid-cols-4 grid-cols-1 gap-6 items-stretch">
 
           {/* LEFT TITLE BOX */}
           <div className="bg-[#f5f9fc] text-main rounded-2xl p-8 flex items-center">
-            <h2 className="text-3xl font-bold leading-snug">
+            <h2 className="text-4xl font-bold leading-snug text-main-dark">
               Our Partners
             </h2>
           </div>

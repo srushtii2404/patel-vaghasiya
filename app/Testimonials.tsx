@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Image from "next/image";
@@ -57,35 +58,45 @@ const Testimonials: React.FC = () => {
       const hasHalfStar = rating % 1 >= 0.5 && starIndex === fullStars + 1;
       
       if (starIndex <= fullStars) {
-        // Full star
-        return (
-          <FaStar
-            key={index}
-            className="text-sm text-yellow-400"
-          />
-        );
+        return <FaStar key={index} className="text-sm text-yellow-400" />;
       } else if (hasHalfStar) {
-        // Half star
-        return (
-          <FaStarHalfAlt
-            key={index}
-            className="text-sm text-yellow-400"
-          />
-        );
+        return <FaStarHalfAlt key={index} className="text-sm text-yellow-400" />;
       } else {
-        // Empty star
-        return (
-          <FaStar
-            key={index}
-            className="text-sm text-gray-300"
-          />
-        );
+        return <FaStar key={index} className="text-sm text-gray-300" />;
       }
     });
   };
 
+  // Skeleton Loader Card Component
+  const SkeletonCard = () => (
+    <div className="p-6 bg-white rounded-2xl shadow animate-pulse h-full flex flex-col justify-between min-h-[280px]">
+      {/* Rating Skeleton */}
+      <div className="flex gap-1 mb-4">
+        {Array(5).fill(0).map((_, i) => (
+          <div key={i} className="w-4 h-4 bg-gray-200 rounded-full"></div>
+        ))}
+      </div>
+
+      {/* Testimonial Text Skeleton */}
+      <div className="space-y-2 flex-grow">
+        <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+        <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+        <div className="h-4 bg-gray-200 rounded w-3/6"></div>
+      </div>
+
+      {/* Author Skeleton */}
+      <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+        <div className="w-12 h-12 rounded-full bg-gray-200 flex-shrink-0"></div>
+        <div className="flex-1">
+          <div className="h-4 bg-gray-200 rounded w-3/4 mb-1"></div>
+          <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="px-6 py-10 max-w-7xl mx-auto bg-[#f5f9fc]">
+    <div className="px-6 py-10 max-w-7xl mx-auto bg-main">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -94,22 +105,26 @@ const Testimonials: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-6"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-main-dark mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           What Our Clients Say
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Trusted by businesses across India for expert compliance and
-          registration services
+        <p className="text-white text-lg max-w-2xl mx-auto">
+          Trusted by businesses across India for expert compliance and registration services
         </p>
       </motion.div>
 
       {loading ? (
-        <div className="text-center py-12">
-          <p className="text-gray-500">Loading testimonials...</p>
+        // Show Skeleton Loader while fetching data
+        <div className="relative">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {Array(3).fill(0).map((_, index) => (
+              <SkeletonCard key={index} />
+            ))}
+          </div>
         </div>
       ) : !testimonials || testimonials.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500">
+          <p className="text-gray-300 text-lg">
             No testimonials available yet. Check back soon!
           </p>
         </div>
@@ -187,10 +202,10 @@ const Testimonials: React.FC = () => {
           </Swiper>
 
           {/* Custom Navigation Arrows */}
-          <button className="swiper-button-prev-testimonial absolute left-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-main hover:text-white transition-all duration-300">
+          <button className="swiper-button-prev-testimonial absolute left-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-main transition-all duration-300">
             <FaChevronLeft className="text-sm" />
           </button>
-          <button className="swiper-button-next-testimonial absolute right-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-main hover:text-white transition-all duration-300">
+          <button className="swiper-button-next-testimonial absolute right-[-10px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-main transition-all duration-300">
             <FaChevronRight className="text-sm" />
           </button>
         </div>
@@ -200,4 +215,3 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
-

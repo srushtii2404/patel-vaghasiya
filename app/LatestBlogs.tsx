@@ -21,29 +21,29 @@ export default function LatestBlogs({ posts }: { posts: Post[] }) {
     })
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-10 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-<div className="text-center mb-12">
-  <h2 className="text-3xl md:text-4xl font-bold text-main-dark">
-    Latest Blogs
-  </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-main-dark">
+            Latest Blogs
+          </h2>
 
-  <p className="mt-3 text-gray-600 text-lg max-w-2xl mx-auto">
-    Insights, updates and articles to help you stay informed
-  </p>
+          <p className="mt-3 text-gray-600 text-lg max-w-2xl mx-auto">
+            Insights, updates and articles to help you stay informed
+          </p>
 
-  {/* View All */}
-  <Link
-    href="/blog"
-    className="inline-flex items-center gap-2 mt-5 
+          {/* View All */}
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 mt-5 
                text-main font-semibold text-sm
                hover:text-main-dark transition"
-  >
-    View all blogs
-    <span className="text-base">→</span>
-  </Link>
-</div>
+          >
+            View all blogs
+            <span className="text-base">→</span>
+          </Link>
+        </div>
 
 
 
@@ -68,15 +68,15 @@ export default function LatestBlogs({ posts }: { posts: Post[] }) {
 
               {/* Content */}
               <div className="p-6">
-                <span className="inline-block text-xs font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
+                <span className="inline-block text-xs font-medium text-main bg-blue-50 px-3 py-1 rounded-full mb-4">
                   {formatDate(post.publishedAt)}
                 </span>
 
-                <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition">
+                <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 group-hover:text-main transition">
                   {post.title}
                 </h3>
 
-                <p className="mt-4 text-sm font-medium text-blue-600">
+                <p className="mt-4 text-sm font-medium text-main">
                   Read More →
                 </p>
               </div>

@@ -79,7 +79,7 @@ export default function AboutUsPage() {
                 jsonLd={jsonLd}
             />
 
-            {/* Hero Section with Image Background */}
+            {/* Hero Section */}
             <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden mt-16">
                 {/* Background Image */}
                 <div className="absolute inset-0">
@@ -94,32 +94,28 @@ export default function AboutUsPage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0d1321]/85 via-[#134c78]/80 to-[#0d1321]/85"></div>
                 </div>
 
-                {/* Animated background elements */}
-                <motion.div
-                    animate={{
-                        y: [0, -20, 0],
-                        x: [0, 10, 0],
-                        scale: [1, 1.1, 1]
-                    }}
-                    transition={{ repeat: Infinity, duration: 8 }}
-                    className="absolute top-20 left-20 w-32 h-32 bg-main/20 rounded-full blur-2xl"
-                />
-                <motion.div
-                    animate={{
-                        y: [0, 15, 0],
-                        x: [0, -15, 0],
-                        scale: [1, 0.9, 1]
-                    }}
-                    transition={{ repeat: Infinity, duration: 6 }}
-                    className="absolute bottom-20 right-20 w-40 h-40 bg-mainDark/20 rounded-full blur-3xl"
-                />
+                {/* Animated background elements - only vertical movement */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0.3 }}
+                        animate={{ y: [0, -30, 0], opacity: [0.3, 0.5, 0.3] }}
+                        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+                        className="absolute top-1/4 left-1/4 w-64 h-64 bg-main/20 rounded-full blur-3xl"
+                    />
+                    <motion.div
+                        initial={{ y: -100, opacity: 0.3 }}
+                        animate={{ y: [0, 40, 0], opacity: [0.3, 0.5, 0.3] }}
+                        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut", delay: 2 }}
+                        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-mainDark/20 rounded-full blur-4xl"
+                    />
+                </div>
 
                 {/* Content */}
                 <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                         className="space-y-8"
                     >
                         <motion.div
@@ -128,34 +124,34 @@ export default function AboutUsPage() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="space-y-4"
                         >
-                            <h1 className="text-5xl md:text-5xl font-bold text-white leading-tight">
+                            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
                                 About <span className="block md:inline">Patel & Vaghasiya</span>
                             </h1>
                             <div className="w-24 h-1 bg-main mx-auto rounded-full"></div>
                         </motion.div>
 
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
                             className="text-2xl md:text-3xl font-semibold text-gray-100"
                         >
                             Chartered Accountants
                         </motion.p>
 
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light"
                         >
                             A leading Chartered Accountancy firm based in Ahmedabad, with a strong professional presence across Gujarat.
                         </motion.p>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.8 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
                             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
                         >
                             <Link
@@ -186,10 +182,10 @@ export default function AboutUsPage() {
                     <motion.section
                         id="company-overview"
                         className="space-y-12"
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                     >
                         <div className="text-center space-y-4">
                             <motion.div
@@ -208,7 +204,6 @@ export default function AboutUsPage() {
                         </div>
 
                         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-                            {/* Main content */}
                             <div className="lg:col-span-2 space-y-8">
                                 <div className="glass-card p-8 md:p-10 space-y-6">
                                     <p className="text-gray-700 text-lg leading-relaxed">
@@ -226,10 +221,10 @@ export default function AboutUsPage() {
                                             {services.map((service, idx) => (
                                                 <motion.div
                                                     key={idx}
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    initial={{ opacity: 0, y: 30 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
-                                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                                    transition={{ duration: 0.5, delay: idx * 0.05 }}
                                                     className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/50 transition-colors"
                                                 >
                                                     <HiCheckCircle className="text-main text-xl flex-shrink-0" />
@@ -241,13 +236,12 @@ export default function AboutUsPage() {
                                 </div>
                             </div>
 
-                            {/* Stats/Highlights sidebar */}
                             <div className="flex flex-col gap-6 h-full">
                                 <motion.div
-                                    initial={{ opacity: 0, x: 50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 0.7 }}
                                     className="glass-card p-8 text-center flex-1 flex flex-col justify-center"
                                 >
                                     <div className="text-4xl font-bold text-main mb-2">10+</div>
@@ -255,10 +249,10 @@ export default function AboutUsPage() {
                                 </motion.div>
 
                                 <motion.div
-                                    initial={{ opacity: 0, x: 50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
+                                    transition={{ duration: 0.7, delay: 0.1 }}
                                     className="glass-card p-8 text-center flex-1 flex flex-col justify-center"
                                 >
                                     <div className="text-4xl font-bold text-main mb-2">500+</div>
@@ -266,10 +260,10 @@ export default function AboutUsPage() {
                                 </motion.div>
 
                                 <motion.div
-                                    initial={{ opacity: 0, x: 50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.4 }}
+                                    transition={{ duration: 0.7, delay: 0.2 }}
                                     className="glass-card p-8 text-center flex-1 flex flex-col justify-center"
                                 >
                                     <div className="text-4xl font-bold text-main mb-2">PAN</div>
@@ -278,7 +272,6 @@ export default function AboutUsPage() {
                             </div>
                         </div>
 
-                        {/* Additional content */}
                         <div className="glass-card p-8 md:p-10 space-y-6">
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-4">
@@ -308,25 +301,30 @@ export default function AboutUsPage() {
 
                     {/* Mission & Vision */}
                     <div className="relative">
-                        {/* Background decorative elements */}
                         <div className="absolute inset-0 overflow-hidden">
                             <div className="absolute top-20 left-10 w-20 h-20 bg-main/5 rounded-full blur-xl"></div>
                             <div className="absolute bottom-20 right-10 w-32 h-32 bg-mainDark/5 rounded-full blur-xl"></div>
                         </div>
 
-                        <div className="relative grid md:grid-cols-2 gap-12 items-stretch">
+                        <motion.div
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.9 }}
+                            className="grid md:grid-cols-2 gap-12 items-stretch"
+                        >
                             {/* Mission */}
                             <motion.section
                                 className="space-y-6 flex flex-col h-full"
-                                initial={{ opacity: 0, x: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
+                                transition={{ duration: 0.8, delay: 0.1 }}
                             >
                                 <div className="text-center space-y-4">
                                     <motion.div
-                                        initial={{ scale: 0, rotate: -180 }}
-                                        whileInView={{ scale: 1, rotate: 0 }}
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.6, type: "spring" }}
                                         className="inline-block p-4 bg-gradient-to-br from-main/10 to-main/20 rounded-2xl shadow-lg"
@@ -353,15 +351,15 @@ export default function AboutUsPage() {
                             {/* Vision */}
                             <motion.section
                                 className="space-y-6 flex flex-col h-full"
-                                initial={{ opacity: 0, x: 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <div className="text-center space-y-4">
                                     <motion.div
-                                        initial={{ scale: 0, rotate: 180 }}
-                                        whileInView={{ scale: 1, rotate: 0 }}
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.6, type: "spring" }}
                                         className="inline-block p-4 bg-gradient-to-br from-mainDark/10 to-main/20 rounded-2xl shadow-lg"
@@ -381,16 +379,16 @@ export default function AboutUsPage() {
                                     <div className="absolute bottom-0 right-0 w-16 h-16 bg-mainDark/5 rounded-full blur-lg"></div>
                                 </div>
                             </motion.section>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Why Choose Us */}
                     <motion.section
                         className="space-y-8"
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                     >
                         <div className="text-center space-y-4">
                             <motion.div
@@ -409,28 +407,41 @@ export default function AboutUsPage() {
                         <div className="glass-card p-10">
                             <div className="grid md:grid-cols-2 gap-6">
                                 {whyChooseUs.map((reason, idx) => (
-                                    <div key={idx} className="flex items-start gap-3">
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.6, delay: idx * 0.05 }}
+                                        className="flex items-start gap-3"
+                                    >
                                         <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" />
                                         <span className="text-gray-700 text-lg leading-relaxed">{reason}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
-                            <div className="mt-8 p-6 bg-gradient-to-r from-main/10 to-mainDark/10 rounded-xl border-l-4 border-main">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                                className="mt-8 p-6 bg-gradient-to-r from-main/10 to-mainDark/10 rounded-xl border-l-4 border-main"
+                            >
                                 <p className="text-gray-800 text-xl font-semibold italic">
                                     We don't just file returns, audit accounts, or prepare reports — we partner with you in your business journey.
                                 </p>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.section>
 
                     {/* Tagline */}
                     <motion.section
                         className="text-center space-y-6"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                     >
                         <div className="glass-card p-8 max-w-4xl mx-auto">
                             <h2 className="text-4xl font-extrabold gradient-heading mb-4">Tagline</h2>
@@ -443,10 +454,10 @@ export default function AboutUsPage() {
                     {/* Partner Profiles */}
                     <motion.section
                         className="space-y-16"
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                     >
                         <div className="text-center space-y-4">
                             <motion.div
@@ -466,14 +477,15 @@ export default function AboutUsPage() {
                         {/* CA Kalpesh Patel */}
                         <motion.div
                             className="glass-card p-8 md:p-12 relative overflow-hidden"
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 1 }}
                         >
-                            {/* Background decorative elements */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-main/5 rounded-full blur-2xl"></div>
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"></div>
+                            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-main/5 rounded-full blur-2xl"></div>
+                                <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"></div>
+                            </div>
 
                             <div className="flex flex-col gap-8 relative z-10">
                                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
@@ -493,8 +505,6 @@ export default function AboutUsPage() {
                                                 className="w-full h-full object-cover"
                                             />
                                         </motion.div>
-                                        <div className="mt-3 space-y-1">
-                                        </div>
                                     </div>
 
                                     <div className="flex-1 text-center lg:text-left flex flex-col justify-center h-32 lg:h-40 space-y-2">
@@ -506,11 +516,8 @@ export default function AboutUsPage() {
                                         <p className="text-base lg:text-lg text-gray-600">Partner – Tax Advisory & Compliance</p>
                                     </div>
                                 </div>
-                                </div>
 
                                 <div className="w-full space-y-4">
-                                    <div className="space-y-2">
-
                                     <p className="text-gray-700 leading-relaxed text-lg py-3">
                                         With over 10 years of post-qualification professional experience, our Tax Advisor brings deep expertise across Direct Tax, Indirect Tax, Audit, and Regulatory Compliance. He has advised a wide range of businesses — from startups and MSMEs to large corporates — helping them navigate India's complex and evolving tax and compliance framework with confidence.
                                     </p>
@@ -526,10 +533,10 @@ export default function AboutUsPage() {
                                             {kalpeshSpecializations.map((spec, idx) => (
                                                 <motion.div
                                                     key={idx}
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    initial={{ opacity: 0, y: 30 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
-                                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                                    transition={{ duration: 0.5, delay: idx * 0.05 }}
                                                     className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-main/5 transition-colors"
                                                 >
                                                     <HiCheckCircle className="text-main text-lg mt-1 flex-shrink-0" />
@@ -539,14 +546,20 @@ export default function AboutUsPage() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-main/20">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-main/20"
+                                    >
                                         <blockquote className="text-gray-700 italic text-lg leading-relaxed">
                                             "People don't care how much you know until they know how much you care."
                                         </blockquote>
                                         <p className="text-gray-600 mt-3 text-base">
                                             This philosophy reflects his commitment to building long-term relationships based on trust, responsiveness, and genuine concern for clients' success.
                                         </p>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>
@@ -554,14 +567,15 @@ export default function AboutUsPage() {
                         {/* CA Vishal Vaghasiya */}
                         <motion.div
                             className="glass-card p-8 md:p-12 relative overflow-hidden"
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
+                            transition={{ duration: 1, delay: 0.2 }}
                         >
-                            {/* Background decorative elements */}
-                            <div className="absolute top-0 left-0 w-32 h-32 bg-mainDark/5 rounded-full blur-2xl"></div>
-                            <div className="absolute bottom-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full blur-xl"></div>
+                            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                                <div className="absolute top-0 left-0 w-32 h-32 bg-mainDark/5 rounded-full blur-2xl"></div>
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full blur-xl"></div>
+                            </div>
 
                             <div className="flex flex-col gap-8 relative z-10">
                                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
@@ -581,8 +595,6 @@ export default function AboutUsPage() {
                                                 className="w-full h-full object-cover"
                                             />
                                         </motion.div>
-                                        <div className="mt-3 space-y-1">
-                                        </div>
                                     </div>
 
                                     <div className="flex-1 text-center lg:text-left flex flex-col justify-center h-32 lg:h-40 space-y-2">
@@ -594,17 +606,14 @@ export default function AboutUsPage() {
                                         <p className="text-base lg:text-lg text-gray-600">Partner – Business Advisory, Project Finance & Government Subsidy</p>
                                     </div>
                                 </div>
-                                </div>
 
                                 <div className="w-full space-y-4">
-                                    <div className="space-y-2">
-
                                     <p className="text-gray-700 leading-relaxed text-lg py-3">
                                         CA Vishal Vaghasiya brings over 12 years of post-qualification professional experience in Project Finance, Government Subsidy Advisory, and Strategic Business Consulting. He has advised a diverse portfolio of clients across India and overseas, including startups, MSMEs, large corporates, and international business groups.
                                     </p>
 
                                     <div className="py-3">
-                                    <h4 className="text-xl font-semibold text-main-dark mb-3 flex items-center gap-2">
+                                        <h4 className="text-xl font-semibold text-main-dark mb-3 flex items-center gap-2">
                                             <div className="w-6 h-6 bg-main rounded-md flex items-center justify-center">
                                                 <span className="text-white text-xs font-bold">✓</span>
                                             </div>
@@ -614,10 +623,10 @@ export default function AboutUsPage() {
                                             {vishalSpecializations.map((spec, idx) => (
                                                 <motion.div
                                                     key={idx}
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    initial={{ opacity: 0, y: 30 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
-                                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                                    transition={{ duration: 0.5, delay: idx * 0.05 }}
                                                     className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-mainDark/5 transition-colors"
                                                 >
                                                     <HiCheckCircle className="text-main text-lg mt-1 flex-shrink-0" />
@@ -628,20 +637,38 @@ export default function AboutUsPage() {
                                     </div>
 
                                     <div className="grid md:grid-cols-2 gap-6">
-                                        <p className="text-gray-700 leading-relaxed mb-5">
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.7 }}
+                                            className="text-gray-700 leading-relaxed mb-5"
+                                        >
                                             He has successfully assisted clients in raising funds, optimizing capital structures, securing government incentives, and aligning financial strategies with long-term business goals. His experience working with national and international corporate groups provides him with a strong understanding of cross-border business dynamics, regulatory expectations, and global best practices.
-                                        </p>
+                                        </motion.p>
 
-                                        <p className="text-gray-700 leading-relaxed mb-5">
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.7 }}
+                                            className="text-gray-700 leading-relaxed mb-5"
+                                        >
                                             CA Vishal is known for his strategic mindset, solution-oriented approach, and strong execution capabilities. He does not view finance merely as a funding function, but as a critical enabler of sustainable growth, operational efficiency, and enterprise value creation.
-                                        </p>
+                                        </motion.p>
                                     </div>
 
-                                    <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-2xl border border-mainDark/20">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.8 }}
+                                        className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-2xl border border-mainDark/20"
+                                    >
                                         <blockquote className="text-gray-700 italic text-lg leading-relaxed">
                                             "His philosophy is rooted in building long-term value for clients through clarity, integrity, and proactive advisory — enabling entrepreneurs to focus on what matters most: building strong systems and growing their businesses with confidence."
                                         </blockquote>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>
@@ -654,10 +681,10 @@ export default function AboutUsPage() {
             <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
                 <motion.section
                     className="bg-main-dark p-12 rounded-2xl shadow-xl border border-mainDark/20 text-center"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 60 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 1 }}
                 >
                     <h2 className="text-4xl font-bold text-white mb-6">
                         Ready to Partner with Gujarat's Leading CA Firm?
