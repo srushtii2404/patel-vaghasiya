@@ -1,25 +1,22 @@
 "use client";
-import React, { useRef, useState } from "react";
-import Link from "next/link";
 
-// Swiper
+import React, { useRef,useState } from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-
-// Icons
 import {
   FaBuilding,
   FaPeopleCarry,
   FaUserTie,
   FaHandshake,
   FaLightbulb,
-  FaPiggyBank,
-  FaCoins,
-  FaCogs,
-  FaTools,
   FaChartLine,
+  FaTools,
+  FaCoins,
+  FaPiggyBank,
+  FaCogs,
   FaFileInvoice,
   FaSearch,
   FaChevronLeft,
@@ -50,7 +47,8 @@ const Home2 = () => {
   const iconStyles =
     "w-12 h-12 rounded-full flex items-center justify-center text-2xl";
 
-const data = [
+  const data = [
+    // Tab 0: Register Company
     [
       {
         title: "Private Limited Company Registration",
@@ -58,6 +56,7 @@ const data = [
         icon: <FaBuilding />,
         color: "#F59E0B",
         light: "#FEF3C7",
+        link: "/services/company-registration", // ← Added here
       },
       {
         title: "LLP Registration",
@@ -65,6 +64,7 @@ const data = [
         icon: <FaPeopleCarry />,
         color: "#10B981",
         light: "#D1FAE5",
+        link: "/services/llp-registration",
       },
       {
         title: "One Person Company Registration",
@@ -72,6 +72,7 @@ const data = [
         icon: <FaUserTie />,
         color: "#3B82F6",
         light: "#DBEAFE",
+        link: "/services/opc-registration",
       },
       {
         title: "Partnership Firm Registration",
@@ -79,6 +80,7 @@ const data = [
         icon: <FaHandshake />,
         color: "#8B5CF6",
         light: "#EDE9FE",
+        link: "/services/partnership-registration",
       },
       {
         title: "Startup India Registration",
@@ -86,9 +88,11 @@ const data = [
         icon: <FaLightbulb />,
         color: "#EF4444",
         light: "#FEE2E2",
+        link: "/services/startup-registration",
       },
     ],
 
+    // Tab 1: Loan for Business
     [
       {
         title: "Project Loan",
@@ -96,6 +100,7 @@ const data = [
         icon: <FaChartLine />,
         color: "#F97316",
         light: "#FFEDD5",
+        link: "/services/project-loan",
       },
       {
         title: "Machine Loan",
@@ -103,6 +108,7 @@ const data = [
         icon: <FaTools />,
         color: "#0EA5E9",
         light: "#E0F2FE",
+        link: "/services/machine-loan",
       },
       {
         title: "Working Capital Loan (OD/CC)",
@@ -110,6 +116,7 @@ const data = [
         icon: <FaCoins />,
         color: "#10B981",
         light: "#D1FAE5",
+        link: "/services/working-capital",
       },
       {
         title: "MSME Loan",
@@ -117,13 +124,7 @@ const data = [
         icon: <FaPiggyBank />,
         color: "#22C55E",
         light: "#DCFCE7",
-      },
-      {
-        title: "Property Loan",
-        desc: "Loan against property for business expansion with competitive interest rates.",
-        icon: <FaBuilding />,
-        color: "#3B82F6",
-        light: "#DBEAFE",
+        link: "/services/msme-loan",
       },
       {
         title: "Secured Loan",
@@ -131,6 +132,7 @@ const data = [
         icon: <FaHandshake />,
         color: "#8B5CF6",
         light: "#EDE9FE",
+        link: "/services/secured-loan",
       },
       {
         title: "Unsecured Loan",
@@ -138,9 +140,11 @@ const data = [
         icon: <FaUserTie />,
         color: "#EF4444",
         light: "#FEE2E2",
+        link: "/services/unsecured-loan",
       },
     ],
 
+    // Tab 2: Government Subsidy
     [
       {
         title: "Subsidy for MSME",
@@ -148,6 +152,7 @@ const data = [
         icon: <FaCoins />,
         color: "#F59E0B",
         light: "#FEF3C7",
+        link: "/services/msme-subsidy",
       },
       {
         title: "Subsidy for Large/Thrust Sector",
@@ -155,6 +160,7 @@ const data = [
         icon: <FaBuilding />,
         color: "#3B82F6",
         light: "#DBEAFE",
+        link: "/services/large-thrust-subsidy", // ← Adjust if needed
       },
       {
         title: "Subsidy for Mega Sector",
@@ -162,6 +168,7 @@ const data = [
         icon: <FaChartLine />,
         color: "#EF4444",
         light: "#FEE2E2",
+        link: "/services/mega-subsidy",
       },
       {
         title: "Subsidy for IT / ITeS",
@@ -169,6 +176,7 @@ const data = [
         icon: <FaLightbulb />,
         color: "#10B981",
         light: "#D1FAE5",
+        link: "/services/it-subsidy",
       },
       {
         title: "Subsidy for Logistic Park",
@@ -176,6 +184,7 @@ const data = [
         icon: <FaTools />,
         color: "#F97316",
         light: "#FFEDD5",
+        link: "/services/logistic-subsidy",
       },
       {
         title: "Subsidy for GCC",
@@ -183,9 +192,11 @@ const data = [
         icon: <FaUserTie />,
         color: "#22C55E",
         light: "#DCFCE7",
+        link: "/services/gcc-subsidy",
       },
     ],
 
+    // Tab 3: Taxation
     [
       {
         title: "GST Registration & Litigation",
@@ -193,6 +204,7 @@ const data = [
         icon: <FaFileInvoice />,
         color: "#EF4444",
         light: "#FEE2E2",
+        link: "/services/gst-service",
       },
       {
         title: "Income Tax & TDS",
@@ -200,9 +212,11 @@ const data = [
         icon: <FaCogs />,
         color: "#10B981",
         light: "#D1FAE5",
+        link: "/services/itr-service",
       },
     ],
 
+    // Tab 4: Audit & Assurance
     [
       {
         title: "Statutory Audit",
@@ -210,6 +224,7 @@ const data = [
         icon: <FaSearch />,
         color: "#6366F1",
         light: "#E0E7FF",
+        link: "/services/statutory-service",
       },
       {
         title: "Tax Audit",
@@ -217,6 +232,7 @@ const data = [
         icon: <FaFileInvoice />,
         color: "#F59E0B",
         light: "#FEF3C7",
+        link: "/services/tax-audit",
       },
       {
         title: "Internal Audit",
@@ -224,6 +240,7 @@ const data = [
         icon: <FaTools />,
         color: "#0EA5E9",
         light: "#E0F2FE",
+        link: "/services/internal-audit",
       },
       {
         title: "Bank Audit",
@@ -231,9 +248,11 @@ const data = [
         icon: <FaPiggyBank />,
         color: "#22C55E",
         light: "#DCFCE7",
+        link: "/services/bank-audit",
       },
     ],
 
+    // Tab 5: IPO Advisory
     [
       {
         title: "IPO Advisory & Support",
@@ -241,6 +260,7 @@ const data = [
         icon: <FaChartLine />,
         color: "#F97316",
         light: "#FFEDD5",
+        link: "/services/ipo-service",
       },
     ],
   ];
@@ -315,20 +335,19 @@ const data = [
                 {item.desc}
               </p>
 
+              {/* Know More Link - Now from data array */}
               <Link
-                href={`/services/${item.title
-                  .toLowerCase()
-                  .replace(/ /g, "-")}`}
-                className="mt-4 text-main font-medium inline-flex items-center"
+                href={item.link}
+                className="mt-4 text-main font-medium inline-flex items-center hover:text-mainDark transition-colors"
               >
-                Know More <span className="ml-1">&rarr;</span>
+                Know More <span className="ml-1">→</span>
               </Link>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* scrollbar hide */}
+      {/* Scrollbar Hide */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;

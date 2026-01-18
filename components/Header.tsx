@@ -29,7 +29,7 @@ export default function Header() {
         { name: "Limited Liability Partnership (LLP) Registration", link: "/services/llp-registration" },
         { name: "One Person Company (OPC) Registration", link: "/services/opc-registration" },
         { name: "Partnership Firm Registration", link: "/services/partnership-registration" },
-        { name: "Start-up India Registration", link: "/services/startup-india-registration" },
+        { name: "Start-up India Registration", link: "/services/startup-registration" },
       ],
     },
     {
@@ -47,6 +47,8 @@ export default function Header() {
       name: "Subsidy",
       items: [
         { name: "Government subsidy to MSME", link: "/services/msme-subsidy" },
+        { name: "Government subsidy to Large or Thrust Sector", link: "/services/large-thrust-subsidy" },
+        { name: "Government subsidy to Mega sector", link: "/services/mega-subsidy" },
         { name: "Government subsidy to IT / ITeS", link: "/services/it-subsidy" },
         { name: "Government subsidy to Logistic Park", link: "/services/logistic-subsidy" },
         { name: "Government subsidy to GCC", link: "/services/gcc-subsidy" },

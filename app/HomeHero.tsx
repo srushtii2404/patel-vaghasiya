@@ -98,7 +98,7 @@ const HomeHero = () => {
           </div>
         </motion.div>
 
-        {/* Quick Links */}
+        {/* Quick Links - Now with correct href */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,15 +110,27 @@ const HomeHero = () => {
           "
         >
           {[
-            "Pvt Ltd Registration",
-            "Project Loan",
-            "MSME Subsidy",
-            "GST & Compliance",
+            {
+              name: "Pvt Ltd Registration",
+              href: "/services/company-registration",
+            },
+            {
+              name: "Project Loan",
+              href: "/services/project-loan",
+            },
+            {
+              name: "MSME Subsidy",
+              href: "/services/msme-subsidy",
+            },
+            {
+              name: "GST & Compliance",
+              href: "/services/gst-service",
+            },
           ].map((item, index) => (
             <motion.a
               key={index}
               whileHover={{ scale: 1.05 }}
-              href="#"
+              href={item.href}
               className="
                 py-2 sm:py-2.5 px-3
                 border font-semibold rounded-lg
@@ -127,7 +139,7 @@ const HomeHero = () => {
                 text-center
               "
             >
-              {item}
+              {item.name}
             </motion.a>
           ))}
         </motion.div>
