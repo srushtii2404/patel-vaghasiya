@@ -73,7 +73,7 @@ export default function TaxAuditPage() {
             />
 
             {/* ---------------- HERO SECTION ---------------- */}
-            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-20 overflow-hidden mt-28">
+            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-12 sm:py-16 md:py-20 overflow-hidden mt-20 sm:mt-24 md:mt-28">
                 <motion.div
                     animate={{ y: [0, -15, 0] }}
                     transition={{ repeat: Infinity, duration: 6 }}
@@ -85,7 +85,7 @@ export default function TaxAuditPage() {
                     className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"
                 />
 
-                <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col lg:flex-row items-start gap-10 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-start gap-6 lg:gap-10 relative z-10">
                     <motion.div
                         className="flex-1 space-y-6 lg:w-2/3"
                         initial={{ opacity: 0, x: -50 }}
@@ -113,15 +113,15 @@ export default function TaxAuditPage() {
             </section>
 
             {/* ---------------- MAIN CONTENT ---------------- */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 flex gap-10 py-20 section-bg">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">
                 {/* LEFT CONTENT */}
-                <div className="flex-1 space-y-16">
+                <div className="flex-1 space-y-12 sm:space-y-16">
 
                     {/* WHY TAX AUDIT */}
                     <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
-                        <h2 className="text-4xl font-extrabold gradient-heading">Why Tax Audit Is Important</h2>
+                        <h2 className="text-3xl sm:text-3xl sm:text-4xl font-extrabold gradient-heading">Why Tax Audit Is Important</h2>
 
-                        <div className="glass-card p-10 space-y-6">
+                        <div className="glass-card p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6">
                             <p>A Tax Audit is not just a statutory requirement—it is a powerful business tool. It helps:
                             </p>
                             {[
@@ -146,11 +146,11 @@ export default function TaxAuditPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">
                             Who Requires a Tax Audit?
                         </h2>
 
-                        <div className="glass-card p-10 space-y-6">
+                        <div className="glass-card p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6">
 
                             {/* 1) Businesses */}
                             <div className="space-y-2">
@@ -194,7 +194,7 @@ export default function TaxAuditPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Our Tax Audit Services Include</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Our Tax Audit Services Include</h2>
 
                         <div className="glass-card p-10 space-y-5">
 
@@ -274,7 +274,7 @@ export default function TaxAuditPage() {
 
                     {/* WHY CHOOSE US */}
                     <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
-                        <h2 className="text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
                         <div className="glass-card p-10 space-y-4">
                             <p>At Patel & Vaghasiya, Chartered Accountants, we combine expertise with professionalism, giving you a seamless tax audit experience.
 </p>
@@ -295,7 +295,7 @@ export default function TaxAuditPage() {
 
                     {/* INDUSTRIES */}
                     <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
-                        <h2 className="text-4xl font-extrabold gradient-heading">Industries We Serve</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Industries We Serve</h2>
                         <div className="glass-card p-10 space-y-4">
                             <p>We have extensive experience across sectors:
 </p>
@@ -320,7 +320,7 @@ export default function TaxAuditPage() {
 
                     {/* DOCUMENTS REQUIRED */}
                     <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
-                        <h2 className="text-4xl font-extrabold gradient-heading">Documents Required for Tax Audit</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Documents Required for Tax Audit</h2>
                         <div className="glass-card p-10 space-y-4">
                             <p>We make the process simple—just keep the following ready:
 </p>
@@ -349,25 +349,25 @@ export default function TaxAuditPage() {
             </div>
 
             {/* FAQ */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 py-0 bg-sky-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-0 bg-sky-50">
                 <FAQ faqs={faqs} />
             </div>
 
             {/* CTA SECTION */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
-                <section className="bg-main-dark p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16">
+                <section className="bg-main-dark p-6 sm:p-8 md:p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-6 md:gap-8">
                     <motion.div className="flex-1" initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
                         <Image
                             src="/assets/5124557.png"
                             alt="Tax Audit"
-                            className="rounded-xl"
+                            className="rounded-xl w-full h-auto"
                             width={400}
                             height={400}
                             priority
                         />
                     </motion.div>
                     <motion.div className="flex-1 text-center md:text-left" initial={{ x: -50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-                        <h2 className="text-4xl font-bold text-white mb-4">Get Stress-Free Tax Audit Support</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Get Stress-Free Tax Audit Support</h2>
                         <p className="text-gray-300 text-lg leading-relaxed">Avoid penalties, stay compliant, and ensure your financials are audit-ready with our expert team.</p>
                         <div className="mt-6">
                             <Link

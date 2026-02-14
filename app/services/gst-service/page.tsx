@@ -108,7 +108,7 @@ export default function GSTServicePage() {
             />
 
             {/* ---------------- HERO SECTION ---------------- */}
-            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-20 overflow-hidden mt-28">
+            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-12 sm:py-16 md:py-20 overflow-hidden mt-20 sm:mt-24 md:mt-28">
                 <motion.div
                     animate={{ y: [0, -15, 0] }}
                     transition={{ repeat: Infinity, duration: 6 }}
@@ -119,17 +119,17 @@ export default function GSTServicePage() {
                     transition={{ repeat: Infinity, duration: 8 }}
                     className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"
                 />
-                <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col lg:flex-row items-start gap-10 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-start gap-6 lg:gap-10 relative z-10">
                     <motion.div
-                        className="flex-1 space-y-6 lg:w-2/3"
+                        className="flex-1 space-y-4 sm:space-y-6 lg:w-2/3"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold text-white">
-                            Gujarat’s Trusted GST Registration, Return Filing & Litigation Service Provider
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                            Gujarat's Trusted GST Registration, Return Filing & Litigation Service Provider
                         </h1>
-                        <p className="text-2xl font-semibold text-gray-100">
+                        <p className="text-xl sm:text-2xl font-semibold text-gray-100">
                             Fast | Accurate | Compliance-Focused | Affordable
                         </p>
                         <p className="text-gray-100 leading-relaxed">
@@ -155,8 +155,8 @@ export default function GSTServicePage() {
             </section>
 
             {/* ---------------- MAIN CONTENT ---------------- */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 flex gap-10 py-20 section-bg">
-                <div className="flex-1 space-y-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">
+                <div className="flex-1 space-y-12 sm:space-y-16">
                     {/* SERVICES SECTIONS */}
                     <motion.section
                         className="space-y-8"
@@ -165,11 +165,11 @@ export default function GSTServicePage() {
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.1 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">
                             Our GST Services
                         </h2>
 
-                        <div className="glass-card p-10 space-y-10">
+                        <div className="glass-card p-6 sm:p-8 md:p-10 space-y-8 sm:space-y-10">
                             {gstServices.map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -204,7 +204,7 @@ export default function GSTServicePage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
                         <div className="glass-card p-10 space-y-5 text-gray-700 text-[17px]">
                             {[
                                 {
@@ -248,7 +248,7 @@ export default function GSTServicePage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Who We Serve</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Who We Serve</h2>
                         <div className="glass-card p-10">
                             <ul className="space-y-3 text-gray-700 text-[17px]">
                                 {[
@@ -277,7 +277,7 @@ export default function GSTServicePage() {
     viewport={{ once: true, amount: 0.1 }}
     transition={{ duration: 0.1 }}
 >
-    <h2 className="text-4xl font-extrabold gradient-heading">
+    <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">
         Our Process
     </h2>
 
@@ -323,13 +323,13 @@ export default function GSTServicePage() {
             </div>
 
             {/* FAQ */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 py-0 bg-sky-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-0 bg-sky-50">
                 <FAQ faqs={faqs} />
             </div>
 
             {/* CTA */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
-                <section className="bg-main-dark p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16">
+                <section className="bg-main-dark p-6 sm:p-8 md:p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-6 md:gap-8">
                     <motion.div
                         className="flex-1"
                         initial={{ scale: 0.9, opacity: 0 }}
@@ -340,7 +340,7 @@ export default function GSTServicePage() {
                         <Image
                             src="/assets/gst-services.png"
                             alt="GST Services"
-                            className="rounded-xl"
+                            className="rounded-xl w-full h-auto"
                             width={400}
                             height={400}
                             priority
@@ -354,7 +354,7 @@ export default function GSTServicePage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl font-bold text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                             Get Expert GST Support Today
                         </h2>
                         <p className="text-gray-300 text-lg leading-relaxed">

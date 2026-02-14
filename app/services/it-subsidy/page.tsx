@@ -76,7 +76,7 @@ export default function ITSubsidyPage() {
             />
 
             {/* ---------------- HERO SECTION ---------------- */}
-            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-20 overflow-hidden mt-28">
+            <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-12 sm:py-16 md:py-20 overflow-hidden mt-20 sm:mt-24 md:mt-28">
                 {/* Soft Animated Circles */}
                 <motion.div
                     animate={{ y: [0, -15, 0] }}
@@ -89,7 +89,7 @@ export default function ITSubsidyPage() {
                     className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"
                 />
 
-                <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col lg:flex-row items-start gap-10 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-start gap-6 lg:gap-10 relative z-10">
                     {/* LEFT TEXT BLOCK */}
                     <motion.div
                         className="flex-1 space-y-6 lg:w-2/3"
@@ -97,11 +97,11 @@ export default function ITSubsidyPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold text-white">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                             Gujarat Government Subsidy for IT / ITeS – Consultant Services
                         </h1>
 
-                        <p className="text-2xl font-semibold text-gray-100">
+                        <p className="text-xl sm:text-2xl font-semibold text-gray-100">
                             Expert Support to Help You Get Maximum Benefits Under the IT/ITeS Policy 2022–27
                         </p>
 
@@ -129,9 +129,9 @@ export default function ITSubsidyPage() {
             </section>
 
             {/* ---------------- MAIN CONTENT ---------------- */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 flex gap-10 py-20 section-bg">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">
                 {/* LEFT CONTENT */}
-                <div className="flex-1 space-y-16">
+                <div className="flex-1 space-y-12 sm:space-y-16">
                     {/* WHO CAN BENEFIT */}
                     <motion.section
                         className="space-y-6"
@@ -140,7 +140,7 @@ export default function ITSubsidyPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Who Can Benefit?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Who Can Benefit?</h2>
 
                         <div className="glass-card p-10 space-y-4">
                             <p className="text-gray-700 text-lg">
@@ -177,7 +177,7 @@ export default function ITSubsidyPage() {
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.1 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">
                             Key Incentives & Benefits
                         </h2>
 
@@ -286,7 +286,7 @@ export default function ITSubsidyPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Eligible IT / ITeS Businesses</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Eligible IT / ITeS Businesses</h2>
 
                         <div className="glass-card p-10">
                             <p className="text-gray-700 text-lg mb-2">You can apply if your business is related to:
@@ -320,7 +320,7 @@ export default function ITSubsidyPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Our Professional Consultancy Services</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Our Professional Consultancy Services</h2>
 
                         <div className="glass-card p-10">
                             <p className="text-gray-700 text-lg mb-2">We offer complete end-to-end subsidy support:
@@ -355,7 +355,7 @@ export default function ITSubsidyPage() {
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Why Choose Us?</h2>
 
                         <div className="glass-card p-10">
                             <ul className="space-y-3 text-gray-700 text-[17px]">

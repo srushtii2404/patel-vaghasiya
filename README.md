@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Google Analytics Setup
+
+Google Analytics has been integrated into this project. To enable tracking:
+
+1. **Create a Google Analytics 4 Property:**
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Create a new GA4 property for your website
+   - Note down your Measurement ID (format: G-XXXXXXXXXX)
+
+2. **Set up Environment Variable:**
+   - Create a `.env.local` file in the root directory
+   - Add your measurement ID:
+     ```
+     NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+     ```
+
+3. **Restart Development Server:**
+   - Stop your dev server (Ctrl+C)
+   - Run `npm run dev` again
+
+The analytics will now track page views and user interactions on your website.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

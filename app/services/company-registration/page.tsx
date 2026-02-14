@@ -224,7 +224,7 @@ export default function CompanyRegistrationPage() {
       />
 
       {/* ---------------- HERO SECTION ---------------- */}
-      <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-20 overflow-hidden mt-28">
+      <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-12 sm:py-16 md:py-20 overflow-hidden mt-20 sm:mt-24 md:mt-28">
         {/* Soft Animated Circles */}
         <motion.div
           animate={{ y: [0, -15, 0] }}
@@ -237,19 +237,19 @@ export default function CompanyRegistrationPage() {
           className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"
         />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-20 flex flex-col lg:flex-row items-start gap-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-start gap-6 lg:gap-10 relative z-10">
           {/* LEFT TEXT BLOCK */}
           <motion.div
-            className="flex-1 space-y-6 lg:w-2/3"
+            className="flex-1 space-y-4 sm:space-y-6 lg:w-2/3"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
               Private Limited Company Registration Services
             </h1>
 
-            <p className="text-2xl font-semibold text-gray-100">
+            <p className="text-xl sm:text-2xl font-semibold text-gray-100">
               Start Your Business with Professional Legal Structure
             </p>
 
@@ -283,8 +283,8 @@ export default function CompanyRegistrationPage() {
 
       {/* Main Content */}
       <div className="relative bg-gray-50">
-        <div className="container mx-auto px-4 py-8 relative z-10">
-          <div className="flex gap-8">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-6 sm:py-8 relative z-10">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
             {/* Main Content */}
             <div className="flex-1 max-w-4xl">
               {/* Breadcrumb */}
@@ -1267,14 +1267,14 @@ export default function CompanyRegistrationPage() {
       </section>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
-        <section className="bg-main-dark p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16">
+        <section className="bg-main-dark p-6 sm:p-8 md:p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-6 md:gap-8">
           <motion.div className="flex-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            <Image src="/assets/ipo-support.png" alt="Company Registration Support" width={400} height={400} className="rounded-xl" />
+            <Image src="/assets/ipo-support.png" alt="Company Registration Support" width={400} height={400} className="rounded-xl w-full h-auto" />
           </motion.div>
 
           <motion.div className="flex-1 text-center md:text-left" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Register Your Company?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Register Your Company?</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               Whether you're starting a Private Limited Company, LLP, or OPC — our team guides you through every step of the registration process.
             </p>
