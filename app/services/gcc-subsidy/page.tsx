@@ -8,6 +8,7 @@ import { HiCheckCircle } from "react-icons/hi";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function GCCSubsidyPage() {
     const jsonLd = {
@@ -36,13 +37,7 @@ export default function GCCSubsidyPage() {
         ],
     };
 
-    const otherServices = [
-        { name: "Project Loan", href: "/services/project-loan", icon: "💰" },
-        { name: "Machine Loan", href: "/services/machine-loan", icon: "🏭" },
-        { name: "MSME Loan", href: "/services/msme-loan", icon: "🧾" },
-        { name: "Working Capital Loan", href: "/services/working-capital", icon: "📊" },
-        { name: "Property Loan", href: "/services/property-loan", icon: "🏠" },
-    ];
+    const otherServices = allServices.filter(s => s.href !== "/services/gcc-subsidy");
 
     const faqs = [
         {
@@ -469,7 +464,7 @@ export default function GCCSubsidyPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <Image
-                            src="/assets/gcc-subsidy.png"
+                            src="/assets/5124557.png"
                             alt="GCC Subsidy Guidance"
                             className="rounded-xl"
                             width={400}

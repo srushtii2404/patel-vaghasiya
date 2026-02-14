@@ -8,6 +8,7 @@ import { HiCheckCircle } from "react-icons/hi";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function IPOAdvisoryPage() {
     const jsonLd = {
@@ -24,13 +25,7 @@ export default function IPOAdvisoryPage() {
         serviceType: "IPO Advisory Services",
     };
 
-    const otherServices = [
-        { name: "Statutory Audit", href: "/services/statutory-audit", icon: "📊" },
-        { name: "Internal Audit", href: "/services/internal-audit", icon: "🔍" },
-        { name: "Tax Audit", href: "/services/tax-audit", icon: "🧾" },
-        { name: "Company Registration", href: "/services/company-registration", icon: "🏢" },
-        { name: "Valuation", href: "/services/business-valuation", icon: "💹" },
-    ];
+    const otherServices = allServices.filter(s => s.href !== "/services/ipo-service");
 
     const faqs = [
         {
@@ -324,7 +319,7 @@ export default function IPOAdvisoryPage() {
             <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
                 <section className="bg-main-dark p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-8">
                     <motion.div className="flex-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-                        <Image src="/assets/ipo-support.png" alt="IPO Advisory" width={400} height={400} className="rounded-xl" />
+                        <Image src="/assets/5124557.png" alt="IPO Advisory" width={400} height={400} className="rounded-xl" />
                     </motion.div>
 
                     <motion.div className="flex-1 text-center md:text-left" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>

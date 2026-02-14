@@ -8,6 +8,7 @@ import { HiCheckCircle } from "react-icons/hi";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function MSMELoanPage() {
     const jsonLd = {
@@ -34,15 +35,7 @@ export default function MSMELoanPage() {
         ],
     };
 
-    const otherServices = [
-        { name: "Project Loan", href: "/services/project-loan", icon: "💰" },
-        { name: "Machine Loan", href: "/services/machine-loan", icon: "🏭" },
-        { name: "Working Capital Loan", href: "/services/working-capital", icon: "📊" },
-        { name: "Property Loan", href: "/services/property-loan", icon: "🏠" },
-        { name: "Unsecured Loan", href: "/services/unsecured-loan", icon: "📌" },
-        { name: "Secured Loan", href: "/services/secured-loan", icon: "🔒" },
-        { name: "Government Subsidy Guidance", href: "/services/subsidy", icon: "🏛️" },
-    ];
+    const otherServices = allServices.filter(s => s.href !== "/services/msme-loan");
 
     const faqs = [
         {

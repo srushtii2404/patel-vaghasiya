@@ -2,8 +2,79 @@
 
 import { motion } from "framer-motion";
 import { FiSearch } from "react-icons/fi";
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 const HomeHero = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  // Complete services list
+  const allServices = [
+    // Registration
+    { name: "Private Limited Company Registration", slug: "company-registration" },
+    { name: "Limited Liability Partnership (LLP) Registration", slug: "llp-registration" },
+    { name: "One Person Company (OPC) Registration", slug: "opc-registration" },
+    { name: "Partnership Firm Registration", slug: "partnership-registration" },
+    { name: "Start-up India Registration", slug: "startup-registration" },
+    
+    // Loans
+    { name: "Project Loan", slug: "project-loan" },
+    { name: "Machine Loan", slug: "machine-loan" },
+    { name: "Working Capital Loan (OD / CC)", slug: "working-capital" },
+    { name: "MSME Loan", slug: "msme-loan" },
+    { name: "Secured Loan", slug: "secured-loan" },
+    { name: "Unsecured Loan", slug: "unsecured-loan" },
+    
+    // Subsidy
+    { name: "Government subsidy to MSME", slug: "msme-subsidy" },
+    { name: "Government subsidy to Large or Thrust Sector", slug: "large-thrust-subsidy" },
+    { name: "Government subsidy to Mega sector", slug: "mega-subsidy" },
+    { name: "Government subsidy to IT / ITeS", slug: "it-subsidy" },
+    { name: "Government subsidy to Logistic Park", slug: "logistic-subsidy" },
+    { name: "Government subsidy to GCC", slug: "gcc-subsidy" },
+    
+    // Tax
+    { name: "GST Registration, Return Filing & Litigation", slug: "gst-service" },
+    { name: "ITR Filing, TDS & Litigation", slug: "itr-service" },
+    
+    // Audit
+    { name: "Statutory Audit", slug: "statutory-service" },
+    { name: "Tax Audit", slug: "tax-audit" },
+    { name: "Internal Audit", slug: "internal-audit" },
+    { name: "Bank Audit", slug: "bank-audit" },
+    
+    // IPO
+    { name: "IPO Advisory & Support", slug: "ipo-service" },
+  ];
+
+  // Filter services
+  const filteredServices = searchQuery.trim() === ""
+    ? []
+    : allServices.filter((service) =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleServiceClick = () => {
+    setSearchQuery("");
+    setIsOpen(false);
+  };
+
   return (
     <section
       className="
@@ -13,26 +84,21 @@ const HomeHero = () => {
         md:min-h-screen
       "
     >
-      {/* ===== Background Video ===== */}
+      {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
         <video
-          className="
-            w-full h-full
-            object-cover
-          "
+          className="w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          webkit-playsinline="true"
           src="/assets/S1.mp4"
         />
         <div className="absolute inset-0 bg-[#0d1321]/85" />
       </div>
 
-      {/* ===== Content Wrapper ===== */}
+      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6 sm:space-y-8 md:space-y-10 pb-10 md:pb-0">
-
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 14 }}
@@ -71,17 +137,22 @@ const HomeHero = () => {
           we manage everything with transparency and expert guidance.
         </motion.p>
 
-        {/* Search */}
+        {/* Search with outside click handling */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="flex justify-center"
         >
-          <div className="relative w-full max-w-md sm:max-w-xl">
+          <div ref={searchContainerRef} className="relative w-full max-w-md sm:max-w-xl">
             <input
               type="text"
               placeholder="Search services like GST, Registration, Loan…"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setIsOpen(e.target.value.trim() !== "");
+              }}
               className="
                 w-full py-2.5 sm:py-3
                 pl-4 sm:pl-5 pr-12 sm:pr-14
@@ -95,10 +166,55 @@ const HomeHero = () => {
               "
             />
             <FiSearch className="absolute right-4 sm:right-5 top-1/2 -translate-y-1/2 text-gray-600 text-xl sm:text-2xl" />
+
+            {/* Dropdown Results */}
+            {isOpen && filteredServices.length > 0 && (
+              <div className="
+                absolute top-full left-0 right-0 mt-2
+                bg-white rounded-xl shadow-lg
+                border border-gray-200
+                max-h-72 overflow-y-auto
+                z-50
+              ">
+                {filteredServices.map((service, index) => (
+                  <Link
+                    key={index}
+                    href={`/services/${service.slug}`}
+                    className="
+                      block px-4 sm:px-5 py-2.5 sm:py-3
+                      text-left text-sm sm:text-base
+                      text-gray-900
+                      hover:bg-blue-50
+                      transition-colors duration-200
+                      border-b border-gray-100 last:border-b-0
+                      flex items-center gap-2
+                    "
+                    onClick={handleServiceClick}
+                  >
+                    <FiSearch className="text-gray-400 text-base" />
+                    <span>{service.name}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* No Results */}
+            {isOpen && filteredServices.length === 0 && searchQuery.trim() !== "" && (
+              <div className="
+                absolute top-full left-0 right-0 mt-2
+                bg-white rounded-xl shadow-lg
+                border border-gray-200
+                px-4 sm:px-5 py-3 sm:py-4
+                text-center text-sm text-gray-500
+                z-50
+              ">
+                No services found for "{searchQuery}"
+              </div>
+            )}
           </div>
         </motion.div>
 
-        {/* Quick Links - Now with correct href */}
+        {/* Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,22 +226,10 @@ const HomeHero = () => {
           "
         >
           {[
-            {
-              name: "Pvt Ltd Registration",
-              href: "/services/company-registration",
-            },
-            {
-              name: "Project Loan",
-              href: "/services/project-loan",
-            },
-            {
-              name: "MSME Subsidy",
-              href: "/services/msme-subsidy",
-            },
-            {
-              name: "GST & Compliance",
-              href: "/services/gst-service",
-            },
+            { name: "Pvt Ltd Registration", href: "/services/company-registration" },
+            { name: "Project Loan", href: "/services/project-loan" },
+            { name: "MSME Subsidy", href: "/services/msme-subsidy" },
+            { name: "GST & Compliance", href: "/services/gst-service" },
           ].map((item, index) => (
             <motion.a
               key={index}
@@ -143,7 +247,6 @@ const HomeHero = () => {
             </motion.a>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import { HiCheckCircle, HiGlobe, HiShieldCheck, HiDocumentText, HiCurrencyDollar
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function OPCRegistrationPage() {
   const jsonLd = {
@@ -32,14 +33,7 @@ export default function OPCRegistrationPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "GST Registration", href: "/services/gst-service", icon: "📄" },
-    { name: "MSME Registration", href: "/services/msme-loan", icon: "🏭" },
-    { name: "Tax Advisory", href: "/services/itr-service", icon: "🧾" },
-    { name: "Statutory Audit", href: "/services/statutory-service", icon: "📊" },
-    { name: "Business Loan", href: "/services/secured-loan", icon: "💰" },
-    { name: "Project Finance", href: "/services/project-loan", icon: "🏗️" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/opc-registration");
 
   const opcTypes = [
     {
@@ -729,7 +723,7 @@ export default function OPCRegistrationPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-20 py-16">
         <section className="bg-main-dark p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-8">
           <motion.div className="flex-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            <Image src="/assets/ipo-support.png" alt="OPC Registration Support" width={400} height={400} className="rounded-xl" />
+            <Image src="/assets/5124557.png" alt="OPC Registration Support" width={400} height={400} className="rounded-xl" />
           </motion.div>
 
           <motion.div className="flex-1 text-center md:text-left" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>

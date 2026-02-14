@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
 import Image from "next/image";
+import { allServices } from "@/lib/services";
 
 export default function StartupIndiaRegistrationPage() {
   const jsonLd = {
@@ -32,14 +33,7 @@ export default function StartupIndiaRegistrationPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "Private Limited Company", href: "/services/company-registration", icon: "🏢" },
-    { name: "LLP Registration", href: "/services/llp-registration", icon: "🤝" },
-    { name: "Partnership Firm", href: "/services/partnership-registration", icon: "🤲" },
-    { name: "GST Registration", href: "/services/gst-registration", icon: "🧾" },
-    { name: "MSME Loan", href: "/services/msme-loan", icon: "💰" },
-    { name: "Project Loan", href: "/services/project-loan", icon: "🏗️" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/startup-registration");
 
   const faqs = [
     {
@@ -471,7 +465,7 @@ export default function StartupIndiaRegistrationPage() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/startup-illustration.png" // ← Replace with your actual startup-related image
+              src="/assets/5124557.png" // ← Replace with your actual startup-related image
               alt="Startup India Registration"
               width={400}
               height={400}

@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
 import Image from "next/image";
+import { allServices } from "@/lib/services";
 
 export default function MsmeSubsidyPage() {
   const jsonLd = {
@@ -33,14 +34,7 @@ export default function MsmeSubsidyPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "Company Registration", href: "/services/company-registration", icon: "🏢" },
-    { name: "Partnership Registration", href: "/services/partnership-registration", icon: "🤝" },
-    { name: "GST Registration", href: "/services/gst-registration", icon: "🧾" },
-    { name: "Project Loan", href: "/services/project-loan", icon: "🏗️" },
-    { name: "Startup India", href: "/services/startup-india-registration", icon: "🚀" },
-    { name: "Tax Advisory", href: "/services/tax-advisory", icon: "📊" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/msme-subsidy");
 
   const faqs = [
     {
@@ -176,54 +170,123 @@ export default function MsmeSubsidyPage() {
             </h2>
 
             <div className="glass-card p-10 space-y-8">
-              {[
-                {
-                  title: "Capital Subsidy",
-                  points: [
-                    "15–35% subsidy on plant & machinery cost",
-                    "Up to ₹1–5 crore depending on scheme & category",
-                  ],
-                },
-                {
-                  title: "Interest Subsidy",
-                  points: [
-                    "3–7% annual interest subsidy on term loans",
-                    "For 5–7 years in many schemes",
-                  ],
-                },
-                {
-                  title: "Credit Guarantee",
-                  points: [
-                    "CGTMSE: Up to 90% loan guarantee without collateral",
-                    "No third-party guarantee required",
-                  ],
-                },
-                {
-                  title: "Technology & Quality Upgradation",
-                  points: [
-                    "CLCSS, ZED Certification subsidy",
-                    "Energy & environment-friendly equipment support",
-                  ],
-                },
-                {
-                  title: "Marketing & Export Assistance",
-                  points: [
-                    "Bar code, packaging, marketing development assistance",
-                    "International trade fair participation subsidy",
-                  ],
-                },
-              ].map((benefit, idx) => (
-                <div key={idx} className="border-l-4 border-main pl-6">
-                  <h3 className="text-xl font-bold text-main-dark mb-2">{benefit.title}</h3>
-                  <ul className="space-y-2">
-                    {benefit.points.map((p, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-700">
-                        <HiCheckCircle className="text-main text-xl mt-1" /> <span>{p}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Aatmanirbhar Gujarat Scheme Overview */}
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Aatmanibhar Gujarat Subsidy Scheme (2022–2027)</h3>
+                <p className="text-blue-800 font-medium">Empowering MSMEs, Startups & Entrepreneurs with subsidies, tax benefits, and financial support</p>
+              </div>
+
+              {/* Project Category Table */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Project Category & Applicable Scheme</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-main text-white">
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Project Category</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Thresholds / Limits</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Applicable Scheme</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="bg-yellow-50">
+                        <td className="border border-gray-300 px-4 py-3 font-bold text-gray-900">MSME</td>
+                        <td className="border border-gray-300 px-4 py-3 text-red-600 font-semibold">P&M investment ≤ ₹50 cr</td>
+                        <td className="border border-gray-300 px-4 py-3 text-gray-800">Assistance to MSMEs scheme</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              ))}
+              </div>
+
+              {/* Capital & Interest Subsidy */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Capital Subsidy & Interest Subsidy</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Capital Subsidy:</strong> Up to 25% term loan (max ₹35 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Interest Subsidy:</strong> Up to 7% p.a. (+1% for women, SC/ST, Startups, youth &lt;35)</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Tax & Utility Benefits */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Tax & Utility Benefits</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>SGST Reimbursement:</strong> Up to 100% for 10 years</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>CGTMSE Fees:</strong> 100% for 5 years</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>EPF Reimbursement:</strong> 100% employer's PF of new employees (with limit) for 10 years</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Rent Subsidy:</strong> 65% (max ₹1 lakh p.a. for 5 years)</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Power & Electricity Benefits */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Power Connection & Electricity Duty Benefit</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Power Subsidy:</strong> 35% (max ₹5 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Electricity Duty:</strong> 100% exemption</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Other Benefits */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Other Financial & Quality Benefits</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Quality Certification:</strong> 50% (max ₹10 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>ERP/ICT Support:</strong> Up to ₹1 lakh / ₹5 lakh</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Patent Filing:</strong> 75% (max ₹25 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Technology Acquisition:</strong> 65% (max ₹50 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>ZED Certificate:</strong> 50% (max ₹50k)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Energy & Water Audits:</strong> 75% (max ₹50k)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Equipment Support:</strong> 25% (max ₹20 lakh)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Exhibition Support:</strong> Domestic & International (stall, logistics, etc.)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>SME IPO:</strong> 25% of cost (max ₹5 lakh)</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <div className="bg-green-50 border border-green-300 p-6 rounded text-center">
+                <p className="text-gray-900 font-semibold text-lg">
+                  🚀 <strong>Be a part of Aatmanibhar Gujarat</strong>
+                </p>
+                <p className="text-gray-800 mt-2">
+                  Take advantage of subsidies & incentives for your business growth.
+                </p>
+              </div>
             </div>
           </motion.section>
 
@@ -239,18 +302,52 @@ export default function MsmeSubsidyPage() {
               Eligibility Criteria for MSME Subsidy
             </h2>
 
-            <div className="glass-card p-10 space-y-4">
-              {[
-                "Must have valid Udyam Registration (MSME Certificate)",
-                "Investment & Turnover within MSME limits (Micro: ₹1 Cr investment & ₹5 Cr turnover, Small: ₹10 Cr & ₹50 Cr, Medium: ₹50 Cr & ₹250 Cr)",
-                "Business must be in manufacturing or service sector",
-                "Project must be new or expansion/modernization",
-                "Must comply with scheme-specific criteria (e.g., location, sector, employment generation)",
-              ].map((el, idx) => (
-                <p key={idx} className="flex items-center gap-3 text-gray-700 text-lg">
-                  <HiCheckCircle className="text-main text-xl" /> {el}
+            <div className="glass-card p-10 space-y-8">
+              <div className="space-y-3">
+                <p className="flex items-center gap-3 text-gray-700 text-lg">
+                  <HiCheckCircle className="text-main text-xl" /> Must have Udhyam Registration
                 </p>
-              ))}
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Investment & Turnover within MSME Limits</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-main text-white">
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Enterprise Category</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Investment in Plant & Machinery / Equipment</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Annual Turnover</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { category: "Micro Enterprise", investment: "2.5 Cr", turnover: "10 Cr" },
+                        { category: "Small Enterprise", investment: "25 Cr", turnover: "100 Cr" },
+                        { category: "Medium Enterprise", investment: "125 Cr", turnover: "500 Cr" },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                          <td className="border border-gray-300 px-4 py-3 text-gray-800 font-medium">{row.category}</td>
+                          <td className="border border-gray-300 px-4 py-3 text-gray-800">{row.investment}</td>
+                          <td className="border border-gray-300 px-4 py-3 text-gray-800">{row.turnover}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <p className="flex items-center gap-3 text-gray-700 text-lg">
+                  <HiCheckCircle className="text-main text-xl" /> Must comply with scheme-specific criteria (e.g., location, sector, employment generation)
+                </p>
+                <p className="flex items-center gap-3 text-gray-700 text-lg">
+                  <HiCheckCircle className="text-main text-xl" /> New enterprise and existing enterprise that carries out expansion are eligible for it.
+                </p>
+                <p className="flex items-center gap-3 text-gray-700 text-lg">
+                  <HiCheckCircle className="text-main text-xl" /> Subsidy will be released after commencement of commercial production
+                </p>
+              </div>
             </div>
           </motion.section>
 
@@ -379,7 +476,7 @@ export default function MsmeSubsidyPage() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/msme-subsidy-illustration.png" // Replace with your actual image
+              src="/assets/5124557.png" // Replace with your actual image
               alt="MSME Subsidy & Incentives"
               width={400}
               height={400}

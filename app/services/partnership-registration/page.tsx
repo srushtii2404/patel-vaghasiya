@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
 import Image from "next/image";
+import { allServices } from "@/lib/services";
 
 export default function PartnershipRegistrationPage() {
   const jsonLd = {
@@ -32,14 +33,7 @@ export default function PartnershipRegistrationPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "Private Limited Company", href: "/services/company-registration", icon: "🏢" },
-    { name: "LLP Registration", href: "/services/llp-registration", icon: "🤝" },
-    { name: "One Person Company", href: "/services/opc-registration", icon: "👤" },
-    { name: "GST Registration", href: "/services/gst-registration", icon: "🧾" },
-    { name: "MSME Loan", href: "/services/msme-loan", icon: "💰" },
-    { name: "Project Loan", href: "/services/project-loan", icon: "🏗️" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/partnership-registration");
 
   const faqs = [
     {
@@ -775,7 +769,7 @@ export default function PartnershipRegistrationPage() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/partnership-illustration.png" // Replace with your actual image
+              src="/assets/5124557.png" // Replace with your actual image
               alt="Partnership Firm Registration"
               width={400}
               height={400}

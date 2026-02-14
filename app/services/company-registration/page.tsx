@@ -8,6 +8,7 @@ import { HiCheckCircle, HiOfficeBuilding, HiUserGroup, HiDocumentText, HiShieldC
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function CompanyRegistrationPage() {
   const jsonLd = {
@@ -32,14 +33,7 @@ export default function CompanyRegistrationPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "GST Registration", href: "/services/gst-service", icon: "📄" },
-    { name: "MSME Registration", href: "/services/msme-loan", icon: "🏭" },
-    { name: "Tax Advisory", href: "/services/itr-service", icon: "🧾" },
-    { name: "Statutory Audit", href: "/services/statutory-service", icon: "📊" },
-    { name: "Business Loan", href: "/services/secured-loan", icon: "💰" },
-    { name: "Project Finance", href: "/services/project-loan", icon: "🏗️" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/company-registration");
 
   const companyTypes = [
     {
@@ -1270,7 +1264,7 @@ export default function CompanyRegistrationPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16">
         <section className="bg-main-dark p-6 sm:p-8 md:p-10 rounded-xl shadow-md border border-bg-mainDark-100 flex flex-col md:flex-row items-center gap-6 md:gap-8">
           <motion.div className="flex-1" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            <Image src="/assets/ipo-support.png" alt="Company Registration Support" width={400} height={400} className="rounded-xl w-full h-auto" />
+            <Image src="/assets/5124557.png" alt="Company Registration Support" width={400} height={400} className="rounded-xl w-full h-auto" />
           </motion.div>
 
           <motion.div className="flex-1 text-center md:text-left" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>

@@ -8,6 +8,7 @@ import { HiCheckCircle } from "react-icons/hi";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
+import { allServices } from "@/lib/services";
 
 export default function TaxAuditPage() {
     const jsonLd = {
@@ -33,15 +34,7 @@ export default function TaxAuditPage() {
         ],
     };
 
-    const otherServices = [
-        { name: "Private Limited Company Registration", href: "/services/pvt-ltd", icon: "🏢" },
-        { name: "LLP Registration", href: "/services/llp", icon: "📄" },
-        { name: "Startup India Registration", href: "/services/startup", icon: "🚀" },
-        { name: "Project Loan", href: "/services/project-loan", icon: "💰" },
-        { name: "Machine Loan", href: "/services/machine-loan", icon: "🏭" },
-        { name: "MSME Loan", href: "/services/msme-loan", icon: "🧾" },
-        { name: "Working Capital Loan", href: "/services/working-capital", icon: "📊" },
-    ];
+    const otherServices = allServices.filter(s => s.href !== "/services/tax-audit");
 
     const faqs = [
         {

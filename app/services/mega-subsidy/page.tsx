@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
 import Image from "next/image";
+import { allServices } from "@/lib/services";
 
 export default function MegaSectorSubsidyPage() {
   const jsonLd = {
@@ -33,14 +34,7 @@ export default function MegaSectorSubsidyPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "Large / Thrust Sector Subsidy", href: "/services/large-thrust-sector-subsidy", icon: "🏭" },
-    { name: "MSME Subsidy", href: "/services/msme-subsidy", icon: "🔧" },
-    { name: "Project Loan", href: "/services/project-loan", icon: "🏗️" },
-    { name: "Company Registration", href: "/services/company-registration", icon: "🏢" },
-    { name: "Startup India", href: "/services/startup-india-registration", icon: "🚀" },
-    { name: "GST Registration", href: "/services/gst-registration", icon: "🧾" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/mega-subsidy");
 
   const faqs = [
     {
@@ -177,57 +171,81 @@ export default function MegaSectorSubsidyPage() {
             </h2>
 
             <div className="glass-card p-10 space-y-8">
-              {[
-                {
-                  title: "Capital Investment Subsidy",
-                  points: [
-                    "20–30% of eligible fixed capital investment",
-                    "Higher in backward/tribal areas",
-                    "Up to ₹50–100 crore or more for Mega/Ultra-Mega projects",
-                  ],
-                },
-                {
-                  title: "Interest Subsidy",
-                  points: [
-                    "5–10% annual interest subsidy on term loans",
-                    "For 10–15 years (longest duration among all categories)",
-                  ],
-                },
-                {
-                  title: "SGST / VAT Reimbursement",
-                  points: [
-                    "100% reimbursement of Net SGST",
-                    "For 10–20 years (capped at 100–200% of investment)",
-                  ],
-                },
-                {
-                  title: "Power Tariff & Electricity Duty",
-                  points: [
-                    "Significant power tariff reduction",
-                    "Full electricity duty exemption for 10+ years",
-                  ],
-                },
-                {
-                  title: "Other Special Incentives",
-                  points: [
-                    "100% Stamp Duty & Registration Fee Exemption",
-                    "Employment Generation Incentive (per job subsidy)",
-                    "Special infrastructure support (road, water, power)",
-                    "Priority in land allotment & approvals",
-                  ],
-                },
-              ].map((benefit, idx) => (
-                <div key={idx} className="border-l-4 border-main pl-6">
-                  <h3 className="text-xl font-bold text-main-dark mb-2">{benefit.title}</h3>
-                  <ul className="space-y-2">
-                    {benefit.points.map((p, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-700">
-                        <HiCheckCircle className="text-main text-xl mt-1" /> <span>{p}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Scheme Overview */}
+              <div className="bg-blue-50p-6 rounded">
+                <h3 className="text-xl font-bold text-main-dark mb-2">Aatmanibhar Gujarat Subsidy Scheme (2022–2027)</h3>
+                <p className="text-main font-medium">Empowering Mega Industries with subsidies, tax benefits, and financial support.</p>
+              </div>
+
+              {/* Project Category Table */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Project Category &amp; Applicable Scheme</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-main text-white">
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Project Category</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Thresholds / Limits</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Applicable Scheme</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="">
+                        <td className="border border-gray-300 px-4 py-3 font-bold text-gray-900">Mega Industries</td>
+                        <td className="border border-gray-300 px-4 py-3 text-red-600 font-semibold">P&amp;M ≥ ₹2,500 cr and direct employment ≥ 2,500</td>
+                        <td className="border border-gray-300 px-4 py-3 text-gray-800">Mega Industries scheme</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              ))}
+              </div>
+
+              {/* Interest Subsidy Section */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-4">Interest Subsidy</h3>
+                <p className="text-gray-700 mb-4"><strong>Interest Subsidy: 7% (subject to maximum of 1.2% of EFCI per annum) for 10 years</strong></p>
+                <p className="text-sm text-gray-600 mb-2">* EFCI = Eligible Fixed Capital Investment</p>
+              </div>
+
+              {/* Tax & PF Benefits */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-4">Tax &amp; PF Benefits</h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">SGST Reimbursement</h4>
+                    <p className="text-gray-700 mb-2"><strong>100% (subject to maximum of 0.9% of EFCI per annum) for 20 years</strong></p>
+                    <p className="text-sm text-gray-600">* EFCI = Eligible Fixed Capital Investment</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Reimbursement of SGST paid on Capital Goods</h4>
+                    <p className="text-gray-700"><strong>100% reimbursement of SGST paid on admissible capital goods</strong></p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">EPF Reimbursement</h4>
+                    <p className="text-gray-700"><strong>100% employer's PF of new employees (with limit) for 10 years</strong></p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Reimbursement of Stamp Duty &amp; Registration Fees</h4>
+                    <p className="text-gray-700"><strong>100% reimbursement of stamp duty and registration charges paid to Govt. of Gujarat for purchase land for project</strong></p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Electricity Duty Benefit */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Electricity Duty Benefit</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Electricity Duty:</strong> 100% exemption</span>
+                  </li>
+                </ul>
+              </div>
+
+             
             </div>
           </motion.section>
 
@@ -382,7 +400,7 @@ export default function MegaSectorSubsidyPage() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/mega-sector-subsidy-illustration.png" // ← Replace with your actual image
+              src="/assets/5124557.png" // ← Replace with your actual image
               alt="Mega Sector Subsidy Gujarat"
               width={400}
               height={400}

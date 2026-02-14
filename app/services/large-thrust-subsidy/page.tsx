@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Sidebar from "@/components/SidebarServices";
 import FAQ from "@/components/FAQSection";
 import Image from "next/image";
+import { allServices } from "@/lib/services";
 
 export default function LargeThrustSectorSubsidyPage() {
   const jsonLd = {
@@ -33,14 +34,7 @@ export default function LargeThrustSectorSubsidyPage() {
     ],
   };
 
-  const otherServices = [
-    { name: "MSME Subsidy", href: "/services/msme-subsidy", icon: "🏭" },
-    { name: "Company Registration", href: "/services/company-registration", icon: "🏢" },
-    { name: "Project Loan", href: "/services/project-loan", icon: "🏗️" },
-    { name: "Startup India", href: "/services/startup-india-registration", icon: "🚀" },
-    { name: "GST Registration", href: "/services/gst-registration", icon: "🧾" },
-    { name: "Tax Advisory", href: "/services/tax-advisory", icon: "📊" },
-  ];
+  const otherServices = allServices.filter(s => s.href !== "/services/large-thrust-subsidy");
 
   const faqs = [
     {
@@ -177,57 +171,160 @@ export default function LargeThrustSectorSubsidyPage() {
             </h2>
 
             <div className="glass-card p-10 space-y-8">
-              {[
-                {
-                  title: "Capital Investment Subsidy",
-                  points: [
-                    "10–25% of eligible fixed capital investment",
-                    "Higher rates in backward/tribal areas",
-                    "Up to ₹20–50 crore maximum (varies by project)",
-                  ],
-                },
-                {
-                  title: "Interest Subsidy",
-                  points: [
-                    "5–7% annual interest subsidy on term loans",
-                    "For 5–10 years depending on location & sector",
-                  ],
-                },
-                {
-                  title: "SGST / VAT Reimbursement",
-                  points: [
-                    "70–100% reimbursement of Net SGST paid",
-                    "For 7–10 years (capped at 100% of eligible investment)",
-                  ],
-                },
-                {
-                  title: "Power Tariff Subsidy",
-                  points: [
-                    "Fixed power tariff reduction",
-                    "Additional subsidy for renewable energy usage",
-                  ],
-                },
-                {
-                  title: "Other Incentives",
-                  points: [
-                    "Stamp Duty & Registration Fee Exemption",
-                    "Employment Generation Subsidy",
-                    "Electricity Duty Exemption",
-                    "Special incentives for Mega / Ultra-Mega projects",
-                  ],
-                },
-              ].map((benefit, idx) => (
-                <div key={idx} className="border-l-4 border-main pl-6">
-                  <h3 className="text-xl font-bold text-main-dark mb-2">{benefit.title}</h3>
-                  <ul className="space-y-2">
-                    {benefit.points.map((p, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-700">
-                        <HiCheckCircle className="text-main text-xl mt-1" /> <span>{p}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Scheme Overview */}
+              <div className="bg-blue-50 p-6 rounded">
+                <h3 className="text-xl font-bold text-main-dark mb-2">Aatmanibhar Gujarat Subsidy Scheme (2022–2027)</h3>
+                <p className="text-main font-medium">Empowering Large and Thrust Sector with subsidies, tax benefits, and financial support.</p>
+              </div>
+
+              {/* Project Category Table */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4">Project Category & Applicable Scheme</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-main text-white">
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Project Category</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Thresholds / Limits</th>
+                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Applicable Scheme</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="">
+                        <td className="border border-gray-300 px-4 py-3 font-bold text-gray-900">Large Industries / Thrust</td>
+                        <td className="border border-gray-300 px-4 py-3 text-red-600 font-semibold">P&M investment &gt; ₹50 cr; plus notified in Thrust</td>
+                        <td className="border border-gray-300 px-4 py-3 text-gray-800">Assistance to Large &amp; Thrust Industries</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              ))}
+              </div>
+
+              {/* Interest Subsidy Section */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-4">Interest Subsidy</h3>
+                <p className="text-gray-700 mb-4">Up to 7% (subject to maximum up to 1.2% of EFCI per annum) for 10 years</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                      <tr className="bg-main text-white">
+                        <th className="border border-gray-300 px-3 py-2 text-left font-semibold">Particulars</th>
+                        <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 1</th>
+                        <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 2</th>
+                        <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 3</th>
+                      </tr>
+                      <tr className="bg-blue-100">
+                        <th className="border border-gray-300 px-3 py-2 text-left"></th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">General</th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust</th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">General</th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust</th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">General</th>
+                        <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="bg-white">
+                        <td className="border border-gray-300 px-3 py-2 font-medium">Ratio of Incentive on Disbursed Term Loan Amount</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">7%</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">7%</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">7%</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 px-3 py-2 font-medium">EFCI (Per Annum)</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">1%</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">1.2%</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">1%</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">1%</td>
+                      </tr>
+                      <tr className="bg-white">
+                        <td className="border border-gray-300 px-3 py-2 font-medium">Tenure</td>
+                        <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">10 Years</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">8 Years</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">10 Years</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">6 Years</td>
+                        <td className="border border-gray-300 px-3 py-2 text-center">8 Years</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-sm text-gray-600 mt-2">* EFCI = Eligible Fixed Capital Investment</p>
+              </div>
+
+              {/* Tax & PF Benefits */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-4">Tax & PF Benefits</h3>
+                
+                {/* SGST Reimbursement */}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">SGST Reimbursement</h4>
+                  <p className="text-gray-700 mb-3">Up to 100% (subject to maximum up to 8% of EFCI per annum) for 10 years</p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-gray-300 text-sm">
+                      <thead>
+                        <tr className="bg-main text-white">
+                          <th className="border border-gray-300 px-3 py-2 text-left font-semibold">Particulars</th>
+                          <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 1</th>
+                          <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 2</th>
+                          <th colSpan="2" className="border border-gray-300 px-3 py-2 text-center font-semibold">Taluka Category 3</th>
+                        </tr>
+                        <tr className="bg-blue-100">
+                          <th className="border border-gray-300 px-3 py-2 text-left"></th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">General Sector</th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust Sector</th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">General Sector</th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust Sector</th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">General Sector</th>
+                          <th className="border border-gray-300 px-3 py-2 text-center font-medium">Thrust Sector</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="bg-white">
+                          <td className="border border-gray-300 px-3 py-2 font-medium">% Net SGST</td>
+                          <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">100%</td>
+                          <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">90%</td>
+                          <td colSpan={2} className="border border-gray-300 px-3 py-2 text-center">80%</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                          <td className="border border-gray-300 px-3 py-2 font-medium">EFCI (Per Annum)</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">7.5%</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">8%</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">6.5%</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">7%</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">5%</td>
+                          <td className="border border-gray-300 px-3 py-2 text-center">5.5%</td>
+                        </tr>
+                        <tr className="bg-white">
+                          <td className="border border-gray-300 px-3 py-2 font-medium">Tenure</td>
+                          <td colSpan="2" className="border border-gray-300 px-3 py-2 text-center">10 Years</td>
+                          <td colSpan="2" className="border border-gray-300 px-3 py-2 text-center">10 Years</td>
+                          <td colSpan="2" className="border border-gray-300 px-3 py-2 text-center">10 Years</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-2">* EFCI = Eligible Fixed Capital Investment</p>
+                </div>
+
+                {/* EPF Reimbursement */}
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>EPF Reimbursement:</strong> 100% employer's PF of new employees (with limit) for 10 years</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Electricity Duty Benefit */}
+              <div className="border-l-4 border-main pl-6">
+                <h3 className="text-xl font-bold text-main-dark mb-3">Electricity Duty Benefit</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-gray-700">
+                    <HiCheckCircle className="text-main text-xl mt-1 flex-shrink-0" /> <span><strong>Electricity Duty:</strong> 100% exemption</span>
+                  </li>
+                </ul>
+              </div>
+
+              
             </div>
           </motion.section>
 
@@ -381,7 +478,7 @@ export default function LargeThrustSectorSubsidyPage() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/assets/large-thrust-subsidy-illustration.png" // ← Replace with your actual image
+              src="/assets/5124557.png" // ← Replace with your actual image
               alt="Large & Thrust Sector Subsidy"
               width={400}
               height={400}
