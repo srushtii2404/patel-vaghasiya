@@ -68,6 +68,27 @@ const Testimonials: React.FC = () => {
   };
 
   // Skeleton Loader Card Component
+
+  // deterministic avatar background for users without image
+  const avatarBgClass = (name: string) => {
+    // Premium palette (darker, richer tones)
+    const colors = [
+      'bg-slate-800',
+      'bg-amber-500',
+      'bg-emerald-700',
+      'bg-rose-700',
+      'bg-indigo-900',
+      'bg-teal-700',
+      'bg-violet-700',
+      'bg-stone-800',
+      'bg-zinc-900',
+      'bg-fuchsia-700',
+    ];
+    let sum = 0;
+    for (let i = 0; i < name.length; i++) sum += name.charCodeAt(i);
+    return colors[Math.abs(sum) % colors.length];
+  };
+
   const SkeletonCard = () => (
     <div className="p-6 bg-white rounded-2xl shadow animate-pulse h-full flex flex-col justify-between min-h-[280px]">
       {/* Rating Skeleton */}
@@ -161,7 +182,7 @@ const Testimonials: React.FC = () => {
                   )}
 
                   {/* Testimonial Text */}
-                  <p className="text-gray-600 text-sm mt-2 leading-relaxed flex-grow break-words line-clamp-4">
+                  <p className="text-gray-600 text-sm mt-2 leading-relaxed flex-grow break-words line-clamp-5">
                     {testimonial.testimonial}
                   </p>
 
@@ -177,8 +198,8 @@ const Testimonials: React.FC = () => {
                         />
                       </div>
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-main/10 flex items-center justify-center flex-shrink-0">
-                        <span className="text-main font-semibold text-base">
+                      <div className={`w-12 h-12 rounded-full ${avatarBgClass(testimonial.name)} flex items-center justify-center flex-shrink-0`}>
+                        <span className="text-white font-semibold text-base">
                           {testimonial.name.charAt(0).toUpperCase()}
                         </span>
                       </div>

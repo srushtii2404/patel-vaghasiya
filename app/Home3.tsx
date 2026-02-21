@@ -10,6 +10,11 @@ const Home3 = () => {
     "/assets/TGC-STAFFING.webp",
     "/assets/icici-header-logo.png",
     "/assets/kore-mobiles.png",
+    "/assets/metalum.png",
+    "/assets/Reeflex.png",
+    "/assets/gangotri.png",
+    "/assets/pure-oxidane.png",
+    "/assets/aster-lite.png",
   ];
 
   return (
