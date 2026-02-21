@@ -293,14 +293,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             Understanding complex financial matters requires expertise and careful analysis.
             Our Chartered Accountants provide comprehensive guidance tailored to your specific business needs.
           </p>
-          <div className="flex justify-start">
-            <a
-              href="#contact"
-              className="bg-main text-white px-5 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center"
-            >
-              Get Expert Consultation
-            </a>
-          </div>
         </div>
 
         {/* Decorative elements */}
