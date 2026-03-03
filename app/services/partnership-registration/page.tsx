@@ -37,55 +37,85 @@ export default function PartnershipRegistrationPage() {
 
   const faqs = [
     {
-      question: "How to find the registration number of a partnership firm?",
-      answer:
-        "You can find the registration number on the Partnership Registration Certificate issued by the Registrar of Firms. Alternatively, you can contact the Registrar of Firms in your respective state and provide the firm’s name along with other relevant details to obtain the registration number.",
+      question: "What is a Partnership Firm?",
+      answer: "A Partnership Firm is a business structure where two or more persons come together to carry on a lawful business and share profits as per a Partnership Deed. It is governed by the Indian Partnership Act, 1932."
     },
     {
-      question: "How to do GST registration of a partnership firm?",
-      answer:
-        "GST registration is required if your annual turnover exceeds ₹20 lakh (₹10 lakh in special category states). You can apply online through the GST portal with your partnership deed, PAN, address proof, and bank details. We assist with the complete process.",
+      question: "Is Partnership Firm registration mandatory in India?",
+      answer: "No, registration is not mandatory, but highly recommended. An unregistered firm cannot file cases in court, enforce contractual rights, or claim legal remedies against partners or third parties."
     },
     {
-      question: "Is registration of a partnership firm compulsory?",
-      answer:
-        "No, registration is not compulsory under the Indian Partnership Act, 1932. However, it is highly recommended as it provides legal recognition, easier dispute resolution, and better credibility with banks, vendors, and government authorities.",
+      question: "What are the benefits of registering a Partnership Firm?",
+      answer: "Key benefits include legal recognition of the firm, rights to sue and enforce contracts, better credibility with banks and vendors, easier loan/GST/MSME registration, and clear profit‑sharing and dispute resolution mechanisms."
     },
     {
-      question: "What are the documents required for partnership firm registration?",
-      answer:
-        "Essential documents include: Partnership Deed, PAN Cards of Partners, Residential Address Proof, Business Address Proof, Photographs. Additional documents may include Rent Agreement, NOC from Landlord, Utility Bills, and Bank Statements.",
+      question: "How many partners are required to start a Partnership Firm?",
+      answer: "A minimum of 2 partners and maximum 50 partners are allowed as per current law."
     },
     {
-      question: "How to check partnership firm registration online?",
-      answer:
-        "You can check the status or verify registration on your state's Registrar of Firms official website by entering the firm name or registration number.",
+      question: "Who can become a partner in a Partnership Firm?",
+      answer: "Indian citizens (NRIs with conditions) who are competent to contract (18+ years, sound mind, not insolvent). Companies and LLPs can also become partners in certain cases."
     },
     {
-      question: "What is the procedure for partnership firm registration?",
-      answer:
-        "Step-by-step: Choose a unique name → Draft Partnership Deed → Get it stamped & signed → Apply to Registrar of Firms (Form No. 1) → Submit documents & fees → Receive Certificate → Open firm bank account.",
+      question: "What documents are required for Partnership Firm registration?",
+      answer: "Generally required documents are PAN & Aadhaar of partners, address proof of partners, business address proof, Partnership Deed (stamped) and passport‑size photographs. We assist in drafting & stamping the deed."
     },
     {
-      question: "How much time does it take to register a partnership firm in India?",
-      answer:
-        "The entire process usually takes 5–10 working days, depending on document readiness, stamp duty payment, and Registrar of Firms processing time.",
+      question: "What is a Partnership Deed and why is it important?",
+      answer: "A Partnership Deed is a legal document defining capital contribution, profit‑sharing ratio, roles & responsibilities, admission/retirement of partners, and dispute resolution. It helps avoid future conflicts and is mandatory for registration."
     },
     {
-      question: "What is the cost of partnership registration in India?",
-      answer:
-        "The total cost ranges from ₹5,000 to ₹15,000 (including professional fees, stamp duty, registration fee, PAN/TAN charges). Exact cost depends on the capital amount and state stamp duty rules.",
+      question: "How long does it take to register a Partnership Firm?",
+      answer: "Typically 5–7 working days, subject to document readiness and local registrar processing."
     },
     {
-      question: "Who is eligible for partnership?",
-      answer:
-        "Any two or more individuals (minimum 2, maximum 50) who are competent to contract (18+ years, sound mind, not insolvent) can form a partnership. Companies cannot be partners in a traditional partnership.",
+      question: "What is the cost of Partnership Firm registration?",
+      answer: "The cost depends on number of partners, stamp duty (varies by state), and professionals' fees. We provide transparent, all‑inclusive pricing with no hidden charges."
     },
     {
-      question: "Is a partnership firm a separate legal entity?",
-      answer:
-        "No, a partnership firm is not a separate legal entity from its partners. The firm and partners are considered the same under law.",
+      question: "Can a Partnership Firm be converted into LLP or Pvt Ltd later?",
+      answer: "Yes, a Partnership Firm can be converted to an LLP or Private Limited Company when the business grows or compliance requirements change."
     },
+    {
+      question: "Is GST registration mandatory for Partnership Firms?",
+      answer: "GST is mandatory if turnover exceeds threshold limits, for inter‑state supply or specific businesses. We handle partnership + GST registration together."
+    },
+    {
+      question: "Can a Partnership Firm open a current bank account?",
+      answer: "Yes. After registration, the firm can easily open a current bank account using the registered Partnership Deed, PAN of the firm, and KYC of partners."
+    },
+    {
+      question: "What are the tax implications for a Partnership Firm?",
+      answer: "Partnership Firm is taxed at 30% + surcharge + cess. Partner’s salary & interest are allowed as deductions (subject to limits). Profit received by partners is exempt in their hands."
+    },
+    {
+      question: "Is audit compulsory for a Partnership Firm?",
+      answer: "Audit is required only if turnover exceeds prescribed limits under Income Tax Act or if opted for presumptive taxation and conditions are violated. We guide you on audit applicability every year."
+    },
+    {
+      question: "Can partners take salary from the firm?",
+      answer: "Yes, partners can receive salary, bonus, commission, or interest, provided it is mentioned in the Partnership Deed."
+    },
+    {
+      question: "What is the difference between Partnership Firm and LLP?",
+      answer: "Partnership firms have unlimited liability, simple registration, low compliance and lower cost, whereas LLPs provide limited liability, MCA‑based registration, moderate compliance and higher cost. We help you choose the right structure based on your business goals."
+    },
+    {
+      question: "Why should I choose a CA for Partnership Firm registration?",
+      answer: "A CA ensures correct deed drafting, tax‑efficient structure, future‑ready compliance planning, and error‑free registration. It provides Registration + Tax + Compliance under one roof."
+    },
+    {
+      question: "Do you provide end‑to‑end services after registration?",
+      answer: "Yes we provide GST & MSME registration, accounting & bookkeeping, income tax return filing, audit & compliance support, and conversion to LLP/Pvt Ltd."
+    },
+    {
+      question: "Can I register a Partnership Firm online?",
+      answer: "Partly. Documentation, deed drafting, and filing can be done digitally, but physical submission may be required depending on the state."
+    },
+    {
+      question: "How do I get started with Partnership Firm registration?",
+      answer: "1. Contact us  2. Share basic details  3. Get your deed drafted  4. Complete registration  5. Start business legally ✔"
+    }
   ];
 
   return (

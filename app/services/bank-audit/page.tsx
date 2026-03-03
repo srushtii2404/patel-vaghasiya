@@ -38,19 +38,74 @@ export default function BankAuditPage() {
 
   const faqs = [
     {
-      question: "What types of banks do you audit?",
+      question: "What is a Bank Audit?",
       answer:
-        "We audit Public & Private Sector Banks, RRBs, Co-operative Banks, NBFCs, microfinance institutions, credit societies and fintech lending platforms.",
+        "A Bank Audit is an independent review of a bank’s financial records, transactions, advances and compliance. It ensures accuracy, regulatory compliance and risk control per RBI and bank guidelines.",
+    },
+    {
+      question: "What types of Bank Audit services do you provide?",
+      answer:
+        "We provide concurrent audit, statutory audit of bank branches, stock & receivable audit, revenue audit, credit/loan audit, system & compliance audit, and special/forensic assignments.",
+    },
+    {
+      question: "Who requires Bank Audit services?",
+      answer:
+        "Public & private sector banks, co-operative banks & societies, NBFCs & financial institutions, and borrowers seeking fund-based or non-fund-based limits require Bank Audit services.",
     },
     {
       question: "What is Concurrent Audit and why is it important?",
       answer:
-        "Concurrent Audit is an ongoing review of branch operations (daily/periodic) to verify transactions, KYC compliance, monitoring of advances and to identify fraud risks early.",
+        "Concurrent Audit is a real-time audit conducted during the year to detect errors, frauds, and procedural lapses before they become major issues. It helps banks strengthen internal control and compliance.",
     },
     {
-      question: "Do you follow RBI guidelines and LFAR reporting?",
+      question: "What is a Stock Audit and when is it required?",
       answer:
-        "Yes — our methodology includes RBI compliance checks and preparation of Long Form Audit Reports (LFAR) where applicable, along with actionable recommendations.",
+        "A Stock Audit verifies the quantity, value and ownership of inventory submitted to banks for working capital limits. It’s usually required when loan limit exceeds bank-prescribed thresholds, account shows stress/irregularity, or renewal/enhancement of limits is due.",
+    },
+    {
+      question: "How does a Bank Audit help borrowers?",
+      answer:
+        "For borrowers, a Bank Audit helps with loan renewals & enhancements, smooth loan renewal & enhancement, avoiding adverse audit remarks, improving financial discipline, and building bank confidence & creditworthiness.",
+    },
+    {
+      question: "What documents are required for a Bank Audit?",
+      answer:
+        "Common documents include financial statements & trial balance, stock statements & debtors aging, bank sanction letters, GST & income tax returns, invoices/registers & MIS reports.",
+    },
+    {
+      question: "How long does a Bank Audit take?",
+      answer:
+        "Audit duration depends on scope and size. Stock audit usually 1–3 days; concurrent audit monthly/continuous; statutory bank audit as per RBI timeline. We ensure timely completion without disruption to operations.",
+    },
+    {
+      question: "What are common issues identified in Bank Audits?",
+      answer:
+        "Common observations include mismatches in stock statements, over‑statement of receivables, diversion of funds, irregular drawing power, non‑compliance with sanction terms, and early identification helps avoid NPA classification.",
+    },
+    {
+      question: "Why choose Patel & Vaghasiya, Chartered Accountants for Bank Audit?",
+      answer:
+        "Experienced CA professionals, deep understanding of RBI & bank guidelines, clear practical audit reports, strong experience with manufacturing, trading & MSME sectors, and ethical, independent, timely execution.",
+    },
+    {
+      question: "Do you also assist in audit compliance after the report?",
+      answer:
+        "Yes. We assist clients in clarifying audit observations, rectification & documentation support, liaison with bank officials, and strengthening systems for future audits.",
+    },
+    {
+      question: "Is Bank Audit mandatory every year?",
+      answer:
+        "It depends on type of bank/borrower, loan exposure and internal policies of the bank. Banks may appoint auditors annually or periodically as required.",
+    },
+    {
+      question: "Do you conduct Bank Audits across Gujarat?",
+      answer:
+        "Yes, we provide Bank Audit services across Ahmedabad, Gujarat, and nearby regions, including on-site audits.",
+    },
+    {
+      question: "How can we appoint you for Bank Audit services?",
+      answer:
+        "You can contact us directly, email your requirement, or share bank/borrower details. We will guide you step-by-step and initiate the audit process promptly.",
     },
   ];
 
@@ -108,6 +163,16 @@ export default function BankAuditPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">
         {/* LEFT CONTENT */}
         <div className="flex-1 space-y-12 sm:space-y-16">
+          {/* WHAT IS A BANK AUDIT */}
+          <motion.section className="space-y-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12">
+            <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">What Is a Bank Audit?</h2>
+            <div className="glass-card p-6 sm:p-8 md:p-10">
+              <p className="text-gray-700 text-lg">
+                A Bank Audit is an independent examination of financial records, transactions, advances, and compliance of a bank or its borrower. It is conducted to ensure accuracy, regulatory compliance, credit and risk control as per RBI and bank guidelines. We provide end-to-end Bank Audit services, including statutory, concurrent, stock and receivable, revenue, credit/loan, system & compliance audits, and special/forensic assignments.
+              </p>
+            </div>
+          </motion.section>
+
           {/* WHY BANK AUDITS ARE CRUCIAL */}
           <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">Why Bank Audits Are Crucial</h2>

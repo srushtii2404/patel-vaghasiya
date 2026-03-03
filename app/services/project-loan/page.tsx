@@ -41,17 +41,65 @@ export default function ProjectLoanPage() {
 
     const faqs = [
         {
-            question: "What documents are required for a project loan?",
-            answer: "Project report, financial statements, GST returns, ITR, bank statements, and KYC.",
+            question: "What is a Project Loan?",
+            answer: "A Project Loan is a long‑term loan taken for setting up a new business, manufacturing unit, factory, warehouse, hotel, hospital, or large commercial project. It generally covers land, building, plant & machinery, and working capital margin."
         },
         {
-            question: "How long does loan approval take?",
-            answer: "Usually 7–15 working days depending on bank and document readiness.",
+            question: "Who is eligible to apply for a Project Loan?",
+            answer: "Project loans can be availed by proprietorships, partnership firms, LLPs, private limited companies, and manufacturing & service sector businesses. Eligibility depends on promoter background, project viability, capital contribution, and repayment capacity."
         },
         {
-            question: "What is the minimum loan amount?",
-            answer: "Minimum loan starts from ₹5 Lakhs and can go up to several crores.",
+            question: "What expenses are covered under a Project Loan?",
+            answer: "A project loan can cover land purchase or lease premium, factory/building construction, plant & machinery purchase, electrical installation & utilities, pre‑operative expenses, margin for working capital, and proper project structuring to keep maximum loan eligibility."
         },
+        {
+            question: "How much margin money is required for a Project Loan?",
+            answer: "Generally, banks require 20% to 35% promoter contribution, depending on nature of project, industry risk, credit profile, and subsidy eligibility. We help clients optimize margin through subsidy planning and correct cost breakup."
+        },
+        {
+            question: "What documents are required for a Project Loan?",
+            answer: "Key documents include Detailed Project Report (DPR), KYC of promoters, last 3 years T & R financials (if existing business), net worth statement, land documents/lease agreement, machinery quotations, bank statements. Documentation varies from bank to bank."
+        },
+        {
+            question: "What is a Detailed Project Report (DPR) and why is it important?",
+            answer: "A DPR is the most critical document for project loan approval. It includes business model, cost of project, means of finance, profitability & cash flow projections, BSR & break‑even analysis. A poor DPR leads to rejection or delay; we prepare bank‑ready DPRs."
+        },
+        {
+            question: "Can a startup or new business get a Project Loan?",
+            answer: "Yes, even new businesses can get project loans if promoters have experience, project is viable, and capital structure is sound. In many cases, CGTMSE/government‑linked schemes can be leveraged."
+        },
+        {
+            question: "What is the typical interest rate for Project Loans?",
+            answer: "Interest rates usually range between 9% to 12%, depending on bank or NBFC, credit rating, nature of project, and security offered. We negotiate with multiple lenders to get best possible terms."
+        },
+        {
+            question: "How long does project loan approval take?",
+            answer: "On average 15–30 days if documentation is complete. Delay occurs mainly due to improper DPR or incomplete papers. We ensure faster approvals through structured filing and follow‑ups."
+        },
+        {
+            question: "Is collateral mandatory for Project Loans?",
+            answer: "In most cases, yes; collateral is required. However some loans can be partially collateral‑free and government guarantee schemes may apply. We analyze your case to reduce collateral burden where possible."
+        },
+        {
+            question: "Can subsidies be linked with Project Loans?",
+            answer: "Absolutely. Project loans can be combined with MSME subsidies, state industrial incentives, capital subsidy, interest subsidy, and central/sectoral grants. Proper planning before loan sanction is crucial to avoid rejection later."
+        },
+        {
+            question: "Can I get a Project Loan for factory expansion?",
+            answer: "Yes. Project loans are available for factory expansion, new production line, technology upgradation, relocation or modernization. Expansion loans require clear justification and projections."
+        },
+        {
+            question: "What are common reasons for Project Loan rejection?",
+            answer: "Common mistakes include incorrect project cost estimation, weak financial projections, poor credit history, improper land documents, and no subsidy planning. We focus on pre‑screening to avoid rejections."
+        },
+        {
+            question: "Why should I take professional help for Project Loans?",
+            answer: "Project loans are technical and compliance‑heavy. Professional assistance ensures higher approval chances, better interest rates, faster processing, maximum subsidy benefit, structured repayment plans, and right planning today to avoid cash‑flow stress tomorrow."
+        },
+        {
+            question: "How can your firm help in Project Loan services?",
+            answer: "We provide end‑to‑end project loan assistance, including DPR preparation, bank/ NBFC coordination, subsidy planning, documentation & follow‑ups, post‑sanction compliance and implementation. From idea to implementation, we stay with you."
+        }
     ];
 
     return (

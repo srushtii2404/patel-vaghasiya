@@ -41,19 +41,114 @@ export default function GCCSubsidyPage() {
 
     const faqs = [
         {
-            question: "Who is eligible for Gujarat GCC Policy 2025-30?",
+            question: "What is a Global Capability Centre (GCC)?",
             answer:
-                "Any company setting up a Global Capability Centre in Gujarat in IT/ITES/KPO/BPO/R&D/Engineering/Analytics/AI-ML services during policy period (Feb 2025 – Mar 2030).",
+                "A Global Capability Center is a captive offshore unit set up by multinational companies to handle IT, R&D, finance, HR, analytics, engineering, legal, and shared services from India at optimized cost and high efficiency.",
         },
         {
-            question: "What types of subsidies are offered?",
+            question: "Are Government subsidies available for GCC setup in India?",
             answer:
-                "CAPEX support, OPEX reimbursement, employment incentives, interest subsidy on loans, EPF reimbursement, electricity duty reimbursement, and skill development support.",
+                "Yes. Both Central and State Governments offer multiple incentives to GCCs, including capital subsidies, employment‑linked incentives, IT/ITeS benefits, rental subsidies, and stamp duty exemptions, subject to eligibility.",
         },
         {
-            question: "How much CAPEX subsidy can a Mega GCC claim?",
+            question: "Which government schemes are applicable to GCCs?",
             answer:
-                "Up to ₹200 Crore for Mega GCC (GFCI ≥ ₹250 Crore or 500+ employees).",
+                "GCCs can benefit from the state IT/ITeS policies, employment generation subsidy, capital investment subsidy, rent & power tariff subsidy, skill development subsidy, stamp duty & registration fee exemptions, and special incentives under GIFT City / SEZ / IT Parks.",
+        },
+        {
+            question: "Is GCC considered IT/ITeS for subsidy purposes?",
+            answer:
+                "Yes. Most states classify GCCs under IT/ITeS / Knowledge‑Based Services, making them eligible for subsidies meant for IT, software, BPO, analytics, engineering, and R&D services.",
+        },
+        {
+            question: "Which expenses are eligible for subsidy in GCC projects?",
+            answer:
+                "Eligible expenses include office setup & infrastructure cost, computers, servers & IT equipment, software & technology tools, employee cost (wages & benefits), lease rent & electricity charges, and training & skill development cost.",
+        },
+        {
+            question: "Is there any employment‑linked incentive for GCCs?",
+            answer:
+                "Yes. Many states offer per‑employee incentives for local employment generation, especially for fresh graduates, women employees, and skilled professionals.",
+        },
+        {
+            question: "Can foreign companies set up GCCs and claim subsidies?",
+            answer:
+                "Absolutely. 100% FDI is allowed under automatic route for IT/ITeS and GCC services. Foreign companies can set up a subsidiary, branch, or LLP and avail government incentives subject to compliance.",
+        },
+        {
+            question: "Is minimum investment or employee strength required?",
+            answer:
+                "Yes. Most subsidy schemes require minimum capital investment, minimum number of employees, and operational commencement within a defined timeline. These thresholds vary state by state and policy.",
+        },
+        {
+            question: "Are startup GCCs eligible for government subsidy?",
+            answer:
+                "Yes. Startup‑focused GCCs may get additional benefits such as higher subsidy percentages, relaxed eligibility norms, faster approvals, and special incentives under Startup policies.",
+        },
+        {
+            question: "Is subsidy available for GCCs operating from rented premises?",
+            answer:
+                "Yes. Many states provide lease rent subsidy for GCCs operating from IT parks, SEZs, and approved commercial buildings.",
+        },
+        {
+            question: "How much subsidy can a GCC expect?",
+            answer:
+                "Subsidy quantum depends on state policy: investment size, employee count, location (e.g., non‑metro/special zone) etc. In many cases, incentives can cover 20% to 50% of eligible costs over a defined period.",
+        },
+        {
+            question: "Are GCC subsidies available in Gujarat?",
+            answer:
+                "Yes. Gujarat offers incentives under its IT/ITeS Policy including capital subsidy, employment incentives, power tariff subsidy, stamp duty exemption and special benefits in GIFT City.",
+        },
+        {
+            question: "Is approval required before starting the GCC project?",
+            answer:
+                "Yes. For most subsidies, prior approval or project registration with the concerned department is mandatory. Late applications may lead to loss of eligibility.",
+        },
+        {
+            question: "What compliances are required after availing GCC subsidy?",
+            answer:
+                "Compliances include periodic employment reporting, investment proof submission, audit reports, continued operations for lock‑in period, avoidance of misuse or premature closure.",
+        },
+        {
+            question: "Can subsidy be rejected or cancelled?",
+            answer:
+                "Yes. Subsidies may be cancelled if false information is submitted, employment targets are not met, unit is closed before lock‑in period, or non‑compliance with policy conditions.",
+        },
+        {
+            question: "How long does it take to receive GCC subsidy?",
+            answer:
+                "Typically, subsidy disbursement takes 6 to 18 months after submission of complete documents and verification by the authorities. Early planning ensures smoother process.",
+        },
+        {
+            question: "Do GCCs get income tax or GST benefits?",
+            answer:
+                "While direct income tax exemptions are limited, GCCs may get IT / GST input credit benefits and export‑oriented service advantages. Reduced compliance burden under certain schemes also helps.",
+        },
+        {
+            question: "Can existing or foreign companies convert into GCC and claim subsidy?",
+            answer:
+                "Yes. Existing Indian or foreign companies expanding into GCC operations can claim subsidies, provided fresh investment and employment criteria are met.",
+        },
+        {
+            question: "What documents are required for GCC subsidy application?",
+            answer:
+                "Common documents include company incorporation documents, project report, investment & employee details, lease deed/ownership proof, invoices & payment proofs, chartered accountant certificates.",
+        },
+        {
+            question: "How can a Chartered Accountant help in GCC subsidy planning?",
+            answer:
+                "A Chartered Accountant helps in eligibility evaluation, optimal structure planning, policy selection, application filing & follow‑up, compliance & audit support, and ensures maximum subsidy with minimum risk.",
+        },
+        {
+            question: "Why choose professional assistance for GCC subsidy?",
+            answer:
+                "Government subsidies involve technical rules, timelines, and documentation. Professional support ensures zero missed deadlines, higher approval chances, faster disbursement and compliance peace of mind.",
+        },
+        {
+            question: "How can we get started with GCC subsidy advisory?",
+            answer:
+                "You can start with a free eligibility assessment where we analyse your business model, investment plan, employment roadmap and location to recommend the best available government incentives.",
         },
     ];
 

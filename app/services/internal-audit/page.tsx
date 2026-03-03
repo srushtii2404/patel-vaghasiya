@@ -38,19 +38,79 @@ export default function InternalAuditPage() {
 
     const faqs = [
         {
-            question: "Is Internal Audit mandatory?",
+            question: "What is an Internal Audit?",
             answer:
-                "Internal Audit is mandatory for certain companies under the Companies Act depending on turnover and borrowings. However, most businesses opt for it voluntarily to strengthen controls.",
+                "A systematic, independent review of processes, controls, compliance and risk management systems to ensure efficiency, compliance and alignment with business objectives. It can be mandated under the Companies Act or taken up voluntarily for better control and growth.",
         },
         {
-            question: "How often should Internal Audit be done?",
+            question: "Is Internal Audit mandatory in India?",
             answer:
-                "Internal Audit can be monthly, quarterly, half-yearly, or yearly depending on the nature and size of the business.",
+                "Yes, Internal Audit is mandatory for certain companies under the Companies Act 2013 based on turnover, paid-up capital or borrowings. Even when not mandatory, Internal Audit is strongly recommended for better control and growth.",
         },
         {
-            question: "What documents are required?",
+            question: "Who needs Internal Audit services?",
             answer:
-                "Books of accounts, process documents, invoices, internal policies, production data, inventory reports, and relevant registers.",
+                "Private & public limited companies, growing MSMEs, businesses availing bank loans or working capital, entities planning expansion, funding or IPOs, and those facing compliance or process issues all benefit from Internal Audit.",
+        },
+        {
+            question: "What are the key objectives of an Internal Audit?",
+            answer:
+                "Identify process gaps & financial risks, improve internal controls, ensure statutory & regulatory compliance, prevent fraud & leakages, and strengthen management decision-making.",
+        },
+        {
+            question: "How is Internal Audit different from Statutory Audit?",
+            answer:
+                "Internal Audit continues year‑round and focuses on preventive systems and operational controls, while Statutory Audit is a year‑end check under Acts like Companies Act for financial statement verification and compliance. The former is management‑oriented and the latter is compliance‑oriented.",
+        },
+        {
+            question: "What areas are covered under Internal Audit?",
+            answer:
+                "Accounting & finance processes, revenue/purchase/expense controls, GST/TDS/statutory compliance review, inventory & fixed assets control, payroll & HR processes, bank & loan covenant compliance, internal control & SOP review.",
+        },
+        {
+            question: "How frequently should Internal Audit be conducted?",
+            answer:
+                "Monthly, quarterly, half‑yearly or annually depending on size, risk level and business complexity.",
+        },
+        {
+            question: "Will Internal Audit disturb daily business operations?",
+            answer:
+                "Our audit approach is non‑intrusive and planned, ensuring minimal disruption while maintaining effective review and reporting.",
+        },
+        {
+            question: "Can Internal Audit help in bank loan or funding approvals?",
+            answer:
+                "Yes. Internal Audit improves bank confidence, strengthens loan renewals & enhancements, helps meet bank audit & stock audit requirements, and supports better credit ratings.",
+        },
+        {
+            question: "Does Internal Audit help in fraud prevention?",
+            answer:
+                "Absolutely. It detects early warning signs of fraud, identifies control weaknesses, prevents revenue leakages, and improves accountability & transparency.",
+        },
+        {
+            question: "Can a CA firm act as an Internal Auditor?",
+            answer:
+                "Yes. A Chartered Accountant firm is professionally qualified and legally permitted to act as Internal Auditor and provide independent assurance and advisory services.",
+        },
+        {
+            question: "Will Internal Audit reports be shared with management?",
+            answer:
+                "Yes. Internal Audit reports are shared with management highlighting observations, risk levels, corrective measures and improvement suggestions, providing clear, practical and actionable insights.",
+        },
+        {
+            question: "Is Internal Audit useful for small businesses?",
+            answer:
+                "Yes. Small and medium businesses benefit through better cost control, improved compliance, reduced errors and a strong foundation for future growth.",
+        },
+        {
+            question: "How does Internal Audit add value beyond compliance?",
+            answer:
+                "It improves operational efficiency, strengthens systems, enables informed decisions, and prepares businesses for scale, funding or exit planning.",
+        },
+        {
+            question: "Why choose Patel & Vaghasiya for Internal Audit?",
+            answer:
+                "Experienced CA professionals, practical & business‑oriented approach, strong compliance & risk focus, clear reporting & actionable insights, and trusted advice for growing businesses.",
         },
     ];
 
@@ -98,7 +158,8 @@ export default function InternalAuditPage() {
 
                         <p className="text-gray-100 leading-relaxed">At Patel & Vaghasiya, Chartered Accountants, we bring professional expertise, industry knowledge, and technology-driven audit practices to ensure your business stays one step ahead of errors, fraud, and inefficiencies.
                         </p>
-                    </motion.div>
+                    
+                </motion.div>
 
                     <motion.div
                         className="flex-1 lg:w-1/3 lg:flex lg:justify-end"
@@ -110,6 +171,16 @@ export default function InternalAuditPage() {
                     </motion.div>
                 </div>
             </section>
+
+            {/* WHAT IS INTERNAL AUDIT */}
+            <motion.section className="space-y-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12">
+                <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">What Is Internal Audit?</h2>
+                <div className="glass-card p-6 sm:p-8 md:p-10">
+                    <p className="text-gray-700 text-lg">
+                        Internal Audit is an independent and systematic review of a company’s processes, controls, compliance, and risk management systems to ensure operations are efficient, compliant, and aligned with business objectives. Under the Companies Act 2013 certain entities must maintain internal audit depending on turnover, paid-up capital or borrowings. Even when not mandatory, internal audit is strongly recommended for better control and growth.
+                    </p>
+                </div>
+            </motion.section>
 
             {/* ---------------- MAIN CONTENT ---------------- */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">

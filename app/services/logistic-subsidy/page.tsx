@@ -40,16 +40,79 @@ export default function LogisticSubsidyPage() {
 
     const faqs = [
         {
-            question: "Who is eligible for Gujarat logistic park subsidies?",
-            answer: "Developers, infrastructure companies, and logistics operators planning Logistic Parks, Mega Logistic Parks, or Integrated Warehousing Facilities in Gujarat.",
+            question: "What is a Logistics Park under Government subsidy schemes?",
+            answer:
+                "A Logistics Park is an integrated infrastructure facility that includes warehousing, transportation hubs, cold storage, container yards, and value-added logistics services. Government subsidy schemes aim to promote such parks to reduce logistics costs, improve supply chain efficiency, and boost Make‑in‑India & export growth.",
         },
         {
-            question: "What are the benefits under the policy?",
-            answer: "Capital subsidy, interest subsidy, stamp duty exemptions, infrastructure support, green infrastructure incentives, automation and cold-chain incentives depending on the type of facility.",
+            question: "Are Government subsidies available for setting up Logistics Parks in India?",
+            answer:
+                "Yes. Both Central Government and State Governments offer subsidies for Logistics Parks under schemes related to Infrastructure Development, Industrial Promotion, MSME support, warehousing, and cold chain development.",
         },
         {
-            question: "Do I need DPR and approvals?",
-            answer: "Yes, submission of DPR, approved building plans, and compliance with environmental & fire safety norms is mandatory for subsidy claims.",
+            question: "What types of Government subsidies are available for Logistics Park projects?",
+            answer:
+                "Subsidies may include capital investment subsidy, interest subsidy on term loans, stamp duty & registration fee exemption, electricity duty exemption or concessional rates, GST‑linked incentives (state‑specific), cold storage & warehousing specific grants (land & infrastructure support, incentive size, and project nature).",
+        },
+        {
+            question: "Who is eligible to apply for Logistics Park subsidies?",
+            answer:
+                "Eligibility generally includes proprietorships, partnerships, LLPs or private limited companies undertaking new or expansion logistics projects. Applicants must meet minimum land area & investment thresholds (state‑specific) and maintain proper statutory registrations & compliances. Our team evaluates eligibility before application to avoid rejection.",
+        },
+        {
+            question: "Is land ownership mandatory to claim subsidy?",
+            answer:
+                "Not always. Many states allow long‑term leasehold land (30 years or more). However, clear title or a registered lease deed is mandatory at the time of subsidy disbursement.",
+        },
+        {
+            question: "Are subsidies available for warehouses and cold storage within Logistics Parks?",
+            answer:
+                "Yes. Warehouse, cold storage, temperature‑controlled logistics, agri‑logistics, and export‑oriented facilities often receive higher incentives under central and state schemes.",
+        },
+        {
+            question: "What is the minimum investment required for subsidy eligibility?",
+            answer:
+                "Minimum investment varies by state and scheme. Typically small logistic parks require ₹5–10 crore; integrated/mega parks require ₹25–50 crore and above. We help structure projects to maximise subsidy eligibility.",
+        },
+        {
+            question: "Can existing Logistics Parks claim Government subsidy?",
+            answer:
+                "Yes, in many cases. Expansion projects are eligible if they involve modernization, capacity enhancement, addition of cold storage, automation, or green logistics. Proper timing and documentation is critical.",
+        },
+        {
+            question: "What is the subsidy application process for Logistics Parks?",
+            answer:
+                "The process usually includes: project feasibility & subsidy mapping; DPR (Detailed Project Report) preparation; pre‑approval/provisional registration; investment execution; post‑investment subsidy claim & inspection. Professional handling significantly improves approval chances.",
+        },
+        {
+            question: "How long does it take to receive Logistics Park subsidy?",
+            answer:
+                "Timelines depend on scheme and state: approval 3–6 months, disbursement 6–18 months after investment. Early planning ensures no loss of subsidy due to deadline lapses.",
+        },
+        {
+            question: "Are Logistics Park subsidies linked with bank or project loans?",
+            answer:
+                "Yes, most subsidies are credit‑linked, meaning they are tied to term loans. Subsidies help reduce project cost and EMI burden, and lenders accept them as part of project financing.",
+        },
+        {
+            question: "Can Logistics Parks avail multiple subsidies together?",
+            answer:
+                "Yes, subject to scheme conditions (e.g., central + state incentives). Infrastructure + MSME + cold chain incentives can be combined. Expert planning is essential.",
+        },
+        {
+            question: "Which states offer attractive subsidies for Logistics Parks?",
+            answer:
+                "States actively promoting logistics parks include Gujarat, Maharashtra, Rajasthan, Madhya Pradesh, Uttar Pradesh, Tamil Nadu and Telangana. Each state has different incentive structures and timelines.",
+        },
+        {
+            question: "What documents are required for subsidy application?",
+            answer:
+                "Key documents include project report/DPR, land documents/lease deed, term loan sanction letter, company incorporation & statutory approvals, CA certificates & audited statements, utility & completion proofs. Missing documents often cause claim rejection or delay.",
+        },
+        {
+            question: "Why should you take professional help for Logistics Park subsidy?",
+            answer:
+                "Because subsidy schemes are technical, time‑bound, and compliance‑heavy. Professional support ensures maximum eligible subsidy, proper documentation & compliance, faster approvals & disbursement, and zero risk of subsidy lapses.",
         },
     ];
 

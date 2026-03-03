@@ -37,16 +37,79 @@ export default function UnsecuredLoanPage() {
 
     const faqs = [
         {
-            question: "Who is eligible for CGTMSE unsecured loans?",
-            answer: "Existing businesses (usually 2+ years), with proper GST & bank statements and consistent turnover are typically eligible.",
+            question: "What is an unsecured loan?",
+            answer:
+                "An unsecured loan is a loan without providing any collateral or security. Approval is based on your income, credit score, business profile, and repayment capacity rather than property or assets.",
         },
         {
-            question: "What types of loans are covered under CGTMSE?",
-            answer: "CGTMSE covers collateral-free OD/CC (working capital), unsecured machinery loans and other term loans for MSMEs as per the scheme.",
+            question: "Who is eligible for an unsecured loan?",
+            answer:
+                "Unsecured loans are generally available to salaried individuals, self-employed professionals (CA, doctor, architect, consultant), proprietors, partnership firms, LLPs & private limited companies. Eligibility depends on IT returns, bank statements, turnover, and credit score.",
         },
         {
-            question: "How long does approval usually take?",
-            answer: "Approval depends on bank and documentation; with correct files it often moves faster — typically within 7–21 working days.",
+            question: "What is the maximum loan amount available?",
+            answer:
+                "Loan amounts usually range from ₹50,000 to ₹1 crore depending on income/turnover, credit history (CIBIL score), business vintage, and banking track record.",
+        },
+        {
+            question: "What documents are required for an unsecured loan?",
+            answer:
+                "Basic documents include PAN card & Aadhaar, last 2–3 years ITR with computation, last 6 months bank statements, business registration proof, financial statements (for businesses). Exact requirements vary bank to bank.",
+        },
+        {
+            question: "How fast can an unsecured loan be approved?",
+            answer:
+                "Approval can happen within 24 to 72 hours, and in some cases same-day sanction, subject to document completeness and lender policy.",
+        },
+        {
+            question: "What is the interest rate on unsecured loans?",
+            answer:
+                "Interest rates typically start from 10.5% to 24% per annum, depending on applicant’s credit score, income stability, and the lender (bank or NBFC). Lower risk profiles get better rates.",
+        },
+        {
+            question: "Is a high CIBIL score mandatory?",
+            answer:
+                "A good CIBIL score (750+) improves approval chances and lowers interest rates. However, even scores between 650–750 may be considered with proper structuring and lender selection.",
+        },
+        {
+            question: "Can unsecured loans be used for any purpose?",
+            answer:
+                "Yes. They can be used for business expansion, working capital, machinery purchase, medical or personal needs, education or professional growth. There are no end-use restrictions in most cases.",
+        },
+        {
+            question: "Can a newly started business get an unsecured loan?",
+            answer:
+                "Yes, startups and new businesses may qualify if the promoter has good credit history, income proof is available, and banking transactions are healthy. Specific NBFC products cater to such cases.",
+        },
+        {
+            question: "Is there any prepayment or foreclosure charge?",
+            answer:
+                "Some lenders charge 2%–5% foreclosure fees, while others offer zero prepayment charges after a lock-in period. We help you choose the most cost-effective option.",
+        },
+        {
+            question: "Why should I take unsecured loan through a CA firm?",
+            answer:
+                "Through Patel & Vaghasiya, Chartered Accountants, you get correct lender selection, profile structuring to improve approval, lower interest negotiation, documentation & compliance support, higher sanction probability; banks trust CA‑verified profiles more.",
+        },
+        {
+            question: "Will unsecured loan affect my income tax or GST?",
+            answer:
+                "Loan amount is not taxable income. Interest is deductible in business cases and proper accounting is required. We ensure tax‑efficient treatment.",
+        },
+        {
+            question: "Which banks and NBFCs do you work with?",
+            answer:
+                "We work with leading banks & NBFCs, selecting the best option based on your profile rather than pushing one fixed lender.",
+        },
+        {
+            question: "Can I apply if my previous loan was rejected?",
+            answer:
+                "Yes. Many rejections happen due to wrong lender choice or poor presentation. We reassess, restructure, and reapply with better chances of approval.",
+        },
+        {
+            question: "How can I apply for an unsecured loan?",
+            answer:
+                "Simply contact us with your basic details. Our team will analyze your eligibility, suggest best lenders, handle documentation and track approval till disbursement.",
         },
     ];
 

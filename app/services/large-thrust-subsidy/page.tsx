@@ -38,29 +38,74 @@ export default function LargeThrustSectorSubsidyPage() {
 
   const faqs = [
     {
-      question: "What is considered a Large / Thrust Sector project?",
+      question: "What is a Mega / Thrust Sector Project under Government subsidy schemes?",
       answer:
-        "Large Sector projects typically have investment ≥ ₹50 crore. Thrust Sectors include industries prioritized by the Gujarat government (e.g., Chemicals, Pharmaceuticals, Textiles, Engineering, Renewable Energy, Food Processing, Ceramics, Auto & Auto Components, etc.).",
+        "A Mega or Thrust Sector project is a large-scale industrial project that the Government actively promotes due to its high investment value, employment generation, exports, or strategic importance. Such projects are eligible for special incentives, higher subsidy limits, and fast-track approvals.",
     },
     {
-      question: "What are the major incentives under Gujarat Industrial Policy?",
+      question: "Which businesses qualify as Mega or Thrust Sector units?",
       answer:
-        "Capital Investment Subsidy (up to 20–25%), Interest Subsidy (5–7% for 5–10 years), SGST / VAT Reimbursement (up to 100% for 7–10 years), Power Tariff Subsidy, Employment Generation Subsidy, Stamp Duty Exemption, and more.",
+        "Eligibility depends on investment size, sector, and location. Typically eligible businesses include large manufacturing units, export-oriented units, engineering & specialty industries, chemical/pharma/textiles, auto & auto components, infrastructure-derived industries, and government-notified thrust sectors.",
     },
     {
-      question: "What is the minimum investment required for Large Sector subsidy?",
+      question: "What types of subsidies are available for Mega / Thrust Sector projects?",
       answer:
-        "Minimum fixed capital investment of ₹50 crore (varies by category & location — lower in backward/tribal areas). Thrust sector projects may have additional relaxations.",
+        "Eligible projects may receive multiple benefits such as capital investment subsidy, interest subsidy on term loans, stamp duty & registration fee exemption, electricity duty exemption, power tariff subsidy, employment generation incentives, SGST reimbursement, land & infrastructure support, etc.",
     },
     {
-      question: "How long does it take to get subsidy approval?",
+      question: "Is subsidy available only from State Government or also from Central Government?",
       answer:
-        "Approval usually takes 3–12 months after application submission, depending on project size, documentation, site inspection, and government processing time.",
+        "Subsidies may be available from both Central and State Governments, depending on the scheme. Central schemes are generally framed by Government of India, while states offer additional and often more lucrative incentives under their industrial policies.",
     },
     {
-      question: "Is there any SGST / GST reimbursement for large industries?",
+      question: "What is the minimum investment required to qualify as a Mega project?",
       answer:
-        "Yes — under Gujarat Industrial Policy, eligible large & thrust sector units get reimbursement of 70–100% of Net SGST paid for 7–10 years (capped at 100% of fixed capital investment in most cases).",
+        "Minimum investment criteria differ from state to state but generally investment runs into crores of rupees. Higher investment attracts higher subsidy ceilings, and employment generation is also a key factor.",
+    },
+    {
+      question: "Can an existing business expand and still get Mega sector subsidy?",
+      answer:
+        "Yes. Existing units are eligible if they undertake expansion, modernization or new product lines and meet additional investment and employment criteria; approvals are taken before starting expansion.",
+    },
+    {
+      question: "What is the most common mistake businesses make while applying for subsidies?",
+      answer:
+        "The biggest mistake is starting investment or purchasing machinery before obtaining eligibility/acknowledgment approval. Once this happens, the subsidy may be rejected permanently, even if the project otherwise qualifies.",
+    },
+    {
+      question: "How long does it take to receive Mega sector subsidy?",
+      answer:
+        "The timeline usually involves eligibility approval, investment completion, verification & inspection, claim filing & disbursement. Typically, 6 months to 24 months, depending on scheme and compliance quality.",
+    },
+    {
+      question: "Are subsidies linked with bank loans or project finance?",
+      answer:
+        "Yes. Most Mega sector subsidies are linked with bank loans, project finance, or institutional funding. Proper project report, certifications, and bank coordination significantly improve approval and disbursement speed.",
+    },
+    {
+      question: "Can multiple subsidies be claimed for the same project?",
+      answer:
+        "Yes, in most cases businesses can combine multiple incentives subject to policy limits and non-duplication clauses. Professional structuring ensures maximum lawful benefit.",
+    },
+    {
+      question: "Is subsidy income taxable?",
+      answer:
+        "In many cases, capital-linked subsidies are treated as capital receipts and may not be taxable, while revenue-linked incentives could be taxable. Correct accounting and tax treatment is crucial to avoid future disputes.",
+    },
+    {
+      question: "What documents are required for Mega sector subsidy application?",
+      answer:
+        "Common documents include project report/DPR, term loan sanction letter, land & factory documents, CA certificate, Udyam/Industrial registration, machinery invoices & payment proofs, employment details. Documentation accuracy directly impacts approval and disbursement.",
+    },
+    {
+      question: "Why should a Chartered Accountant handle Mega sector subsidy cases?",
+      answer:
+        "Mega sector subsidy involves investment benefit, zero rejection risk, and long-term compliance safety. A CA ensures maximum benefit, prepares correct project report, handles documentation, timelines, departmental liaison, tax & accounting impact.",
+    },
+    {
+      question: "How can your firm help in Mega / Thrust Sector subsidy services?",
+      answer:
+        "We provide end-to-end assistance including eligibility analysis, project structuring, subsidy planning before investment, application filling & follow-up, disbursement support, post-subsidy compliance and tax advisory. Our objective is not just subsidy approval, but subsidy realization.",
     },
   ];
 

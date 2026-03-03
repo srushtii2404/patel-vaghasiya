@@ -37,19 +37,104 @@ export default function GSTServicePage() {
 
     const faqs = [
         {
-            question: "What is included in GST registration services?",
+            question: "Who is required to take GST registration?",
             answer:
-                "New GST registration, amendment of details, composition scheme registration, e-commerce GST & TCS compliance for platforms like Amazon, Flipkart, Meesho.",
+                "Any person whose aggregate turnover exceeds the prescribed limit (₹40 lakh for goods, ₹20 lakh for services – subject to state & exceptions) or who is engaged in inter‑state supply, e‑commerce, exports, or liable under reverse charge must take GST registration.",
         },
         {
-            question: "How often should GST returns be filed?",
+            question: "Is GST registration mandatory for small businesses or startups?",
             answer:
-                "GSTR-1 monthly/quarterly, GSTR-3B monthly, GSTR-9/9C annually. We also handle ITC reconciliation, e-invoicing, and reverse charge compliance.",
+                "Yes, GST registration is mandatory even if turnover is below threshold in cases like: interstate supplies, e‑commerce operators, service providers in certain states, reverse‑charge transactions, or taxpayer opting to register voluntarily. Voluntary registration helps obtain input tax credit and trade legally.",
         },
         {
-            question: "Can you help with GST notices and audits?",
+            question: "What documents are required for GST registration?",
             answer:
-                "Yes, we provide end-to-end support for notices like ASMT-10/11/12, DRC-01/07, audit & scrutiny notices, ITC mismatches, cancellations, revocations, and appeal filing.",
+                "Basic documents include PAN & Aadhaar of proprietor/partners/directors, address proof of business place, bank details (cancelled cheque/statement), and incorporation documents (for company/LLP). We handle end‑to‑end documentation & online filing.",
+        },
+        {
+            question: "How long does GST registration take?",
+            answer:
+                "Normally 3–7 working days, subject to department verification of details or site visit. With proper documentation, delays and notices can be avoided.",
+        },
+        {
+            question: "Can I take GST registration from my home address?",
+            answer:
+                "Yes. GST registration is allowed from residential premises, provided valid address proof is submitted and the activity is permissible from that location.",
+        },
+        {
+            question: "Which GST returns are required to be filed?",
+            answer:
+                "Depending on your registrations, returns may include GSTR‑1 (outward supplies), GSTR‑3B (summary), GSTR‑2/2A (inward summary), GSTR‑7 (TDS), GSTR‑9/9C (annual return & audit), and various quarterly/annual statements.",
+        },
+        {
+            question: "What happens if GST returns are not filed on time?",
+            answer:
+                "Late fees & interest apply, blocking of e‑way bill, GST notices & assessments, cancellation of GST registration, and regular compliance courts unnecessary litigation. We ensure timely filing to avoid penalties.",
+        },
+        {
+            question: "Can GST returns be revised after filing?",
+            answer:
+                "GST returns cannot be revised directly, but errors can be corrected in subsequent returns. Provisional returns must be revised to avoid long‑term minimum issues.",
+        },
+        {
+            question: "Is GST return filing required even if there is no business?",
+            answer:
+                "Yes. Nil returns must be filed even if there is no transaction during the period. Failure attracts penalties.",
+        },
+        {
+            question: "Can I change my GST return filing frequency?",
+            answer:
+                "The normal frequency is monthly; however taxpayers can opt for Quarterly Returns (QRMP scheme) or Annual Payment as per turnover limits and scheme rules.",
+        },
+        {
+            question: "What is Input Tax Credit (ITC)?",
+            answer:
+                "ITC allows a taxpayer to deduct GST paid on inputs against output tax on sales, reducing net tax liability. Proper invoice and payment through banking are prerequisites.",
+        },
+        {
+            question: "Why does ITC get blocked or reduced?",
+            answer:
+                "Common reasons include supplier not filing return, invoice not reflected in GSTR‑2B, payment not made within 180 days, or mismatch/duplicate claims. We perform ITC reconciliation & corrective action.",
+        },
+        {
+            question: "What types of GST notices are commonly issued?",
+            answer:
+                "Common notices include ASMT‑10/11/12 (verification), DRC‑01/07 (demand), GST audit notices (Section 65/66), scrutiny notices and ITC mismatch notices. We assist in drafting replies and representations.",
+        },
+        {
+            question: "Can GST notices be replied online?",
+            answer:
+                "Yes. Most GST notices are replied through the GST portal, but replies must be legally and technically correct to avoid future disputes.",
+        },
+        {
+            question: "What happens if a GST notice is ignored?",
+            answer:
+                "Ignoring GST notices can lead to GST demands, heavy tax demand with penalty, bank account attachment, or cancellation of GST registration. Timely professional response is critical.",
+        },
+        {
+            question: "Do you handle GST appeals and assessments?",
+            answer:
+                "Yes, we provide complete support for GST scrutiny & assessment, appeals before appellate authority, demand order challenges, and departmental hearings & representations.",
+        },
+        {
+            question: "Why should GST compliance be handled by a Chartered Accountant?",
+            answer:
+                "GST law is dynamic and technical. A CA ensures correct tax planning, maximises ITC utilisation, monitors notice compliance, provides strong representation in litigation, and maintains records for audits.",
+        },
+        {
+            question: "Do you provide monthly GST compliance packages?",
+            answer:
+                "We offer customised monthly/quarterly GST compliance plans based on business size and transaction volume, including returns, reconciliation and advisory.",
+        },
+        {
+            question: "Can you take over GST compliance from another consultant?",
+            answer:
+                "Absolutely. We handle data review, pending return filings, transfer issues, and ensure smooth transition without disruption.",
+        },
+        {
+            question: "How can we get started with your GST services?",
+            answer:
+                "Simply contact us for a free preliminary GST review, and we will guide you on registration, compliance, and risk management.",
         },
     ];
 

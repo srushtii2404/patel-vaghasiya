@@ -36,16 +36,79 @@ export default function ITRServicePage() {
 
     const faqs = [
         {
-            question: "Which ITR forms do you handle?",
-            answer: "ITR-1, ITR-2, ITR-3, ITR-4, ITR-5, ITR-6, ITR-7 for individuals, firms, LLPs, companies, trusts & NGOs.",
+            question: "Who is required to take GST registration?",
+            answer:
+                "Any individual, business, or professional whose income exceeds the basic exemption limit, or who has filed GST returns, done high-value transactions, taken loans, or wants to claim refund, must file ITR.",
         },
         {
-            question: "Do you manage TDS & TCS compliance?",
-            answer: "Yes, we handle monthly calculation, challan payments, quarterly return filing, Form 16/16A, correction returns, and lower/NIL TDS certificates.",
+            question: "What happens if I do not file my ITR on time?",
+            answer:
+                "Late filing may result in penalties up to ₹5,000, interest on tax payable, loss of carry‑forward of losses, difficulty in bank loans, visas & tenders. Timely filing protects your financial credibility.",
         },
         {
-            question: "Can you assist with Income Tax notices and litigation?",
-            answer: "Absolutely. We handle scrutiny notices, defective returns, reassessment notices, mismatch queries, appeals, and demand/ refund rectification.",
+            question: "Can you help in filing ITR for salaried, business & professionals?",
+            answer:
+                "Yes. We handle all types of ITRs, including salaried individuals, business owners & professionals, partnership firms, LLPs & companies, capital gains, stock market & crypto income.",
+        },
+        {
+            question: "I received an Income Tax Notice. Should I worry?",
+            answer:
+                "No. Most notices are routine or mismatch‑based. Our experts analyse the notice, prepare proper replies, and handle the matter professionally to avoid penalties and stress.",
+        },
+        {
+            question: "Can you revise or correct an already filed ITR?",
+            answer:
+                "Yes. If there is any mistake, omission, or mismatch, we can file Revised Return or Rectification within allowed timelines.",
+        },
+        {
+            question: "Who is required to deduct TDS?",
+            answer:
+                "Businesses, professionals, companies, LLPs, and even individuals (in certain cases) must deduct TDS on salary, rent, contractor payments, professional fees, interest, commission, purchase of goods, etc.",
+        },
+        {
+            question: "What are the due dates for TDS return filing?",
+            answer:
+                "TDS returns are filed quarterly, and delays can attract late fee of ₹200 per day, penalty & interest, and notices from the Income Tax Department. Regular TDS compliance avoids unnecessary litigation.",
+        },
+        {
+            question: "What if TDS is deducted but not reflected in 26AS?",
+            answer:
+                "This usually happens due to wrong PAN, PAN not linked to Aadhaar, or non‑filing of GSTR returns. We identify, correct, and follow up to ensure credit is reflected properly.",
+        },
+        {
+            question: "Do you handle TDS notices & defaults?",
+            answer:
+                "Yes. We assist in TDS default notices, short deduction/non‑deduction cases, late filing fee & interest calculations, and preparation of replies & correction statements.",
+        },
+        {
+            question: "What types of Income Tax notices do you handle?",
+            answer:
+                "We handle notices under Section 139(9) – Defective return, Section 143(1) – Intimation/mismatch, Section 142(1) – Scrutiny query, Section 148 – Reassessment, penalty & demand notices.",
+        },
+        {
+            question: "Can you represent us before Income Tax authorities?",
+            answer:
+                "Yes. We provide complete end-to-end litigation support, including drafting replies, online submissions, hearing representation, appeal filing & follow-ups.",
+        },
+        {
+            question: "I have old pending tax matters. Can they be resolved now?",
+            answer:
+                "Yes. Even old or ignored notices can be handled with proper strategy. Early action helps reduce penalties and future complications.",
+        },
+        {
+            question: "Why should I take professional help instead of filing myself?",
+            answer:
+                "Because wrong filing or incorrect replies can lead to heavy tax demand, penalties & prosecution, long-term litigation. A professional ensures accuracy, compliance & peace of mind.",
+        },
+        {
+            question: "How do you ensure confidentiality and accuracy?",
+            answer:
+                "We follow proper documentation checks, secure data handling, expert review before filing, and transparent communication. Your data and case are handled with utmost confidentiality and responsibility.",
+        },
+        {
+            question: "How can we get started with your services?",
+            answer:
+                "Simply contact us with your documents. We will review your case, suggest the best tax-efficient solution, and handle compliance end-to-end.",
         },
     ];
 

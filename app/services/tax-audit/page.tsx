@@ -38,19 +38,69 @@ export default function TaxAuditPage() {
 
     const faqs = [
         {
+            question: "What is a Tax Audit under the Income Tax Act?",
+            answer:
+                "A Tax Audit is a detailed examination of books of accounts by a Chartered Accountant to ensure correctness of income, expenses, compliance with provisions of the Income Tax Act, and proper disclosure in Form 3CD.",
+        },
+        {
             question: "Who requires a Tax Audit?",
             answer:
-                "Businesses with turnover above ₹1 crore, Professionals with gross receipts above ₹50 lakh, and those under presumptive taxation declaring profits below prescribed thresholds.",
+                "Businesses with turnover exceeding ₹1 crore (or up to ₹10 crore if cash receipts/payments do not exceed 5% of total transactions), professionals with gross receipts exceeding ₹50 lakh, and taxpayers under presumptive schemes declaring profits below prescribed limits.",
         },
         {
             question: "What documents are needed for a Tax Audit?",
             answer:
-                "Books of accounts, bank statements, GST & TDS returns, fixed asset details, loan statements, inventory details, agreements, invoices, vouchers, and previous year ITR & audit reports.",
+                "Books of accounts (including Tally or accounting software), bank statements, GST returns & reconciliation, purchase & sales registers, expense vouchers, loan and capital details, agreements, invoices, vouchers, and previous year ITR & audit reports.",
         },
         {
-            question: "What is the timeline for completing a Tax Audit?",
+            question: "What is Form 3CD?",
             answer:
-                "Tax Audit must be completed and reports filed before the statutory deadline of the Income Tax Department, usually 30th September of the assessment year.",
+                "Form 3CD is a detailed statement attached with the Tax Audit Report that includes depreciation details, TDS compliance, GST reconciliation, related party transactions, and disallowances under the Income Tax Act.",
+        },
+        {
+            question: "What is the due date for Tax Audit filing?",
+            answer:
+                "The Tax Audit Report must be filed on or before 30th September of the relevant assessment year (subject to extensions by the government).",
+        },
+        {
+            question: "What is the penalty for non-compliance of Tax Audit?",
+            answer:
+                "Under Section 271B, a penalty of 0.5% of turnover, with a minimum of ₹1,50,000 (or 0.5% of turnover, whichever is lower) may apply unless reasonable cause is proved.",
+        },
+        {
+            question: "Can Tax Audit help in getting bank loans?",
+            answer:
+                "Yes. A properly conducted Tax Audit improves credibility with banks, helps in loan approvals & higher limits, and shows transparent profits and compliance.",
+        },
+        {
+            question: "Is Tax Audit required if GST Audit is already done?",
+            answer:
+                "Yes. GST Audit and Tax Audit are separate compliance under different laws and both may be applicable independently.",
+        },
+        {
+            question: "Is Tax Audit applicable to partnership firms and LLPs?",
+            answer:
+                "Yes. Tax Audit applies to proprietorships, partnership firms, LLPs, and companies if the turnover or income limits are exceeded.",
+        },
+        {
+            question: "Can Tax Audit reduce future Income Tax notices?",
+            answer:
+                "Absolutely. A correct Tax Audit reduces mismatches in AIS / 26AS / GST, avoids disallowances and supports scrutiny and assessment notices.",
+        },
+        {
+            question: "What is the difference between Statutory Audit and Tax Audit?",
+            answer:
+                "Statutory audit is governed by Companies Act/ LLP Act for financial reporting, while Tax Audit is under the Income Tax Act for tax compliance; they have different purposes and applicable laws.",
+        },
+        {
+            question: "Can you handle Tax Audit along with Income Tax Return filing?",
+            answer:
+                "Yes. We provide end-to-end services including Tax Audit, Income Tax Return filing, assessment & scrutiny support, and TDS & GST reconciliation.",
+        },
+        {
+            question: "How much time does a Tax Audit take?",
+            answer:
+                "Time depends on business size: small businesses 7–10 days; medium/large clients 15–30 days. Starting early ensures ample time for review & corrections.",
         },
     ];
 
@@ -109,6 +159,16 @@ export default function TaxAuditPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">
                 {/* LEFT CONTENT */}
                 <div className="flex-1 space-y-12 sm:space-y-16">
+
+                    {/* WHAT IS TAX AUDIT */}
+                    <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
+                        <h2 className="text-3xl sm:text-3xl sm:text-4xl font-extrabold gradient-heading">What Is Tax Audit?</h2>
+                        <div className="glass-card p-6 sm:p-8 md:p-10">
+                            <p className="text-gray-700 text-lg">
+                                A Tax Audit is a detailed examination of books of accounts by a Chartered Accountant under Section 44AB of the Income Tax Act. It ensures correctness of income, expenses, compliance with provisions of the Act and proper disclosure in Form 3CD.
+                            </p>
+                        </div>
+                    </motion.section>
 
                     {/* WHY TAX AUDIT */}
                     <motion.section className="space-y-6" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>

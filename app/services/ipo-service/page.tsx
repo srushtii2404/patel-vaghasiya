@@ -29,19 +29,79 @@ export default function IPOAdvisoryPage() {
 
     const faqs = [
         {
-            question: "What is Pre-IPO advisory?",
+            question: "What is IPO Advisory and why is it important for a company?",
             answer:
-                "Pre-IPO advisory prepares your company for listing by restructuring, financial strengthening, compliance cleanup, valuation and readiness for due diligence.",
+                "IPO Advisory is a comprehensive professional service that guides a company from the pre-IPO stage to a successful listing. It ensures compliance with SEBI regulations, proper restructuring, strong financial reporting, valuation support, and coordination with intermediaries — reducing risk and improving listing success.",
         },
         {
-            question: "Do you support SME IPO?",
+            question: "Which companies are eligible to launch an IPO in India?",
             answer:
-                "Yes, we specialize in SME IPOs including NSE EMERGE, BSE SME and Mainboard IPO.",
+                "Companies eligible for IPO must comply with SEBI ICDR Regulations. Typically, they need a minimum net tangible asset base, profit track record or profit in net worth (depending on route), proper corporate structure and governance, clear statutory, tax and secretarial compliance, and must be eligible by feasibility before IPO preparation.",
         },
         {
-            question: "How long does IPO preparation take?",
+            question: "What are the stages involved in the IPO process?",
             answer:
-                "Generally 3–9 months depending on restructuring, financial restatement, compliance gaps and merchant banker processes.",
+                "The IPO process broadly includes: 1. Pre-IPO feasibility & eligibility check; 2. Financial, tax and legal due diligence; 3. Corporate re-structuring (if applicable); 4. Draft Red Herring Prospectus (DRHP) preparation; 5. SEBI observations & approvals; 6. Marketing, pricing & book building; 7. Listing on stock exchange; 8. Post-listing compliance and advisory after.",
+        },
+        {
+            question: "How early should a company start IPO planning?",
+            answer:
+                "Ideally, IPO planning should start 18-24 months in advance. Early planning helps in cleaning up accounts & tax, improving financials, strengthening governance, optimizing structure, and preparing for due diligence and valuation.",
+        },
+        {
+            question: "Do you assist in converting a private company into a public limited company?",
+            answer:
+                "Yes, we provide complete support for conversion, including alteration of MOA/AOA, share restructuring & ESOP alignment, ROC and regulatory compliance. This is a critical pre-IPO requirement handled carefully.",
+        },
+        {
+            question: "How important are audited financials for IPO?",
+            answer:
+                "Audited financials are the backbone of IPO approval. SEBI requires restated financial statements, consistency in accounting policies, clean audit reports, and compliance with Ind AS or applicable standards. Companies must ensure IPO-ready financial statements with minimal SEBI queries.",
+        },
+        {
+            question: "Can you help in selecting Merchant Bankers and other IPO intermediaries?",
+            answer:
+                "Yes. We assist in shortlisting and negotiating with SEBI-registered Merchant Bankers, Registrars & Bankers, acting as a bridge between promoters and intermediaries and coordinating due diligence, drafting and client queries.",
+        },
+        {
+            question: "What role does a Chartered Accountant play in an IPO?",
+            answer:
+                "A CA plays a crucial role in financial due diligence, restatement of books, regulatory compliance reviews, tax structuring, valuation support, review of DRHP financials, and ongoing post-listing advisory. They ensure accuracy and transparency for investors and regulators.",
+        },
+        {
+            question: "Do you provide IPO advisory for SME IPOs as well?",
+            answer:
+                "Yes, we specialize in SME IPO advisory including NSE EMERGE, BSE SME and offer tailored support for growth-oriented mid-sized businesses.",
+        },
+        {
+            question: "How do you help in reducing SEBI observations and delays?",
+            answer:
+                "We focus on pre-IPO compliance audits, proper documentation, timely old disclosures, and robust due diligence to minimize queries. Our proactive approach helps fast-tracking SEBI approvals and smoother listing.",
+        },
+        {
+            question: "Is IPO advisory only for listing, or also for future compliance?",
+            answer:
+                "IPO advisory goes beyond listing. We assist with post-IPO compliance, quarterly/annual filings, corporate governance, SEBI & stock exchange requirements, and ongoing advisory to maintain continuous compliance and investor relations.",
+        },
+        {
+            question: "What are the common mistakes companies make before IPO?",
+            answer:
+                "Common errors include poor record-keeping and weak audits, unclean tax histories, unsupported related-party transactions, late management information systems, and misaligned corporate/legal structures. Early rectification avoids SEBI observations.",
+        },
+        {
+            question: "How much does IPO advisory service cost?",
+            answer:
+                "IPO advisory costs vary based on scope and complexity; fees depend on work effort, size of transaction, and professional deliverables. We offer transparent, stage-wise professional fees with clear deliverables.",
+        },
+        {
+            question: "Why choose Patel & Vaghasiya for IPO Advisory?",
+            answer:
+                "We bring strong CA-led financial expertise, practical compliance-oriented approach, early-stage risk identification, deep understanding of SEBI & stock exchange requirements, and hands-on promoter handholding for successful listing and long-term company success.",
+        },
+        {
+            question: "How can we start the IPO advisory process?",
+            answer:
+                "Simply contact us for a confidential IPO readiness assessment. We evaluate feasibility, timelines, and costs—then provide a clear roadmap before you commit major resources.",
         },
     ];
 
@@ -91,17 +151,18 @@ export default function IPOAdvisoryPage() {
                         </p>
 
                     </motion.div>
-
-                    <motion.div
-                        className="flex-1 lg:w-1/3 lg:flex lg:justify-end"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <ContactForm />
-                    </motion.div>
                 </div>
             </section>
+
+            {/* WHAT IS IPO ADVISORY */}
+            <motion.section className="space-y-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-12">
+                <h2 className="text-3xl sm:text-4xl font-extrabold gradient-heading">What Is IPO Advisory & Support?</h2>
+                <div className="glass-card p-6 sm:p-8 md:p-10">
+                    <p className="text-gray-700 text-lg">
+                        IPO Advisory is a comprehensive professional service that guides a company from the pre-IPO stage to a successful listing. It ensures compliance with SEBI regulations, proper restructuring, strong financial reporting, valuation support, and coordination with intermediaries — reducing risk and improving listing success.
+                    </p>
+                </div>
+            </motion.section>
 
             {/* ---------------- MAIN CONTENT ---------------- */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-6 lg:gap-10 py-12 sm:py-16 md:py-20 section-bg">

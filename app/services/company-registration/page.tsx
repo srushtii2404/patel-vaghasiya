@@ -114,9 +114,80 @@ export default function CompanyRegistrationPage() {
 
   const faqs = [
     {
-      question: "Is there a minimum capital requirement for company registration in India?",
-      answer: "No, there is no mandatory minimum capital requirement to register a company in India. Earlier, private limited companies were required to have a minimum paid-up capital of Rs. 1 lakh, but this requirement has been removed. Now, you can start a company with any amount of capital, depending on business needs."
+      question: "What is Company Registration?",
+      answer: "Company registration is the legal process of incorporating a business under the Companies Act, 2013 with the Ministry of Corporate Affairs (MCA). Once registered, the company becomes a separate legal entity with its own PAN, bank account, and legal identity."
     },
+    {
+      question: "Which type of company is best for my business?",
+      answer: "It depends on your business size, funding plans, and risk exposure. Private Limited Company – best for startups, scaleups, securities & investments. LLP – suitable for professionals & small businesses. Proprietorship – for very small, local businesses. We evaluate your business model before recommending the structure."
+    },
+    {
+      question: "How many directors are required to register a Private Limited Company?",
+      answer: "A minimum of 2 directors and 2 shareholders are required. The same person can act as both director and shareholder."
+    },
+    {
+      question: "Can I register a company from home address?",
+      answer: "Yes. You can register a company using your residential address. No commercial office is mandatory at the time of incorporation."
+    },
+    {
+      question: "Is GST registration mandatory with company registration?",
+      answer: "GST is not mandatory at incorporation, but required if turnover exceeds threshold limits, or you are doing interstate sales, exports, or e-commerce. We guide you on whether GST should be applied immediately or later."
+    },
+    {
+      question: "How long does company registration take?",
+      answer: "Generally, 7-10 working days depending on document submission and name approval. We provide regular updates until incorporation is completed."
+    },
+    {
+      question: "What documents are required for company registration?",
+      answer: "Basic documents include PAN & Aadhaar of directors, address proof, passport size photo, and office address proof. No physical presence is required."
+    },
+    {
+      question: "What is DIN and DSC?",
+      answer: "DIN (Director Identification Number) is a unique ID for directors. DSC (Digital Signature Certificate) is used for online filings. Both are mandatory and arranged by us."
+    },
+    {
+      question: "Can a salaried person become director in a company?",
+      answer: "Yes. A salaried person can be a director, subject to the terms of their employment contract. We advise on compliance before appointment."
+    },
+    {
+      question: "Is a Chartered Accountant required for company registration?",
+      answer: "Legally, no – but practically, yes. A CA assists with name selection, tax & compliance planning, and avoids future penalties. It saves significant costs in the long run."
+    },
+    {
+      question: "What are the post-registration compliances?",
+      answer: "After incorporation, mandatory compliances include bank account opening, PAN & TAN, annual ROC filings, GST (if applicable), Form DIR-3 KYC, etc. We offer end-to-end compliance support."
+    },
+    {
+      question: "What is the minimum capital required to start a company?",
+      answer: "There is no minimum capital requirement for Private Limited Companies in India. You can start with any amount based on business needs."
+    },
+    {
+      question: "Can foreigners or NRIs start a company in India?",
+      answer: "Yes. NRI and foreign nationals can be shareholders or directors with conditions. Additional documentation and compliance apply."
+    },
+    {
+      question: "Will company registration help in getting bank loans or investors?",
+      answer: "A registered company enhances credibility, meets bank requirements, enables MSME benefits & subsidies, and makes it easier to raise funds."
+    },
+    {
+      question: "What is the cost of company registration?",
+      answer: "The cost depends on number of directors, authorized capital, and government fees. We provide transparent, all-inclusive pricing with no hidden charges."
+    },
+    {
+      question: "Can I change company name or business activity later?",
+      answer: "Yes. Company name, objects, and structure can be changed later through proper legal process. We handle such changes seamlessly."
+    },
+    {
+      question: "What happens if annual compliances are not done?",
+      answer: "Non-compliance can lead to heavy penalties, director disqualification, and company strike-off. Regular compliance is as important as registration."
+    },
+    {
+      question: "Why should I choose Patel & Vaghasiya, Chartered Accountants?",
+      answer: "✔ CA-led advisory (not agents) ✔ Practical & compliance planning ✔ Startup & MSME focused ✔ Long-term compliance partner, not just registration."
+    }
+  ];
+  // old FAQ entries removed below
+  /*
     {
       question: "How many days does it take to register a company in India?",
       answer: "Typically 7-15 working days depending on the company type and document submission. Private Limited Company takes about 10-14 days, while LLP takes 7-10 days."
@@ -194,6 +265,8 @@ export default function CompanyRegistrationPage() {
       answer: "Private Limited Companies file AOC-4 (financial statements) and MGT-7 (annual return) within 60 days of AGM. Small companies have extended timelines. Late filing attracts penalties starting from ₹200 per day."
     }
   ];
+
+  */
 
   return (
     <>

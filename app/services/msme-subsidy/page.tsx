@@ -38,29 +38,84 @@ export default function MsmeSubsidyPage() {
 
   const faqs = [
     {
-      question: "Who is eligible for MSME subsidy?",
+      question: "What is Government Subsidy for MSME?",
       answer:
-        "Any Micro, Small or Medium Enterprise registered under Udyam Registration (MSME certificate) is eligible. Classification depends on investment in plant/machinery/equipment and annual turnover.",
+        "Government subsidy is financial assistance provided by Central or State governments to Micro, Small and Medium Enterprises to lower cost of funding, encourage growth, promote employment, support capital investment or reimburse expenses. Schemes may cover capital subsidy, interest subsidy, credit guarantee, technology upgradation, stamp duty, power/water, and other incentives.",
     },
     {
-      question: "What are the main types of MSME subsidies?",
+      question: "Who is eligible for MSME subsidy in India?",
       answer:
-        "Capital Subsidy, Interest Subsidy, Credit Guarantee Scheme, Technology Upgradation Subsidy, Marketing Assistance, Export Promotion Subsidy, and state-specific incentives (e.g., Gujarat Industrial Policy).",
+        "All MSME units – new or existing – are eligible, provided they are registered (usually via Udyam) and classified correctly based on investment in plant & machinery or turnover. Eligibility can further depend on location, sector (manufacturing/service), and specific scheme criteria.",
     },
     {
-      question: "How much subsidy can I get?",
+      question: "What types of subsidies are available for MSMEs?",
       answer:
-        "Subsidy amount varies by scheme: 15–35% capital subsidy, 3–7% interest subsidy, up to 90% guarantee cover under CGTMSE, etc. Maximum limits depend on project cost and category (Micro/Small/Medium).",
+        "Common subsidies include capital subsidy or term loan assistance, interest subsidy on term loans, credit guarantee cover, technology upgradation support, export/marketing incentives, stamp duty reimbursement, and state-specific incentives under industrial policies.",
     },
     {
-      question: "Is Udyam Registration mandatory for subsidy?",
+      question: "How much subsidy can an MSME get?",
       answer:
-        "Yes, Udyam Registration (online MSME certificate) is mandatory for most central and state subsidy schemes. It is free and takes only a few minutes.",
+        "Subsidy rates vary by scheme – typically 10–50% of project cost for capital subsidies, 3–7% interest subsidy, or fixed amounts. Maximum limits depend on project cost, size category (micro/small/medium) and sector.",
     },
     {
-      question: "How long does it take to get MSME subsidy?",
+      question: "Is subsidy available for existing businesses or only new units?",
       answer:
-        "It depends on the scheme — usually 3–12 months after application submission, including project approval, inspection, and disbursement. We help fast-track the process.",
+        "Both existing and new businesses can claim subsidies. While some schemes target new entrepreneurs, most allow current MSMEs to apply for expansion or modernization grants.",
+    },
+    {
+      question: "Is subsidy available for service sector MSMEs also?",
+      answer:
+        "Yes. Service-sector MSMEs are eligible under many central and state schemes exactly like manufacturing units, subject to scheme-specific conditions.",
+    },
+    {
+      question: "When should subsidy planning be done – before or after investment?",
+      answer:
+        "Ideally subsidy planning should be done before investment. Many schemes require prior approval or project sanction; planning in advance ensures compliance and avoids missed opportunities.",
+    },
+    {
+      question: "Can subsidy be claimed after taking a bank loan?",
+      answer:
+        "Yes, subsidies can often be claimed post-loan, though some schemes require subsidy approval before loan disbursement. We advise coordinating loan and subsidy applications to minimise delays.",
+    },
+    {
+      question: "Is subsidy only for government‑registered units or are state approvals enough?",
+      answer:
+        "Udyam/MSME registration is generally mandatory. Certain state schemes may also require additional registrations (GST, factory license, etc.) but formal government recognition is essential.",
+    },
+    {
+      question: "How long does it take to receive MSME subsidy?",
+      answer:
+        "Timelines vary by scheme – typically 3–12 months from application to disbursement, depending on inspections, approvals and fund release. Complex projects may take longer.",
+    },
+    {
+      question: "Can subsidy application be rejected?",
+      answer:
+        "Yes. Rejections occur due to incomplete documentation, wrong classification, non‑compliance with scheme guidelines or delayed filings. Proper preparation reduces this risk.",
+    },
+    {
+      question: "Is professional help required to claim MSME subsidy?",
+      answer:
+        "While not mandatory, professional assistance greatly improves accuracy, speeds up processing, and increases your chances of approval by ensuring correct documentation and scheme selection.",
+    },
+    {
+      question: "Why choose us for MSME subsidy consultancy?",
+      answer:
+        "We provide experienced guidance on scheme identification, accurate application preparation, liaison with authorities, follow‑up until disbursement and post‑approval compliance – all under one roof.",
+    },
+    {
+      question: "Which authority provides MSME subsidies?",
+      answer:
+        "Subsidies are provided by the Ministry of MSME (central) and by state industry/development departments or nodal agencies such as SIDBI, KVIC, GIDC, etc., depending on the scheme.",
+    },
+    {
+      question: "Can multiple subsidies be claimed for one project?",
+      answer:
+        "Yes, central and state subsidies can often be combined, or different scheme components accessed, provided the rules allow such stacking. We help structure applications to maximise benefits without violating norms.",
+    },
+    {
+      question: "How can we check which subsidy is best for our business?",
+      answer:
+        "By analysing your project cost, industry, location, investment plan and current registrations, we shortlist suitable schemes and recommend the most beneficial subsidy mix for your business.",
     },
   ];
 

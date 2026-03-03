@@ -37,40 +37,65 @@ export default function StartupIndiaRegistrationPage() {
 
   const faqs = [
     {
-      question: "What is Startup Registration?",
-      answer:
-        "Startup Registration involves legally incorporating your business as a Private Limited Company or LLP with the Ministry of Corporate Affairs (MCA). Businesses receive a legal status and then can handle operations by following required compliances.",
+      question: "What is Start-up India registration?",
+      answer: "Start-up India registration is a government recognition provided to eligible startups by the Department for Promotion of Industry and Internal Trade (DPIIT). It helps startups get tax benefits, funding support, compliance relaxations, and easier access to government schemes."
     },
     {
-      question: "Who is eligible for Startup Registration?",
-      answer:
-        "Any Private Limited Company, LLP, or registered Partnership Firm less than 10 years old, with turnover below ₹100 crore, working towards innovation/scalable model, and not formed by splitting an existing business.",
+      question: "Who is eligible for Start-up India registration?",
+      answer: "A business is eligible if it is a Private Limited Company, LLP, or Registered Partnership incorporated within the last 10 years, with annual turnover below ₹100 crore, working on innovation, improvement or scalable business model; and not formed by splitting or reconstructing an existing business."
     },
     {
-      question: "What are the legal documents required for a Startup business?",
-      answer:
-        "Directors'/Partners' PAN, Aadhaar, Address Proof, Photograph, Registered Office Proof (Rent Agreement/NOC + Utility Bill), Memorandum & Articles of Association (for Pvt Ltd), LLP Agreement (for LLP), Partnership Deed (if applicable).",
+      question: "Is Start-up India registration free of cost?",
+      answer: "Yes. Government registration is completely free. However, professional assistance may be required for documentation, drafting, and compliance, which may involve professional fees."
     },
     {
-      question: "What is the cost of Startup Registration?",
-      answer:
-        "Incorporation (Pvt Ltd/LLP): ₹12,000–₹25,000 (including govt fees, DSC, DIN, professional fees). DPIIT Recognition is completely free. Total approx. ₹15,000–₹35,000 depending on structure.",
+      question: "What are the major benefits of Start-up India registration?",
+      answer: "Key benefits include income tax exemption for 3 consecutive years, angel tax exemption (Section 56(2)(viib)), fast‑track patent & trademark registration at lower cost, self‑certification under labour & environment laws, easy access to government tenders, and funding opportunities & startup schemes."
     },
     {
-      question: "How long does Startup Registration take?",
-      answer:
-        "Incorporation: 7–15 working days. DPIIT Recognition: 2–7 working days after application submission (usually instant recognition number + certificate soon after).",
+      question: "Do startups get income tax exemption automatically after registration?",
+      answer: "No. DPIIT recognition is the first step. For income tax exemption, the startup must apply separately to the Inter‑Ministerial Board (IMB) and fulfill conditions under Section 80‑IA. Professional guidance is highly recommended."
     },
     {
-      question: "How to apply for Startup Registration?",
-      answer:
-        "Step 1: Incorporate entity via MCA (SPICe+ form) → Step 2: Create profile on startupindia.gov.in → Step 3: Fill DPIIT application → Step 4: Upload documents & self-certify → Step 5: Get recognition number/certificate.",
+      question: "Can existing businesses apply for Start-up India registration?",
+      answer: "Yes, if the business is within 10 years of incorporation, turnover is within limits, and the model shows innovation or scalability. Many existing MSMEs already qualify but are not eligible if they fail those criteria."
     },
     {
-      question: "Which registration is best for a Startup?",
-      answer:
-        "Private Limited Company is best for most startups (especially if planning to raise funds, issue ESOPs, or scale aggressively). LLP is good for service-based bootstrapped startups with lower compliance needs.",
+      question: "Is Start-up India registration mandatory?",
+      answer: "No, it is optional but highly beneficial if you plan to raise funds, want tax exemptions, apply for government schemes, register intellectual property, or improve business credibility."
     },
+    {
+      question: "How long does Start-up India registration take?",
+      answer: "If documents are proper, registration usually takes 2–7 working days. Delays generally occur due to improper business description or missing declarations."
+    },
+    {
+      question: "What documents are required for Start-up India registration?",
+      answer: "Common documents include Certificate of Incorporation / LLP Agreement, PAN of entity, Directors’/Partners’ details, brief write‑up on innovation & scalability, declaration of non‑reconstruction, and authorized signatory details."
+    },
+    {
+      question: "Can a sole proprietorship get Start-up India registration?",
+      answer: "No. Sole proprietorships are not eligible. You must convert into a Private Limited Company, LLP, or registered Partnership Firm."
+    },
+    {
+      question: "Does Start-up India registration help in getting funding?",
+      answer: "Yes. It improves credibility with angel investors & VCs, and provides eligibility for government grants & funds, as well as access to startup‑focused incubators and accelerators."
+    },
+    {
+      question: "Is GST registration compulsory for Start-up India?",
+      answer: "No. GST registration depends on turnover, nature of business, and state. Start-up India registration is independent of GST."
+    },
+    {
+      question: "Can a startup registered under Start-up India close or change business later?",
+      answer: "Yes, however benefits already claimed may be reviewed. Major changes should be updated, and proper compliance is required to avoid future tax issues."
+    },
+    {
+      question: "Why should I take professional help for Start-up India registration?",
+      answer: "Because business description plays a crucial role, incorrect drafting can lead to rejection, failure to plan benefits properly can cause problems, and professional guidance ensures approval and long‑term compliance safety."
+    },
+    {
+      question: "How can we help you with Start-up India registration?",
+      answer: "We assist with eligibility analysis, documentation & drafting, DPIIT registration, tax exemption planning, and end‑to‑end startup compliance support."
+    }
   ];
 
   return (

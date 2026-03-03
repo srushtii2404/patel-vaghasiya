@@ -37,19 +37,79 @@ export default function ITSubsidyPage() {
 
     const faqs = [
         {
-            question: "Who is eligible for Gujarat IT/ITeS subsidies?",
+            question: "What government subsidies are available for IT / ITeS service companies in India?",
             answer:
-                "New IT/ITeS units set up after 7 Feb 2022 with minimum 10 employees, and expansion units that meet the employee increase criteria are the primary eligible categories. Specific eligibility varies by incentive type.",
+                "IT and ITeS companies can avail various Central and State Government incentives including capital investment subsidy, office rent/lease subsidy, employment generation subsidy (EPF/salary linked), interest subsidy on term loans, electricity duty exemption, stamp duty reimbursement, skill development & training subsidy. Exact benefits depend on state policy, location, and project size.",
         },
         {
-            question: "What is the CAPEX subsidy limit?",
+            question: "Who is eligible to apply for IT / ITeS government subsidies?",
             answer:
-                "CAPEX support can be up to 25% of total investment, capped at ₹50 crore, paid in quarterly installments (usually over 20 quarters).",
+                "Eligibility generally includes proprietorship, partnership, LLP or private limited company registered in IT/ITeS activity, new or expanding units, compliance with local IT policy & labor norms, and meeting minimum employment and investment criteria. Startups and MSMEs often receive additional benefits.",
         },
         {
-            question: "How does employment incentive work?",
+            question: "Are subsidies available for software development and digital service companies?",
             answer:
-                "On hiring and retaining local employees for 1 year, companies can claim 50% of 1 month CTC (capped) — different caps apply for male and female employees. The benefit is tracked digitally via Aadhaar.",
+                "Yes. Subsidies are available for software development companies, SaaS & cloud service providers, BPO/KPO/LPO units, data processing & analytics services, digital marketing & IT support services, FinTech/HealthTech/EdTech IT units. Both export-oriented and domestic service providers are covered.",
+        },
+        {
+            question: "Can startups in IT services get government subsidy benefits?",
+            answer:
+                "Absolutely. Many state IT policies provide special incentives for startups, such as higher subsidy percentages, relaxed eligibility norms, incubation support, rental assistance in IT parks, and training & mentorship grants. Proper structuring at the incorporation stage is crucial.",
+        },
+        {
+            question: "Is office rent or lease subsidy available for IT / ITeS companies?",
+            answer:
+                "Yes. Most state IT policies provide office space rental reimbursement for IT parks, SEZ/non-SEZ zones, and approved commercial IT buildings. Subsidy is usually available for 3 to 5 years from commencement.",
+        },
+        {
+            question: "What is employment generation subsidy in IT / ITeS sector?",
+            answer:
+                "Employment subsidy is granted based on number of local employees hired, EPF registration and salary payment, and retention period. The subsidy may be per employee per year, significantly reducing manpower cost.",
+        },
+        {
+            question: "Is subsidy available on bank loans taken by IT companies?",
+            answer:
+                "Yes. Eligible IT/ITeS units can claim interest subsidy on term loans taken for setup or expansion, with additional benefits for women-led or startup enterprises. This improves cash flow during initial years.",
+        },
+        {
+            question: "Do IT companies get stamp duty and registration fee exemption?",
+            answer:
+                "Many states offer 100% or partial stamp duty reimbursement and registration fee exemption on lease or purchase of office premises, substantially reducing initial setup costs.",
+        },
+        {
+            question: "Are subsidies available for IT companies working from non-metro cities?",
+            answer:
+                "Yes. In fact, higher incentives are often provided for Tier‑2 & Tier‑3 cities, emerging IT hubs, and rural or backward areas to promote decentralized IT growth.",
+        },
+        {
+            question: "What compliances are required after availing IT / ITeS subsidy?",
+            answer:
+                "Post-approval compliances usually include periodic employment reporting, investment utilization certificates, EPF, GST, and labor law compliance, timely renewal of eligibility certificates. Non-compliance can lead to subsidy recovery.",
+        },
+        {
+            question: "How long does it take to receive IT / ITeS subsidy amount?",
+            answer:
+                "Timeline varies by scheme but generally application approval takes 2–6 months, first disbursement after compliance verification, and subsequent claims annually or quarterly. Proper documentation ensures faster disbursement.",
+        },
+        {
+            question: "Can an existing IT company apply for subsidy on expansion?",
+            answer:
+                "Yes. Expansion projects are eligible if additional investment is made, new employment is generated and expansion is approved under the applicable IT policy. Many companies miss this benefit due to lack of planning.",
+        },
+        {
+            question: "Is professional assistance required for subsidy application?",
+            answer:
+                "Yes. Subsidy schemes involve technical eligibility interpretation, financial projections, department coordination, and timely follow-ups. Professional handling maximizes approval chances and reduces rejection risk.",
+        },
+        {
+            question: "How can our firm help you get IT / ITeS government subsidy?",
+            answer:
+                "We assist in scheme identification & eligibility analysis, entity structuring & registration, end-to-end subsidy application, documentation & departmental liaison, disbursement follow-up & compliance support—one-stop solution from planning to subsidy receipt.",
+        },
+        {
+            question: "When should an IT business plan for government subsidy?",
+            answer:
+                "Ideally before company registration, before office lease or loan sanction, before hiring employees. Early planning can increase subsidy amount by 20–40%.",
         },
     ];
 

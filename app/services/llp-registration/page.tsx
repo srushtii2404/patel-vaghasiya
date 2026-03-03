@@ -64,80 +64,80 @@ export default function LLPRegistrationPage() {
 
   const faqs = [
     {
-      question: "What is LLP registration, and how is it different from a private limited company?",
-      answer: "An LLP combines the limited liability protection of a company with the flexibility of a partnership. Unlike private limited companies, registering as an LLP requires no minimum capital requirements and a simpler tax structure without dividend distribution tax."
+      question: "What is an LLP (Limited Liability Partnership)?",
+      answer: "An LLP is a business structure that combines the flexibility of a partnership with the limited liability benefit of a company. Partners are not personally liable for business losses beyond their agreed contribution."
     },
     {
-      question: "How many partners are required to form an LLP in India?",
-      answer: "At least two partners are required to form an LLP. There is no maximum limit on the number of partners, allowing for business scalability."
+      question: "Who should opt for LLP registration?",
+      answer: "LLP is best suitable for professionals (CAs, CS, Lawyers, Consultants), small & medium businesses, family-run businesses, startups wanting low compliance with credibility, or if you want limited liability with minimal compliance."
     },
     {
-      question: "How long does it take to register an LLP in India?",
-      answer: "LLP registration usually takes around 10 to 15 working days, depending on document submission speed, name approval, and government processing efficiency."
+      question: "What are the benefits of registering an LLP?",
+      answer: "Key advantages include limited liability protection, no minimum capital requirement, lower compliance than Pvt Ltd, separate legal entity, no dividend distribution tax, and easy partner addition/removal."
     },
     {
-      question: "What is the minimum capital requirement for LLP registration?",
-      answer: "There is no minimum capital requirement for LLP formation. Partners can contribute capital as agreed in the LLP Agreement."
+      question: "How many partners are required to form an LLP?",
+      answer: "Minimum 2 partners are required. There is no maximum limit on the number of partners."
     },
     {
-      question: "Can foreign nationals be partners in an Indian LLP?",
-      answer: "Yes, foreign nationals can be partners in an Indian LLP. Foreign LLPs can also establish a place of business in India."
+      question: "Can NRIs or foreign nationals become partners in an LLP?",
+      answer: "Yes. NRIs and foreign nationals can become partners in an LLP, subject to FEMA regulations and proper documentation."
     },
     {
-      question: "What are the annual compliance requirements for an LLP?",
-      answer: "LLPs must file annual returns (Form 11), statement of accounts & solvency (Form 8), and maintain proper records. Audit is required only if turnover exceeds Rs. 40 lakhs."
+      question: "Is an office address mandatory for LLP registration?",
+      answer: "A registered office address in India is mandatory. It can be commercial property, owned property, rented property (with NOC), or utility bill & NOC from owner."
     },
     {
-      question: "How much does LLP registration cost?",
-      answer: "LLP registration costs vary from Rs. 6,000 to Rs. 15,000 including government fees, professional services, and stamp duty. Costs depend on capital contribution and complexity."
+      question: "What documents are required for LLP registration?",
+      answer: "Basic documents include PAN & Aadhaar of partners, address proof, passport (for NRI/foreign partners), office address proof, and DSC/DIN if needed."
     },
     {
-      question: "Can an existing partnership firm or company be converted into an LLP?",
-      answer: "Yes, existing partnership firms and private limited companies can be converted into LLPs following the prescribed procedure under the LLP Act, 2008."
+      question: "How much time does LLP registration take?",
+      answer: "Typically, 7–12 working days depending on document readiness, name approval, and government processing time."
     },
     {
-      question: "What happens if my LLP application is rejected?",
-      answer: "If rejected, you can appeal within 60 days or reapply with corrected documents. Common reasons include incomplete documentation or name conflicts."
+      question: "What is the cost of LLP registration?",
+      answer: "Cost depends on number of partners, capital contribution, and state government fees. We offer transparent, all-inclusive packages with no hidden charges."
     },
     {
-      question: "Is LLP registration the same as LLP incorporation?",
-      answer: "Yes, both terms refer to the same process of forming a Limited Liability Partnership under the LLP Act, 2008."
+      question: "Is GST registration mandatory for LLP?",
+      answer: "GST is mandatory only if turnover exceeds the threshold limit or the LLP is engaged in inter-state supply or specific businesses. Otherwise, GST is not compulsory at incorporation stage."
     },
     {
-      question: "How often do I need to renew my LLP registration?",
-      answer: "LLP registration does not require renewal. Once incorporated, the LLP has perpetual succession. However, annual filings must be maintained."
+      question: "Is audit compulsory for LLP?",
+      answer: "Audit is required only if turnover exceeds ₹40 lakh or capital contribution exceeds ₹25 lakh. Otherwise, audit is not mandatory."
     },
     {
-      question: "Can the LLP Agreement be modified after registration?",
-      answer: "Yes, the LLP Agreement can be modified by filing Form 3 with the MCA. All partners must consent to the changes."
+      question: "What are the annual compliances after LLP registration?",
+      answer: "Major compliances include Form 11 (Statement of Accounts & Solvency), Form 8 (Annual Return), and income tax return. GST return if applicable."
     },
     {
-      question: "What documentation should I keep after registering my LLP?",
-      answer: "Keep the Certificate of Incorporation, LLP Agreement, PAN/TAN certificates, bank statements, and all compliance documents securely."
+      question: "Can LLP be converted into a Private Limited Company later?",
+      answer: "Yes, LLP can be converted into a Private Limited Company if business grows and funding or expansion is required. LLP is better than proprietorship due to limited liability, separate legal identity, LLP offers legal recognition, banking & loan eligibility, and builds business credibility."
     },
     {
-      question: "How do I check my LLP registration status online?",
-      answer: "Visit mca.gov.in → MCA Services → LLP Services → Check LLP Name/Status and enter your application number or proposed name."
+      question: "Can partners withdraw money from LLP?",
+      answer: "Yes. Partners can withdraw remuneration, interest on capital, or share of profit as per LLP Agreement and tax provisions."
     },
     {
-      question: "What is the perpetual succession feature of an LLP?",
-      answer: "Perpetual succession means the LLP continues to exist regardless of changes in partnership. Death, retirement, or insolvency of partners doesn't affect the LLP's existence."
+      question: "Do banks give loans to LLP?",
+      answer: "Yes. LLPs are eligible for business loans, government schemes (like CGTMSE), and enjoy better approval chances with proper compliance."
     },
     {
-      question: "How do I add or remove partners after LLP registration?",
-      answer: "Partners can be added or removed by amending the LLP Agreement and filing Form 3 with the MCA. Consent of all existing partners is required."
+      question: "What is LLP Agreement and why is it important?",
+      answer: "LLP Agreement defines partner rights & duties, profit-sharing ratio, capital contribution, management roles, and other key terms. It is a mandatory legal document for LLP."
     },
     {
-      question: "What is the tax limit for an LLP?",
-      answer: "LLPs are taxed as partnerships. Profits are taxed at the partner level. No separate tax on LLP level. Audit required if turnover exceeds Rs. 40 lakhs."
+      question: "Can LLP name be changed later?",
+      answer: "Yes. LLP name can be changed anytime by following MCA procedure and filing prescribed forms."
     },
     {
-      question: "Is LLP better than a traditional partnership?",
-      answer: "Yes, LLP provides limited liability protection while maintaining partnership flexibility. Partners' personal assets are protected from business liabilities."
+      question: "Is LLP suitable for startups?",
+      answer: "Yes, especially bootstrapped startups that want low compliance, cost efficiency, professional image, and later the option to upgrade to Pvt Ltd if required."
     },
     {
-      question: "How to cancel LLP Registration?",
-      answer: "LLP registration can be cancelled by filing Form 24 with the MCA, following the dissolution procedure outlined in the LLP Act, 2008."
+      question: "Why choose us for LLP registration?",
+      answer: "✔ End-to-end support ✔ Expert CA guidance ✔ Transparent pricing ✔ Compliance-oriented approach ✔ Post-registration support."
     }
   ];
 

@@ -39,19 +39,79 @@ export default function WorkingCapitalPage() {
 
     const faqs = [
         {
-            question: "What is the difference between OD and CC?",
+            question: "What is a Working Capital Loan?",
             answer:
-                "Overdraft (OD) is a limit on current account allowing negative balance; Cash Credit (CC) is against stock/receivables with a separate limit. Both fund short-term working capital needs but structure and documentation can differ.",
+                "A short-term finance facility provided to businesses to manage daily operational expenses like raw material purchases, salaries, rent, electricity, GST payments, etc., without disturbing long-term funds.",
         },
         {
-            question: "Can MSMEs get collateral-free OD/CC?",
+            question: "What is the difference between OD (Overdraft) and CC (Cash Credit)?",
             answer:
-                "Yes — under CGTMSE certain schemes and products provide collateral-free working capital limits to eligible MSMEs. Eligibility and limit depend on scheme rules and bank/NBFC product.",
+                "Overdraft is linked to your current account with interest charged only on the amount utilized. Cash Credit is usually against stock & receivables, ideal for manufacturing and trading businesses; both are revolving limits and renew annually.",
         },
         {
-            question: "Which documents banks require for OD/CC?",
+            question: "Who is eligible for a Working Capital Loan?",
             answer:
-                "Typical documents include GST returns, ITR & financial statements, bank statements, stock/creditor/debtor details, KYC, business registration, and collateral papers (if applicable).",
+                "Proprietorships, Partnership Firms, LLPs, Private Limited Companies, Manufacturers, Traders & Service Providers. Eligibility depends on turnover, profitability, banking discipline, and stock/debtor position.",
+        },
+        {
+            question: "Why is Working Capital finance important for a business?",
+            answer:
+                "Without sufficient working capital, cash flow gets blocked, payments to suppliers get delayed, business growth slows down, and credit rating deteriorates. A proper OD/CC facility ensures smooth operations and uninterrupted growth.",
+        },
+        {
+            question: "How is Working Capital Limit calculated by banks?",
+            answer:
+                "Banks generally assess limits based on the turnover method, operating cycle, stock & receivables, CMA data & projections, and banking transactions; proper factoring by a CA increases approval chances and limit.",
+        },
+        {
+            question: "What documents are required for OD / CC loan?",
+            answer:
+                "Common documents include last 2-3 years ITR & financial statements, GST returns, bank statements, stock & debtor statements, CMA data & projections, KYC documents; exact requirement may vary bank-to-bank.",
+        },
+        {
+            question: "Is collateral required for Working Capital Loan?",
+            answer:
+                "Up to certain limits it can be collateral-free (under government schemes); higher limits may require property, plant & machinery, or other collateral security along with prior evaluation and structured proposals.",
+        },
+        {
+            question: "What is the interest rate on OD / CC facility?",
+            answer:
+                "Rates depend on credit score & banking history, business financial strength, collateral offered, and bank & scheme selected; interest is charged only on the utilized amount, not on the full sanctioned limit.",
+        },
+        {
+            question: "Can a new business get a Working Capital Loan?",
+            answer:
+                "Yes, based on promoter background, capital infusion, business model & projections, existing banking relationship and proper project report & financial planning, which play a key role.",
+        },
+        {
+            question: "How long does it take to get OD / CC sanctioned?",
+            answer:
+                "Typically file preparation: 3-5 working days; bank processing: 7-15 working days; timelines depend on document readiness and bank response.",
+        },
+        {
+            question: "Can I increase my existing OD / CC limit?",
+            answer:
+                "Enhancement is possible if turnover has increased, profitability improved, account conduct is regular and stock & debtors have grown; we assist in limit enhancement & restructuring.",
+        },
+        {
+            question: "What happens if Working Capital is not managed properly?",
+            answer:
+                "Poor management may lead to over-utilisation of limits, penal interest, account becoming irregular (SMA/NPA risk), difficulty in future loan approvals; professional monitoring avoids these risks.",
+        },
+        {
+            question: "How can a Chartered Accountant help in OD / CC loan?",
+            answer:
+                "A CA assists with cost assessment of working capital needs, CMA preparation & projections, selecting right bank & scheme, improving approval chances & limits, negotiating interest & terms; strong numbers lead to faster sanction.",
+        },
+        {
+            question: "Is GST compliance important for Working Capital loan assistance?",
+            answer:
+                "Yes, banks heavily rely on GST returns consistency, turnover matching with books and compliance rating; proper GST compliance improves creditworthiness.",
+        },
+        {
+            question: "Why choose us for Working Capital Loan assistance?",
+            answer:
+                "We provide end-to-end support, proper financial planning, bank-ready documentation, faster approvals, post-sanction compliance guidance; we don’t just apply for loans, we structure them for approval.",
         },
     ];
 

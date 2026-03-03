@@ -39,19 +39,79 @@ export default function StatutoryAuditPage() {
 
   const faqs = [
     {
-      question: "Who needs a statutory audit?",
+      question: "What is a statutory audit?",
       answer:
-        "Private Limited Companies, Public Limited Companies, LLPs and entities required by law or regulators.",
+        "A statutory audit is a mandatory audit required by law to verify whether a company's financial statements present a true and fair view of its financial position, as per applicable laws like the Companies Act, Income Tax Act, LLP Act, etc.",
     },
     {
-      question: "What is the timeline for completing a statutory audit?",
+      question: "Who is required to undergo a statutory audit in India?",
       answer:
-        "Typically within the statutory deadlines, depending on the company's financial year and complexity of records.",
+        "Statutory audit is mandatory for all Private Limited & Public Limited Companies, LLPs exceeding prescribed turnover limits, partnership firms & proprietorships under tax audit criteria, and any entities required under specific laws or bank/authority conditions.",
     },
     {
-      question: "What documents are required for the audit?",
+      question: "Why is statutory audit important for a business?",
       answer:
-        "Books of Accounts, vouchers, ledgers, financial statements, compliance reports, and internal control documentation.",
+        "Statutory audit helps ensure legal compliance, improve financial transparency, build trust with banks, investors and stakeholders, detect errors, frauds, and compliance gaps, and strengthen internal financial controls.",
+    },
+    {
+      question: "Is statutory audit compulsory even if there is no profit?",
+      answer:
+        "Yes. Profit or loss is irrelevant. If your entity is covered under statutory provisions, audit is mandatory regardless of turnover, loss, or no business activity.",
+    },
+    {
+      question: "What documents are required for statutory audit?",
+      answer:
+        "Common documents include trial balance & ledgers, bank statements & reconciliations, invoices (sales & purchases), statutory registers, GST, TDS, PF, ESIC returns, and previous audit reports & financial statements. Exact requirements may vary by entity type.",
+    },
+    {
+      question: "What is the difference between statutory audit and tax audit?",
+      answer:
+        "Statutory audit is done under the Companies Act/LLP Act and focuses on financial statements, whereas tax audit is conducted under the Income Tax Act and focuses on tax compliance. Both may have different turnover limits and focus areas.",
+    },
+    {
+      question: "Who can conduct a statutory audit?",
+      answer:
+        "Only a practicing Chartered Accountant holding a valid Certificate of Practice (COP) is authorised to conduct a statutory audit.",
+    },
+    {
+      question: "What happens if statutory audit is not done on time?",
+      answer:
+        "Non‑compliance may result in heavy penalties on company & directors, disqualification of directors, issues in ROC filings, loan rejection by banks, and legal prosecution in severe cases.",
+    },
+    {
+      question: "What is included in your statutory audit service?",
+      answer:
+        "Our statutory audit service typically includes audit planning & risk assessment, verification of books & records, compliance check (Companies Act/LLP Act), final audit report & observations, and guidance on improving controls & compliance.",
+    },
+    {
+      question: "How long does a statutory audit take?",
+      answer:
+        "Duration depends on size of business, quality of accounts, volume of transactions. On average, audits take 2–6 weeks from receipt of complete data.",
+    },
+    {
+      question: "Can statutory audit help in getting bank loans or funding?",
+      answer:
+        "Absolutely. Audited financial statements are mandatory for bank loans, VC/private equity funding, government tenders & subsidies.",
+    },
+    {
+      question: "Is statutory audit required for newly incorporated companies?",
+      answer:
+        "Yes. Even new companies must appoint an auditor and conduct statutory audit after a financial year is complete, regardless of profitability.",
+    },
+    {
+      question: "What is an audit report?",
+      answer:
+        "An audit report is a formal opinion issued by the auditor stating whether financial statements comply with applicable laws and accounting standards.",
+    },
+    {
+      question: "How much does statutory audit cost?",
+      answer:
+        "Audit fees depend on turnover & transaction volume, complexity of operations. We offer transparent, reasonable, and customized pricing.",
+    },
+    {
+      question: "Why choose a professional CA firm for statutory audit?",
+      answer:
+        "Because a professional audit ensures zero compliance risk, practical guidance, not just reporting, timely completion & ROC support, and better financial discipline & credibility.",
     },
   ];
 

@@ -39,16 +39,69 @@ export default function MSMELoanPage() {
 
     const faqs = [
         {
-            question: "Is CGTMSE Loan completely collateral-free?",
-            answer: "Yes, eligible MSMEs can get collateral-free loans under the CGTMSE scheme.",
+            question: "What is an MSME loan?",
+            answer:
+                "An MSME loan is business finance provided to Micro, Small and Medium Enterprises for working capital, machinery purchase, expansion, or business growth. These loans are offered by banks, NBFCs, and government‑supported schemes.",
         },
         {
-            question: "What is the maximum CGTMSE loan limit?",
-            answer: "CGTMSE coverage is available up to ₹2 crore (bank may offer higher based on profile).",
+            question: "Who is eligible for an MSME loan?",
+            answer:
+                "Any business registered as a Proprietorship, Partnership, LLP, or Private Limited Company can apply, provided the business is operational, has valid Udyam (MSME) Registration, and maintains regular turnover and banking transactions (GST compliance where applicable).",
         },
         {
-            question: "Do you guarantee loan approval?",
-            answer: "No — we follow ICAI-ethical practices and only provide documentation & advisory support.",
+            question: "What types of MSME loans are available?",
+            answer:
+                "Common MSME loan options include: Working Capital Loan (OD / CC), Term Loan for machinery or expansion, Unsecured Business Loan, CGTMSE collateral‑free loan, Invoice / Bill Discounting, and Government‑subsidised MSME loans.",
+        },
+        {
+            question: "What is the difference between secured and unsecured MSME loans?",
+            answer:
+                "Secured loans require collateral like property, machinery, or fixed deposits and usually offer lower interest rates. Unsecured loans have no collateral requirement but charge higher interest and may have stricter eligibility criteria.",
+        },
+        {
+            question: "What is CGTMSE loan and how does it help MSMEs?",
+            answer:
+                "CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) allows collateral‑free loans up to ₹5 crore (most banks cap at ₹2 crore). It’s ideal for new and growing MSMEs with good financials but no property to offer as security.",
+        },
+        {
+            question: "How much MSME loan amount can I get?",
+            answer:
+                "Loan amount depends on business turnover and profitability, bank statements, credit score (CIBIL), existing liabilities, and nature of business; typically MSME loans range from ₹5 lakh up to ₹5 crore or more.",
+        },
+        {
+            question: "What documents are required for MSME loan?",
+            answer:
+                "Common documents include PAN & Aadhaar of proprietors/partners/directors, business registration documents, Udyam Registration, last 2–3 years ITR & financial statements, GST returns (if applicable), and bank statements (6–12 months).",
+        },
+        {
+            question: "How long does MSME loan approval take?",
+            answer:
+                "Unsecured loans: 3–7 working days. Secured / CGTMSE loans: 15–30 days. Proper documentation and financial planning significantly reduce approval time.",
+        },
+        {
+            question: "Is GST mandatory for all MSME loans?",
+            answer:
+                "GST is not mandatory for every MSME loan, but many banks impose it for higher limits. Good GST compliance helps in easier approval and improved limit.",
+        },
+        {
+            question: "Will MSME loan affect my personal credit score?",
+            answer:
+                "Yes. Since most MSME loans require personal guarantee, timely repayments improve your CIBIL score while defaults can negatively impact it.",
+        },
+        {
+            question: "Can I apply for MSME loan without income tax return?",
+            answer:
+                "Banks may provide loans without ITR, but interest rates are higher and amounts are limited. Having ITR and full financials is strongly recommended.",
+        },
+        {
+            question: "Why should I take professional help for MSME loans?",
+            answer:
+                "Professional support helps with eligibility assessment, documentation, financial projections, bank/NBFC coordination, faster approval, better interest negotiation, and avoiding rejection or compliance issues.",
+        },
+        {
+            question: "How can Patel & Vaghasiya help in MSME loans?",
+            answer:
+                "We assist with loan eligibility analysis, CMA data & project reports, bank/NBFC coordination, CGTMSE & government schemes support, working capital structuring, post‑sanction compliance, and end‑to‑end MSME loan assistance under one roof.",
         },
     ];
 

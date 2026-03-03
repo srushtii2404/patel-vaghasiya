@@ -65,112 +65,60 @@ export default function OPCRegistrationPage() {
 
   const faqs = [
     {
-      question: "What is One Person Company (OPC) registration?",
-      answer: "One Person Company (OPC) registration is the process by which a single individual can incorporate a private limited company with limited liability and a separate legal identity. The OPC structure combines the benefits of sole proprietorship with the features of a corporate entity."
+      question: "What is a One Person Company (OPC)?",
+      answer: "An OPC is a corporate entity owned and managed by a single individual. It offers limited liability protection while retaining many features of a sole proprietorship."
     },
     {
-      question: "Who is eligible to be a member of an OPC?",
-      answer: "Any Indian citizen and resident who is at least 18 years old can form an OPC. The person must be both the shareholder and director, and must appoint a nominee for succession purposes."
+      question: "Who should opt for OPC registration?",
+      answer: "Solo entrepreneurs, freelancers, and first‑time business owners who want limited liability, credibility, and easy compliance should choose an OPC."
+    },
+    {
+      question: "What are the main benefits of OPC registration?",
+      answer: "Benefits include limited liability, separate legal identity, easy fund raising, corporate credibility, and simplified compliance compared to other company forms."
+    },
+    {
+      question: "What is the minimum capital required for OPC?",
+      answer: "There is no minimum capital requirement. You can start with any amount of authorized capital as per your business needs."
+    },
+    {
+      question: "Can an OPC have employees?",
+      answer: "Yes, an OPC can hire employees just like any other company. It must comply with labour laws and PF/ESI requirements."
+    },
+    {
+      question: "Is GST registration mandatory for OPC?",
+      answer: "GST is required once turnover crosses ₹40 lakhs (₹20 lakhs for special states) or for inter‑state/online supplies. It is not automatically compulsory at incorporation."
+    },
+    {
+      question: "What is a nominee in an OPC?",
+      answer: "A nominee is a person appointed to take over the company in case the sole member dies or becomes incapacitated. Appointment of a nominee is mandatory."
+    },
+    {
+      question: "Can minors or foreign nationals start an OPC?",
+      answer: "No. Only Indian residents above 18 years of age are eligible to form an OPC. Minors and non‑residents cannot act as members."
+    },
+    {
+      question: "What compliances are required after OPC registration?",
+      answer: "Post‑incorporation, OPCs must file annual returns (AOC‑4, MGT‑7), hold two board meetings, maintain statutory books, obtain PAN/TAN, and file income tax returns."
+    },
+    {
+      question: "Is audit mandatory for OPC?",
+      answer: "Audit is mandatory only if turnover exceeds ₹40 lakh or capital contribution exceeds ₹25 lakh in a financial year; otherwise it is not required."
+    },
+    {
+      question: "Can OPC be converted into Private Limited Company later?",
+      answer: "Yes, conversion is possible and often done when business expands or when the member wants to bring in additional shareholders."
+    },
+    {
+      question: "How long does OPC registration take?",
+      answer: "Typically 15–25 working days, depending on name approval and document submission."
     },
     {
       question: "What documents are required for OPC registration?",
-      answer: "PAN Card, Aadhaar Card, identity proof, address proof, recent photographs, nominee consent, registered office proof, and business declaration documents are required."
+      answer: "Essential documents include identity and address proofs of the member and nominee, PAN/Aadhaar, proof of registered office, and digital signature."
     },
     {
-      question: "Is registration of OPC compulsory?",
-      answer: "OPC registration is not compulsory but highly recommended for entrepreneurs seeking limited liability protection, credibility, and access to funding opportunities."
-    },
-    {
-      question: "Who cannot form an OPC?",
-      answer: "Minors, non-residents, people disqualified by court orders, and individuals already serving as directors in more than 20 companies cannot form an OPC."
-    },
-    {
-      question: "How is the registered office address determined for an OPC?",
-      answer: "The registered office can be the owner's residence or a commercial property. It must be a valid address with proper proof of ownership or rental agreement."
-    },
-    {
-      question: "What is the role of a nominee in an OPC?",
-      answer: "A nominee is appointed to take over the OPC if the owner dies or becomes incapacitated. The nominee becomes the shareholder and manages the company temporarily."
-    },
-    {
-      question: "What are the post-incorporation formalities for an OPC?",
-      answer: "OPCs must file annual returns, maintain statutory registers, hold board meetings, obtain PAN/TAN, and comply with tax regulations."
-    },
-    {
-      question: "What is the difference between an OPC and a sole proprietorship?",
-      answer: "OPC provides limited liability and separate legal entity status, while sole proprietorship offers unlimited personal liability. OPC has more credibility and compliance requirements."
-    },
-    {
-      question: "Can an NRI form an OPC in India?",
-      answer: "No, only Indian residents can form an OPC. NRIs can form private limited companies but not OPCs."
-    },
-    {
-      question: "How many OPCs can one person form?",
-      answer: "One person can form only one OPC at a time. If they want to form another business, they must either dissolve the existing OPC or convert it to a private limited company."
-    },
-    {
-      question: "What is the minimum capital requirement for One Person Company Registration?",
-      answer: "There is no minimum capital requirement for OPC registration. The authorized capital can be any amount as decided by the owner."
-    },
-    {
-      question: "Can an OPC have multiple directors?",
-      answer: "No, an OPC can have only one director who is also the shareholder. However, additional directors can be appointed if the OPC converts to a private limited company."
-    },
-    {
-      question: "How long does it take to register a One Person Company in India?",
-      answer: "OPC registration typically takes 15-25 days, including name approval, document preparation, and certificate issuance by the Registrar of Companies."
-    },
-    {
-      question: "Can I run my OPC from my home address?",
-      answer: "Yes, you can use your home address as the registered office for an OPC, provided you have proper proof of address and it complies with local regulations."
-    },
-    {
-      question: "Is it mandatory to appoint a nominee for One Person Company Registration?",
-      answer: "Yes, appointing a nominee is mandatory for OPC registration. The nominee takes over management if the owner becomes incapacitated or passes away."
-    },
-    {
-      question: "Can I choose any name for my One Person Company Registration?",
-      answer: "No, the name must be unique, not similar to existing companies, and must end with 'One Person Company' or 'OPC Private Limited'. It must comply with MCA naming guidelines."
-    },
-    {
-      question: "Do I need a physical office for One Person Company Registration?",
-      answer: "A physical registered office address is required, but it can be your home address or a virtual office, as long as it meets legal requirements."
-    },
-    {
-      question: "Are OPCs required to hold board meetings?",
-      answer: "Yes, OPCs must hold at least two board meetings annually with proper minutes. The director acts as both chairman and member for these meetings."
-    },
-    {
-      question: "Can an OPC issue shares to the public?",
-      answer: "No, OPCs cannot issue shares to the public. Shares can only be held by the single member and nominee. OPCs cannot raise public capital."
-    },
-    {
-      question: "Is GST registration mandatory after One Person Company Registration?",
-      answer: "GST registration is mandatory if turnover exceeds ₹40 lakhs (₹20 lakhs for special category states) or if the OPC is involved in inter-state supplies."
-    },
-    {
-      question: "Can an OPC distribute dividends?",
-      answer: "Yes, OPCs can distribute dividends to shareholders, but dividend distribution tax may apply depending on the tax laws at the time of distribution."
-    },
-    {
-      question: "What happens to an OPC if the member becomes incapacitated?",
-      answer: "The nominee automatically takes over as the shareholder and director. The OPC continues to operate, and the nominee manages it until the original member recovers or a new arrangement is made."
-    },
-    {
-      question: "When must an OPC convert to a private limited company?",
-      answer: "An OPC must convert to a private limited company if its paid-up share capital exceeds ₹50 lakhs or if turnover exceeds ₹2 crores in any financial year."
-    },
-    {
-      question: "Can I convert my existing sole proprietorship to an OPC?",
-      answer: "Yes, existing sole proprietorships can be converted to OPCs, but the process involves forming a new OPC and transferring assets, which may have tax implications."
-    },
-    {
-      question: "How can I close my OPC if I no longer wish to operate it?",
-      answer: "OPCs can be closed through voluntary winding up or strike-off process by filing necessary forms with the MCA and settling all liabilities."
-    },
-    {
-      question: "What happens if I fail to pay my OPC company registration fees?",
-      answer: "Non-payment of registration fees can lead to penalties, and the application may be rejected. Outstanding fees may accumulate interest and affect future filings."
+      question: "Is OPC suitable for long-term business growth?",
+      answer: "Yes, OPCs offer a scalable structure that can later convert to a private limited company for expansion while providing initial low compliance and single‑owner control."
     }
   ];
 

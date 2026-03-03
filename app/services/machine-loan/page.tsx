@@ -41,20 +41,65 @@ export default function MachineryLoanPage() {
 
   const faqs = [
     {
-      question: "What documents are required for a machinery loan?",
-      answer:
-        "GST returns, ITR & financial statements, bank statements, machinery quotation / proforma invoice, KYC of business & promoters, business registration documents, collateral documents (if applicable). Banks may ask additional documents based on profile.",
+      question: "What is a Machinery Loan?",
+      answer: "A Machinery Loan is a business loan taken to purchase new or used machinery, plant, or equipment required for manufacturing, processing, or service activities. It helps businesses grow without blocking working capital."
     },
     {
-      question: "What types of machinery can be financed?",
-      answer:
-        "New or upgraded plant & machinery including CNC machines, fabrication machines, molding machines, printing & packaging equipment, commercial vehicles, automation tools and specialized industrial equipment.",
+      question: "Who can apply for a Machinery Loan?",
+      answer: "Machinery loans are available for proprietorship firms, partnership firms, LLPs, private limited companies, MSMEs & startups, and manufacturing & service industries."
     },
     {
-      question: "Can MSMEs get collateral-free machinery loans?",
-      answer:
-        "Some schemes (like CGTMSE) and certain NBFC products provide collateral-free options for eligible MSMEs. Eligibility depends on business profile and scheme rules.",
+      question: "What type of machinery can be financed?",
+      answer: "Banks and NBFCs finance manufacturing machinery, industrial plant & equipment, printing, textile, pharma, chemical machinery, CNC, VMC, packaging, food processing machines, construction & engineering equipment. Both new and imported machinery can be financed."
     },
+    {
+      question: "Can I get a loan for second-hand (used) machinery?",
+      answer: "Yes. Many banks and NBFCs provide loans for used machinery, subject to machine age & condition, valuation report, remaining useful life, and seller invoice & documents."
+    },
+    {
+      question: "How much loan amount can I get?",
+      answer: "Generally, 75%–90% of machinery cost. Loan amount depends on business turnover, profitability, repayment capacity, and credit history."
+    },
+    {
+      question: "What is the typical repayment period for a Machinery Loan?",
+      answer: "Repayment tenure usually ranges from 3 years to 7 years, depending on nature of machinery, cash flow cycle, and bank policy."
+    },
+    {
+      question: "What interest rate is charged on Machinery Loans?",
+      answer: "Interest rates vary based on bank/NBFC, business profile, credit score, and type of machinery. Rates generally start from 9% onwards for eligible borrowers."
+    },
+    {
+      question: "Is collateral required for a Machinery Loan?",
+      answer: "It depends on the loan structure; many machinery loans are secured by the machinery itself. Additional collateral may be required in some cases. Government schemes like CGTMSE allow collateral-free loans (subject to eligibility)."
+    },
+    {
+      question: "What documents are required for a Machinery Loan?",
+      answer: "Commonly required documents include KYC of promoters, business registration documents, last 2–3 years’ ITR & financial statements, GST returns, machinery quotation/proforma invoice, and bank statements. Exact requirements vary from bank to bank."
+    },
+    {
+      question: "Can a new business or startup get a Machinery Loan?",
+      answer: "Yes. Startups and new businesses can get machinery loans if the project is viable, promoters have relevant experience, and proper project report & estimates are submitted. We assist in project report preparation and bank presentation."
+    },
+    {
+      question: "Is subsidy available on Machinery Loans?",
+      answer: "Yes, eligible businesses can get benefits under MSME schemes, state government subsidy, capital investment subsidy, interest subsidy (where applicable). Proper planning is essential to maximize subsidy benefits."
+    },
+    {
+      question: "How long does machinery loan approval take?",
+      answer: "Once documents are complete, NBFCs take 3–7 working days and banks 7–15 working days. We help speed up approvals by ensuring error-free documentation."
+    },
+    {
+      question: "Can machinery loan be combined with working capital?",
+      answer: "Yes. Many banks offer machinery loan + CC/OD limit; this helps manage both asset purchase and daily operations efficiently."
+    },
+    {
+      question: "Why take professional assistance for Machinery Loan?",
+      answer: "Professional support helps in selecting the right bank/NBFC, better interest rate negotiation, proper project & CMA preparation, faster processing, avoiding rejections due to technical errors."
+    },
+    {
+      question: "How can Patel & Vaghasiya help in Machinery Loan?",
+      answer: "We provide end-to-end support including loan eligibility analysis, bank & NBFC comparison, documentation & application, project report & financials, subsidy planning & follow‑up. Our goal is approval with minimum stress & maximum benefit."
+    }
   ];
 
   return (

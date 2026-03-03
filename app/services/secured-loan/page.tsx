@@ -39,15 +39,78 @@ export default function SecuredLoanPage() {
     const faqs = [
         {
             question: "What is a Secured Loan?",
-            answer: "A secured loan is a loan backed by collateral such as property, machinery, or fixed deposits, allowing higher loan amounts and lower interest rates.",
+            answer:
+                "A secured loan is a loan where the borrower provides an asset such as property, machinery, fixed deposit, shares, or other collateral to the lender. Because security is provided, interest rates are lower and loan amounts are higher compared to unsecured loans.",
         },
         {
-            question: "What is a Hybrid Loan?",
-            answer: "A hybrid loan combines secured collateral with CGTMSE guarantee, allowing MSMEs to access higher funding even with limited assets.",
+            question: "What assets can be used as security for a secured loan?",
+            answer:
+                "Commonly accepted securities include residential or commercial property, industrial land or factory building, machinery & plant, fixed deposits (FD), shares, mutual funds, or bonds (in some cases).",
         },
         {
-            question: "How long does approval take?",
-            answer: "Typically 7–15 working days depending on bank and document readiness.",
+            question: "Who is eligible to apply for a secured loan?",
+            answer:
+                "Secured loans are available to salaried individuals, self-employed professionals (CA, Doctor, Architect, etc.), proprietorships, partnerships, LLPs, Private Limited Companies, MSMEs, and manufacturers. Eligibility depends on income, repayment capacity, credit history, and value of security.",
+        },
+        {
+            question: "What is the maximum loan amount I can get?",
+            answer:
+                "Loan amount usually ranges from 50% to 75% of the market value of the asset offered as security. The exact amount depends on the type of collateral, business turnover or income, credit score, and purpose of the loan.",
+        },
+        {
+            question: "What are the interest rates on secured loans?",
+            answer:
+                "Interest rates are lower than unsecured loans and typically start from 8.5–12% per annum, depending on the nature of security, borrower profile, loan tenure, and bank or NBFC policies.",
+        },
+        {
+            question: "What can a secured loan be used for?",
+            answer:
+                "Secured loans can be used for business expansion or working capital, machinery or equipment purchase, debt consolidation, construction or renovation, long-term funding needs, and personal or professional requirements (subject to lender terms).",
+        },
+        {
+            question: "What is the tenure of a secured loan?",
+            answer:
+                "Tenure can range from 3 years to 20 years depending on the type of asset, borrower’s age & income. Longer tenure helps in lower EMIs and better cash flow management.",
+        },
+        {
+            question: "Is CIBIL score important for a secured loan?",
+            answer:
+                "Although security is provided, lenders still check CIBIL score. A score above 650 improves approval chances and helps in getting better interest rates and terms.",
+        },
+        {
+            question: "Can I get a secured loan even if my income is irregular?",
+            answer:
+                "Yes. For self-employed and business owners, lenders also consider bank statements, cash flow, turnover & GST returns. Proper financial structuring and documentation play a crucial role.",
+        },
+        {
+            question: "How much time does it take to get a secured loan approved?",
+            answer:
+                "In-principle approval: 3–7 working days; final disbursement: 10–21 days. Timelines depend on property valuation, legal checks, and documents.",
+        },
+        {
+            question: "Are there any processing fees or hidden charges?",
+            answer:
+                "Banks may charge a processing fee (0.5%–1.5%), legal & valuation charges, and stamp duty (if applicable). We ensure complete transparency and explain all charges upfront.",
+        },
+        {
+            question: "Can I prepay or foreclose a secured loan?",
+            answer:
+                "Yes. Most lenders allow pre-payment or foreclosure, though some may charge a prepayment penalty, especially in fixed-rate loans.",
+        },
+        {
+            question: "What documents are required for a secured loan?",
+            answer:
+                "Common documents include KYC (PAN, Aadhaar), income proof/financial statements, bank statements, property or asset documents, and business registration (if applicable). Exact list varies based on borrower profile.",
+        },
+        {
+            question: "Why should I take secured loan assistance from a CA firm?",
+            answer:
+                "A CA-led advisory offers the right loan structure, lower interest rates & better terms, correct documentation, faster approvals, alignment with tax & compliance planning, and help with financial statement preparation to boost loan approval.",
+        },
+        {
+            question: "How can Patel & Vaghasiya help in securing the best loan?",
+            answer:
+                "We assist with loan eligibility assessment, choosing the right bank/NBFC, documentation & financial presentation, negotiating interest rates, and end-to-end loan support till disbursement.",
         },
     ];
 
