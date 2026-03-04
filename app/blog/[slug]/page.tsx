@@ -1,4 +1,7 @@
 import { getPost, getPosts } from '@/lib/sanity'
+
+// ISR for individual post pages
+export const revalidate = 60
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import React from 'react'

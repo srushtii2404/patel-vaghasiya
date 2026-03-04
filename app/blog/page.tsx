@@ -2,6 +2,9 @@ import { getPosts, getCategories } from '@/lib/sanity'
 import { Metadata } from 'next'
 import BlogClient from './BlogClient'
 
+// Incremental Static Regeneration: revalidate every minute
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: 'Blog | Patel & Vaghasiya Associates - Latest Updates & Insights',
   description: 'Stay updated with the latest news, insights, and expert advice from Patel & Vaghasiya Associates. Read our comprehensive blog posts on finance, legal, and business topics.',
