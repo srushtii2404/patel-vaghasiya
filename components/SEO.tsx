@@ -26,6 +26,7 @@ export default function SEO({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="generator" content="Patel & Vaghasiya Website" />
 
       {keywords && <meta name="keywords" content={keywords} />}
 
@@ -37,6 +38,8 @@ export default function SEO({
       {image && <meta property="og:image" content={image} />}
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
+      {/* explicitly include site name so platforms don’t show Next/Vercel */}
+      <meta property="og:site_name" content="Patel & Vaghasiya" />
 
       {/* Twitter */}
       <meta
@@ -45,6 +48,7 @@ export default function SEO({
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
 
       {jsonLd && (
         <script

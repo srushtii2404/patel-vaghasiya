@@ -61,15 +61,15 @@ export default function Footer() {
 
                         {/* Social Icons (External) */}
                         <div className="flex items-center gap-4 mt-3">
-                            <a href="/" target="_blank" className="text-gray-400 hover:text-white transition">
+                            <a href="https://www.facebook.com/" target="_blank" className="text-gray-400 hover:text-white transition">
                                 <i className="ri-facebook-fill text-xl"></i>
                             </a>
 
-                            <a href="/" target="_blank" className="text-gray-400 hover:text-white transition">
+                            <a href="https://www.instagram.com/patel_vaghasiya_ca/" target="_blank" className="text-gray-400 hover:text-white transition">
                                 <i className="ri-instagram-line text-xl"></i>
                             </a>
 
-                            <a href="/" target="_blank" className="text-gray-400 hover:text-white transition">
+                            <a href="https://www.linkedin.com/" target="_blank" className="text-gray-400 hover:text-white transition">
                                 <i className="ri-linkedin-fill text-xl"></i>
                             </a>
                         </div>
@@ -99,24 +99,23 @@ export default function Footer() {
                             Registration Services
                         </h3>
                         <ul className="space-y-1.5 text-sm text-gray-400">
-                            <li><Link href="/" className="hover:text-white">Private Limited Company Registration</Link></li>
-                            <li><Link href="/" className="hover:text-white">One Person Company (OPC) Registration</Link></li>
-                            <li><Link href="/" className="hover:text-white">Start-up India Registration</Link></li>
-                            <li><Link href="/" className="hover:text-white">Limited Liability Partnership (LLP) Registration</Link></li>
-                            <li><Link href="/" className="hover:text-white">Partnership Firm Registration</Link></li>
+                            <li><Link href="/services/company-registration" className="hover:text-white">Private Limited Company Registration</Link></li>
+                            <li><Link href="/services/opc-registration" className="hover:text-white">One Person Company (OPC) Registration</Link></li>
+                            <li><Link href="/services/startup-registration" className="hover:text-white">Start-up India Registration</Link></li>
+                            <li><Link href="/services/llp-registration" className="hover:text-white">Limited Liability Partnership (LLP) Registration</Link></li>
+                            <li><Link href="/services/partnership-registration" className="hover:text-white">Partnership Firm Registration</Link></li>
                         </ul>
 
                         <h3 className="text-main font-semibold text-[16px] mb-3 mt-7">
                             Loans
                         </h3>
                         <ul className="space-y-1.5 text-sm text-gray-400">
-                            <li><Link href="/" className="hover:text-white">Project Loan</Link></li>
-                            <li><Link href="/" className="hover:text-white">Machine Loan</Link></li>
-                            <li><Link href="/" className="hover:text-white">Working Capital Loan (OD / CC)</Link></li>
-                            <li><Link href="/" className="hover:text-white">MSME Loan</Link></li>
-                            <li><Link href="/" className="hover:text-white">Property Loan</Link></li>
-                            <li><Link href="/" className="hover:text-white">Secured Loan</Link></li>
-                            <li><Link href="/" className="hover:text-white">Unsecured Loan</Link></li>
+                            <li><Link href="/services/project-loan" className="hover:text-white">Project Loan</Link></li>
+                            <li><Link href="/services/machine-loan" className="hover:text-white">Machine Loan</Link></li>
+                            <li><Link href="/services/working-capital" className="hover:text-white">Working Capital Loan (OD / CC)</Link></li>
+                            <li><Link href="/services/msme-loan" className="hover:text-white">MSME Loan</Link></li>
+                            <li><Link href="/services/secured-loan" className="hover:text-white">Secured Loan</Link></li>
+                            <li><Link href="/services/unsecured-loan" className="hover:text-white">Unsecured Loan</Link></li>
                         </ul>
                     </div>
 
@@ -126,30 +125,30 @@ export default function Footer() {
                             Government Subsidy
                         </h3>
                         <ul className="space-y-1.5 text-sm text-gray-400">
-                            <li><Link href="/" className="hover:text-white">Government subsidy to MSME</Link></li>
-                            <li><Link href="/" className="hover:text-white">Government subsidy to Large / Thrust Sector</Link></li>
-                            <li><Link href="/" className="hover:text-white">Government subsidy to Mega Sector</Link></li>
-                            <li><Link href="/" className="hover:text-white">Government subsidy to IT / ITeS</Link></li>
-                            <li><Link href="/" className="hover:text-white">Government subsidy to Logistic Park</Link></li>
-                            <li><Link href="/" className="hover:text-white">Government subsidy to GCC</Link></li>
+                            <li><Link href="/services/msme-subsidy" className="hover:text-white">Government subsidy to MSME</Link></li>
+                            <li><Link href="/services/large-thrust-subsidy" className="hover:text-white">Government subsidy to Large / Thrust Sector</Link></li>
+                            <li><Link href="/services/mega-subsidy" className="hover:text-white">Government subsidy to Mega Sector</Link></li>
+                            <li><Link href="/services/it-subsidy" className="hover:text-white">Government subsidy to IT / ITeS</Link></li>
+                            <li><Link href="/services/logistic-subsidy" className="hover:text-white">Government subsidy to Logistic Park</Link></li>
+                            <li><Link href="/services/gcc-subsidy" className="hover:text-white">Government subsidy to GCC</Link></li>
                         </ul>
 
                         <h3 className="text-main font-semibold text-[16px] mb-3 mt-7">
                             Tax Services
                         </h3>
                         <ul className="space-y-1.5 text-sm text-gray-400">
-                            <li><Link href="/" className="hover:text-white">GST Registration, Return Filing & Litigation</Link></li>
-                            <li><Link href="/" className="hover:text-white">ITR Filing, TDS & Litigation</Link></li>
+                            <li><Link href="/services/gst-service" className="hover:text-white">GST Registration, Return Filing & Litigation</Link></li>
+                            <li><Link href="/services/itr-service" className="hover:text-white">ITR Filing, TDS & Litigation</Link></li>
                         </ul>
 
                         <h3 className="text-main font-semibold text-[16px] mb-3 mt-7">
                             Audit Services
                         </h3>
                         <ul className="space-y-1.5 text-sm text-gray-400">
-                            <li><Link href="/" className="hover:text-white">Statutory Audit</Link></li>
-                            <li><Link href="/" className="hover:text-white">Tax Audit</Link></li>
-                            <li><Link href="/" className="hover:text-white">Internal Audit</Link></li>
-                            <li><Link href="/" className="hover:text-white">Bank Audit</Link></li>
+                            <li><Link href="/services/statutory-service" className="hover:text-white">Statutory Audit</Link></li>
+                            <li><Link href="/services/tax-audit" className="hover:text-white">Tax Audit</Link></li>
+                            <li><Link href="/services/internal-audit" className="hover:text-white">Internal Audit</Link></li>
+                            <li><Link href="/services/bank-audit" className="hover:text-white">Bank Audit</Link></li>
                         </ul>
                     </div>
 

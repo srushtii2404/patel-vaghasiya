@@ -84,10 +84,10 @@ export default function AboutUsPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/group-people-working-team.jpg"
+                        src="/assets/about.jpeg"
                         alt="Patel & Vaghasiya Chartered Accountants - Professional Team"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                         priority
                     />
                     {/* Dark overlay */}
