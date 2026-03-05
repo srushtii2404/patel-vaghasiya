@@ -1,6 +1,6 @@
 // Email configuration
 export const emailConfig = {
-    user: 'srushtigohel2404@gmail.com',
+    user: 'vishal@pvassociates.in',
     pass: 'qogsrmdutknxcycs'
 };
 
