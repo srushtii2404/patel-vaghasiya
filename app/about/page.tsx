@@ -154,18 +154,6 @@ export default function AboutUsPage() {
                             transition={{ duration: 0.8, delay: 0.5 }}
                             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
                         >
-                            <Link
-                                href="#company-overview"
-                                className="inline-block bg-main text-white font-semibold px-8 py-4 rounded-xl shadow-2xl hover:scale-105 transition-all duration-300 hover:shadow-main/50"
-                            >
-                                Learn More About Us
-                            </Link>
-                            <Link
-                                href="/contact"
-                                className="inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-4 rounded-xl shadow-xl hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                            >
-                                Get Expert Consultation
-                            </Link>
                         </motion.div>
                     </motion.div>
                 </div>

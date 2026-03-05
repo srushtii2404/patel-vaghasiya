@@ -189,7 +189,9 @@ export default function Footer() {
                             IPO Advisory
                         </h3>
                         <p className="text-sm text-gray-400">
-                            Expert IPO Advisory & Support for SME & Mainboard Listings.
+                            <Link href="/services/ipo-service" className="hover:text-white">
+                                Expert IPO Advisory & Support for SME & Mainboard Listings.
+                            </Link>
                         </p>
                     </div>
                 </div>

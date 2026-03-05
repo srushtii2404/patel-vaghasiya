@@ -128,15 +128,16 @@ export default function IPOAdvisoryPage() {
                     transition={{ repeat: Infinity, duration: 8 }}
                     className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"
                 />
-
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-start gap-6 lg:gap-10 relative z-10">
-                    <motion.div
-                        className="flex-1 space-y-4 sm:space-y-6 lg:w-2/3"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">IPO Advisory & Support Services</h1>
+
+    {/* LEFT TEXT BLOCK */}
+    <motion.div
+        className="flex-1 space-y-6 lg:w-2/3"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+    >
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">IPO Advisory & Support Services</h1>
                         <p className="text-xl sm:text-2xl font-semibold text-gray-100">
                             Trusted Pre-IPO Partner for Fast-Growing Companies
                         </p>
@@ -149,9 +150,20 @@ export default function IPOAdvisoryPage() {
                             At Patel & Vaghasiya, Chartered Accountants, we provide end-to-end IPO Advisory and Support Services, with a special focus on Pre-IPO readiness—helping companies strengthen their financials, governance, structure, and documentation well before they enter the capital market.
 
                         </p>
+    </motion.div>
 
-                    </motion.div>
-                </div>
+    {/* RIGHT CONTACT FORM */}
+    <motion.div
+        className="flex-1 lg:w-1/3 lg:flex lg:justify-end"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+    >
+        <ContactForm />
+    </motion.div>
+</div>
+
+               
             </section>
 
             {/* WHAT IS IPO ADVISORY */}
