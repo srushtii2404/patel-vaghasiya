@@ -234,8 +234,8 @@ export default function GCCSubsidyPage() {
             <SEO
                 title="GCC Subsidy Consultant in Gujarat | Patel & Vaghasiya CA"
                 description="Unlock up to ₹200 Crore subsidy for setting up Global Capability Centres in Gujarat — end-to-end consultancy for CAPEX, OPEX, employment & skill incentives."
-                url="https://yourwebsite.com/services/gcc-subsidy"
-                image="https://yourwebsite.com/assets/gcc-subsidy-banner.jpg"
+                url="https://pvassociates.in/services/gcc-subsidy"
+                image="https://pvassociates.in/assets/gcc-subsidy-banner.jpg"
                 keywords="GCC Subsidy Gujarat, GCC Policy 2025-30, Global Capability Centre Gujarat, CAPEX Subsidy GCC, OPEX Subsidy GCC, Employment Incentive GCC, Interest Subsidy GCC, EPF Reimbursement GCC, Skill Development Subsidy, GCC Consulting CA Ahmedabad"
                 jsonLd={jsonLd}
             />

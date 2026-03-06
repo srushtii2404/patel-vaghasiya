@@ -11,8 +11,8 @@ export default function AboutUsPage() {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About Us - Patel & Vaghasiya, Chartered Accountants",
-        "description": "Leading Chartered Accountancy firm in Ahmedabad, Gujarat. Specializing in company registration, project finance, government subsidies, taxation, and audit services.",
-        "url": "https://patelvaghasiyaassociates.com/about",
+        "description": "Leading Chartered Accountancy firm in Ahmedabad, Gujarat. Specializing in company registration, project finance, government subsidies, taxation, GST, and audit services.",
+        "url": "https://pvassociates.in/about",
         "publisher": {
             "@type": "Organization",
             "name": "Patel & Vaghasiya, Chartered Accountants",
@@ -71,11 +71,11 @@ export default function AboutUsPage() {
     return (
         <>
             <SEO
-                title="About Us - Patel & Vaghasiya, Chartered Accountants | Leading CA Firm in Gujarat"
-                description="Leading Chartered Accountancy firm in Ahmedabad, Gujarat. Specializing in company registration, project finance, government subsidies, taxation, and audit services. Meet our expert partners."
-                url="https://patelvaghasiyaassociates.com/about"
-                image="https://patelvaghasiyaassociates.com/assets/logo.png"
-                keywords="Patel Vaghasiya Chartered Accountants, CA firm Ahmedabad, Gujarat CA services, tax advisory Gujarat, business loans Gujarat, government subsidies Gujarat"
+                title="About Us - Patel & Vaghasiya | Best CA in Nikol Ahmedabad"
+                description="About Patel & Vaghasiya, Chartered Accountants in Nikol, Ahmedabad. Expert in company registration, GST, tax planning, audit, project finance and government subsidies across Gujarat."
+                url="https://pvassociates.in/about"
+                image="https://pvassociates.in/assets/logo.png"
+                keywords="CA in Nikol, Chartered Accountant in Ahmedabad, CA firm in Gujarat, tax consultant in Nikol, GST consultant Ahmedabad, best CA for company registration, CA for business loans and subsidies"
                 jsonLd={jsonLd}
             />
 

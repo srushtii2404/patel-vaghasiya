@@ -114,8 +114,8 @@ export default function BankAuditPage() {
       <SEO
         title="Bank Audit Services in Ahmedabad | Patel & Vaghasiya CA"
         description="Ensure accuracy, compliance & trust with our expert Bank Audit Services — statutory audits, concurrent audits, IS audits, credit & forensic audits for banks and financial institutions."
-        url="https://yourwebsite.com/services/bank-audit"
-        image="https://yourwebsite.com/assets/bank-audit-banner.jpg"
+        url="https://pvassociates.in/services/bank-audit"
+        image="https://pvassociates.in/assets/bank-audit-banner.jpg"
         keywords="Bank Audit Services Ahmedabad, Bank Audit, Concurrent Audit, IS Audit, Forensic Audit, Credit Audit"
         jsonLd={jsonLd}
       />

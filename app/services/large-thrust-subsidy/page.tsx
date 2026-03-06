@@ -114,8 +114,8 @@ export default function LargeThrustSectorSubsidyPage() {
       <SEO
         title="Government Subsidy for Large / Thrust Sector | Gujarat Industrial Policy"
         description="Expert support for subsidies to Large & Thrust Sector industries in Gujarat — capital subsidy, interest subsidy, SGST reimbursement, power tariff subsidy, and more."
-        url="https://patelvaghasiyaassociates.com/services/large-thrust-sector-subsidy"
-        image="https://patelvaghasiyaassociates.com/assets/large-thrust-subsidy-banner.jpg"
+        url="https://pvassociates.in/services/large-thrust-sector-subsidy"
+        image="https://pvassociates.in/assets/large-thrust-subsidy-banner.jpg"
         keywords="Large Sector Subsidy Gujarat, Thrust Sector Subsidy, Gujarat Industrial Policy Subsidy, Capital Subsidy Large Industries, SGST Reimbursement Gujarat"
         jsonLd={jsonLd}
       />

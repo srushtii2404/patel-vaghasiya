@@ -118,8 +118,8 @@ export default function ITSubsidyPage() {
             <SEO
                 title="Gujarat Government Subsidy for IT / ITeS – Consultant Services | Patel & Vaghasiya CA"
                 description="Get expert help to claim Gujarat IT/ITeS subsidies (CAPEX, OPEX, employment incentives, interest subsidy, EPF refund, co-working subsidy, upskilling & more)."
-                url="https://yourwebsite.com/services/it-subsidy"
-                image="https://yourwebsite.com/assets/it-subsidy-banner.jpg"
+                url="https://pvassociates.in/services/it-subsidy"
+                image="https://pvassociates.in/assets/it-subsidy-banner.jpg"
                 keywords="Gujarat IT Subsidy, ITeS Incentive Policy, IT Subsidy Consultant Ahmedabad, CAPEX OPEX subsidy Gujarat"
                 jsonLd={jsonLd}
             />

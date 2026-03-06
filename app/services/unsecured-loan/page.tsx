@@ -118,8 +118,8 @@ export default function UnsecuredLoanPage() {
             <SEO
                 title="Unsecured Loan (CGTMSE) Consultant Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Get collateral-free CGTMSE loans for Working Capital (OD/CC), Machinery, and Business Expansion. Expert CGTMSE consultants in Ahmedabad."
-                url="https://yourwebsite.com/services/unsecured-loan"
-                image="https://yourwebsite.com/assets/unsecured-loan-banner.jpg"
+                url="https://pvassociates.in/services/unsecured-loan"
+                image="https://pvassociates.in/assets/unsecured-loan-banner.jpg"
                 keywords="Unsecured Loan Consultant Ahmedabad, CGTMSE Loan, OD/CC Loan, Machinery Loan CGTMSE"
                 jsonLd={jsonLd}
             />

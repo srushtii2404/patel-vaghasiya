@@ -127,7 +127,7 @@ export default function OPCRegistrationPage() {
       <SEO
         title="One Person Company Registration Services in India | Patel & Vaghasiya Associates"
         description="Professional One Person Company (OPC) registration services in India. Single entrepreneur company formation with limited liability protection and compliance support. Get your OPC registered today."
-        url="https://yourwebsite.com/services/opc-registration"
+        url="https://pvassociates.in/services/opc-registration"
         keywords="OPC registration, One Person Company, OPC formation India, single person company, MCA OPC registration, entrepreneur registration"
         jsonLd={jsonLd}
       />

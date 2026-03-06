@@ -107,8 +107,8 @@ export default function MachineryLoanPage() {
       <SEO
         title="Machinery Loan Consultant Service in Ahmedabad | Patel & Vaghasiya CA"
         description="Helping manufacturers, traders & service providers get the right machinery finance — eligibility assessment, CMA data, documentation, lender coordination & subsidy guidance."
-        url="https://yourwebsite.com/services/machine-loan"
-        image="https://yourwebsite.com/assets/machinery-loan-banner.jpg"
+        url="https://pvassociates.in/services/machine-loan"
+        image="https://pvassociates.in/assets/machinery-loan-banner.jpg"
         keywords="Machinery Loan Consultant Ahmedabad, Machine Loan Consultant, Machinery Finance, CMA Data for Machine Loan, Machinery Loan Documentation, Machine Loan Eligibility, MSME Machinery Loan, CGTMSE Machinery Loan, Machinery Loan Subsidy Gujarat, Equipment Finance Consultant"
         jsonLd={jsonLd}
       />

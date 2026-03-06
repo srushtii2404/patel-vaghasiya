@@ -99,8 +99,8 @@ export default function ContactUsPage() {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Us - Patel & Vaghasiya, Chartered Accountants",
-        "description": "Get in touch with Patel & Vaghasiya for expert Chartered Accountancy services in Ahmedabad, Gujarat. Contact us for company registration, tax advisory, project finance, and more.",
-        "url": "https://patelvaghasiyaassociates.com/contact",
+        "description": "Get in touch with Patel & Vaghasiya Chartered Accountants in Nikol, Ahmedabad for company registration, GST, tax planning, audits, loans, and subsidy advisory.",
+        "url": "https://pvassociates.in/contact",
         "publisher": {
             "@type": "Organization",
             "name": "Patel & Vaghasiya",
@@ -152,11 +152,11 @@ export default function ContactUsPage() {
     return (
         <>
             <SEO
-                title="Contact Us - Patel & Vaghasiya, Chartered Accountants | Ahmedabad, Gujarat"
-                description="Get in touch with Patel & Vaghasiya for expert Chartered Accountancy services. Contact us for company registration, tax advisory, project finance, and government subsidies in Ahmedabad, Gujarat."
-                url="https://patelvaghasiyaassociates.com/contact"
-                image="https://patelvaghasiyaassociates.com/assets/logo.png"
-                keywords="contact Patel Vaghasiya Chartered Accountants, CA contact Ahmedabad, Gujarat CA services contact, tax advisory contact Gujarat"
+                title="Contact Best CA in Nikol Ahmedabad | Patel & Vaghasiya"
+                description="Contact Patel & Vaghasiya, Chartered Accountants in Nikol, Ahmedabad for company registration, GST, income tax, audits, loans, and subsidy advisory across Gujarat."
+                url="https://pvassociates.in/contact"
+                image="https://pvassociates.in/assets/logo.png"
+                keywords="contact CA in Nikol, Chartered Accountant contact Ahmedabad, GST consultant Nikol, tax consultant contact Gujarat, Patel Vaghasiya Chartered Accountants contact"
                 jsonLd={jsonLd}
             />
 

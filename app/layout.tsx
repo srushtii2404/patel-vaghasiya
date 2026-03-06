@@ -7,7 +7,6 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
-  
   description:
     "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya offers expert services in Company Registration, GST, Taxation, Audit, Loans & Subsidies in Nikol, Ahmedabad, Gujarat.",
 
@@ -22,6 +21,10 @@ export const metadata: Metadata = {
   ],
 
   metadataBase: new URL("https://pvassociates.in"),
+
+  alternates: {
+    canonical: "https://pvassociates.in/",
+  },
 
   openGraph: {
     title:
@@ -91,9 +94,10 @@ export default function RootLayout({
               },
               openingHours: ["Mo-Fr 09:00-18:00"],
               sameAs: [
-                "https://www.facebook.com/",
                 "https://www.instagram.com/patel_vaghasiya_ca/",
-                "https://www.linkedin.com/",
+                "https://www.facebook.com/share/1aUtwp3UPy/",
+                "https://www.linkedin.com/in/ca-vishal-vaghasiya-67a89177/",
+                "https://www.justdial.com/jd-business?source=2&wap=2&wkwebview=1&rootvc=1&city=Ahmedabad&area=Nikol%20Gam&fullpage=1&nh=1&hide_header=1&nd=1&ln=en&ver=1.0&docid=079PXX79.XX79.230609114404.B4X5",
               ],
             }),
           }}

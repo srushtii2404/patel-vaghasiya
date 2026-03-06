@@ -120,8 +120,8 @@ export default function WorkingCapitalPage() {
             <SEO
                 title="Working Capital (OD / CC) Loan Consultant in Ahmedabad | Patel & Vaghasiya CA"
                 description="Fast, hassle-free OD/CC & working capital consultancy for manufacturers, traders, contractors and MSMEs — CMA data, documentation, CGTMSE help, renewals & enhancements."
-                url="https://yourwebsite.com/services/working-capital"
-                image="https://yourwebsite.com/assets/working-capital-banner.jpg"
+                url="https://pvassociates.in/services/working-capital"
+                image="https://pvassociates.in/assets/working-capital-banner.jpg"
                 keywords="working capital loan consultant in ahmedabad, OD CC loan consultant, CMA data preparation Ahmedabad, collateral free working capital loan, CGTMSE loan for MSME, cash credit limit consultant, overdraft limit for business, working capital finance Gujarat"
                 jsonLd={jsonLd}
             />

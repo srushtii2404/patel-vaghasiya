@@ -123,8 +123,8 @@ export default function PartnershipRegistrationPage() {
       <SEO
         title="Partnership Firm Registration Online in India | Patel & Vaghasiya"
         description="Register your Partnership Firm online in India with expert help — Partnership Deed drafting, PAN & TAN registration, fast filing & complete legal assistance."
-        url="https://patelvaghasiyaassociates.com/services/partnership-registration"
-        image="https://patelvaghasiyaassociates.com/assets/partnership-banner.jpg"
+        url="https://pvassociates.in/services/partnership-registration"
+        image="https://pvassociates.in/assets/partnership-banner.jpg"
         keywords="Partnership Firm Registration Ahmedabad, Partnership Registration Online India, Partnership Deed Drafting, Register Partnership Firm Gujarat"
         jsonLd={jsonLd}
       />

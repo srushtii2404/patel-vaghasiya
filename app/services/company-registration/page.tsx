@@ -273,9 +273,9 @@ export default function CompanyRegistrationPage() {
       <SEO
         title="Private Limited Company Registration in India | Patel & Vaghasiya"
         description="Expert Private Limited Company registration services in India. Complete legal compliance, documentation support, and fast-track incorporation under Companies Act, 2013."
-        url="https://patelvaghasiyaassociates.com/services/company-registration"
+        url="https://pvassociates.in/services/company-registration"
         keywords="Private Limited Company Registration, Pvt Ltd Registration, Company Incorporation India, MCA Company Registration, Business Registration Ahmedabad"
-        canonical="https://patelvaghasiyaassociates.com/services/company-registration"
+        canonical="https://pvassociates.in/services/company-registration"
       />
 
       <script

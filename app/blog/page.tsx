@@ -6,32 +6,36 @@ import BlogClient from './BlogClient'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Blog | Patel & Vaghasiya Associates - Latest Updates & Insights',
-  description: 'Stay updated with the latest news, insights, and expert advice from Patel & Vaghasiya Associates. Read our comprehensive blog posts on finance, legal, and business topics.',
-  keywords: 'blog, finance, legal advice, business insights, Patel Vaghasiya Associates',
+  title: 'CA Blog | Patel & Vaghasiya - GST, Taxation, Subsidy & Finance Insights',
+  description:
+    'CA blog by Patel & Vaghasiya, Chartered Accountants in Nikol, Ahmedabad. Read expert articles on GST, income tax, company law, government subsidies, MSME loans and business finance.',
+  keywords:
+    'CA blog, GST articles, income tax tips, subsidy schemes Gujarat, business finance blog, Patel Vaghasiya Chartered Accountants, CA in Nikol Ahmedabad',
   openGraph: {
-    title: 'Blog | Patel & Vaghasiya Associates',
-    description: 'Stay updated with the latest news, insights, and expert advice from Patel & Vaghasiya Associates.',
-    url: 'https://patelvaghasiyaassociates.com/blog',
-    siteName: 'Patel & Vaghasiya Associates',
+    title: 'CA Blog | Patel & Vaghasiya Chartered Accountants',
+    description:
+      'Latest CA insights on GST, income tax, audits, subsidies and business finance from Patel & Vaghasiya in Nikol, Ahmedabad.',
+    url: 'https://pvassociates.in/blog',
+    siteName: 'Patel & Vaghasiya',
     type: 'website',
     images: [
       {
         url: '/og-blog.jpg',
         width: 1200,
         height: 630,
-        alt: 'Patel & Vaghasiya Associates Blog',
+        alt: 'Patel & Vaghasiya Chartered Accountants Blog',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | Patel & Vaghasiya Associates',
-    description: 'Stay updated with the latest news, insights, and expert advice from Patel & Vaghasiya Associates.',
+    title: 'CA Blog | Patel & Vaghasiya Chartered Accountants',
+    description:
+      'Expert CA insights on GST, income tax, audits, subsidies and business finance from Patel & Vaghasiya in Nikol, Ahmedabad.',
     images: ['/og-blog.jpg'],
   },
   alternates: {
-    canonical: 'https://patelvaghasiyaassociates.com/blog',
+    canonical: 'https://pvassociates.in/blog',
   },
 }
 
@@ -43,18 +47,19 @@ export default async function BlogPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'Patel & Vaghasiya Associates Blog',
-    description: 'Latest updates and insights from Patel & Vaghasiya Associates',
-    url: 'https://patelvaghasiyaassociates.com/blog',
+    name: 'Patel & Vaghasiya Chartered Accountants Blog',
+    description:
+      'Latest CA updates and insights on GST, taxation, audit, subsidies and business finance from Patel & Vaghasiya Chartered Accountants in Nikol, Ahmedabad.',
+    url: 'https://pvassociates.in/blog',
     publisher: {
       '@type': 'Organization',
-      name: 'Patel & Vaghasiya Associates',
-      url: 'https://patelvaghasiyaassociates.com',
+      name: 'Patel & Vaghasiya Chartered Accountants',
+      url: 'https://pvassociates.in',
     },
     blogPost: posts.slice(0, 10).map((post: any) => ({
       '@type': 'BlogPosting',
       headline: post.title,
-      url: `https://patelvaghasiyaassociates.com/blog/${post.slug.current}`,
+      url: `https://pvassociates.in/blog/${post.slug.current}`,
       datePublished: post.publishedAt,
       author: {
         '@type': 'Person',

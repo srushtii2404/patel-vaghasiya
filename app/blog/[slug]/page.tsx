@@ -131,24 +131,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const imageUrl = post.mainImage?.asset?.url || '/og-default.jpg'
 
   return {
-    metadataBase: new URL('https://patelvaghasiyaassociates.com'),
-    title: `${post.title} | Patel & Vaghasiya Associates Blog`,
+    metadataBase: new URL('https://pvassociates.in'),
+    title: `${post.title} | Patel & Vaghasiya CA Blog`,
     description,
     keywords: [
       post.title,
-      'Patel Vaghasiya Associates',
+      'Patel & Vaghasiya Chartered Accountants',
       'blog',
       'finance',
       'legal',
       'business',
       ...(post.categories?.map((cat: { _id: string; title: string }) => cat.title) || [])
     ].join(', '),
-    authors: [{ name: post.author?.name || 'Patel & Vaghasiya Associates' }],
+      authors: [{ name: post.author?.name || 'Patel & Vaghasiya Chartered Accountants' }],
     openGraph: {
       title: post.title,
       description,
       url: `/blog/${post.slug.current}`,
-      siteName: 'Patel & Vaghasiya Associates',
+      siteName: 'Patel & Vaghasiya',
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.publishedAt,
@@ -217,15 +217,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Patel & Vaghasiya Associates',
+      name: 'Patel & Vaghasiya Chartered Accountants',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://patelvaghasiyaassociates.com/logo.png',
+        url: 'https://pvassociates.in/assets/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://patelvaghasiyaassociates.com/blog/${post.slug.current}`,
+      '@id': `https://pvassociates.in/blog/${post.slug.current}`,
     },
     keywords: post.categories?.map((cat: { _id: string; title: string }) => cat.title).join(', '),
     articleSection: post.categories?.[0]?.title || 'General',
@@ -242,19 +242,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://patelvaghasiyaassociates.com',
+        item: 'https://pvassociates.in',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://patelvaghasiyaassociates.com/blog',
+        item: 'https://pvassociates.in/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://patelvaghasiyaassociates.com/blog/${post.slug.current}`,
+        item: `https://pvassociates.in/blog/${post.slug.current}`,
       },
     ],
   }
