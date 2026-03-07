@@ -103,7 +103,7 @@ export default function StartupIndiaRegistrationPage() {
       <SEO
         title="Startup India Registration & DPIIT Recognition | Ahmedabad, Gujarat"
         description="Register your Startup under Startup India scheme — Get DPIIT recognition, tax holiday, funding support, fast-track IPR, and simplified compliance with expert help."
-        url="https://pvassociates.in/services/startup-india-registration"
+        url="https://pvassociates.in/services/startup-registration"
         image="https://pvassociates.in/assets/startup-banner.jpg"
         keywords="Startup India Registration Ahmedabad, DPIIT Recognition, Startup Tax Benefits, Startup Funding, Startup India Scheme Gujarat"
         jsonLd={jsonLd}
