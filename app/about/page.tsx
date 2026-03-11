@@ -163,7 +163,7 @@ export default function AboutUsPage() {
             </section>
 
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-6 md:px-20 py-20 section-bg">
+            <div className="max-w-7xl mx-auto px-6 md:px-20 py-20">
                 <div className="space-y-20">
 
                     {/* Company Overview */}
