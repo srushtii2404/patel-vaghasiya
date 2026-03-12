@@ -24,18 +24,18 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://pvassociates.in/",
+    canonical: "https://www.pvassociates.in/",
   },
 
   openGraph: {
     title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya",
     description:
       "Expert Chartered Accountants offering GST, Income Tax, Company Registration, Audit and Loan/Subsidy consultancy services in Ahmedabad.",
-    url: "https://pvassociates.in/",
+    url: "https://www.pvassociates.in/",
     siteName: "Patel & Vaghasiya Associates",
     images: [
       {
-        url: "https://pvassociates.in/og-image.jpg",
+        url: "https://www.pvassociates.in/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     title: "Best CA in Nikol Ahmedabad",
     description:
       "GST, Income Tax, Company Registration and Audit services by Patel & Vaghasiya Chartered Accountants.",
-    images: ["https://pvassociates.in/og-image.jpg"],
+    images: ["https://www.pvassociates.in/og-image.jpg"],
   },
 
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
@@ -71,8 +71,8 @@ const Page = async () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Patel & Vaghasiya Chartered Accountants",
-              url: "https://pvassociates.in",
-              logo: "https://pvassociates.in/logo.png",
+              url: "https://www.pvassociates.in",
+              logo: "https://www.pvassociates.in/logo.png",
               sameAs: [
                 "https://www.linkedin.com/",
                 "https://www.facebook.com/",
@@ -82,9 +82,9 @@ const Page = async () => {
               "@context": "https://schema.org",
               "@type": "AccountingService",
               name: "Patel & Vaghasiya Chartered Accountants",
-              image: "https://pvassociates.in/logo.png",
-              "@id": "https://pvassociates.in",
-              url: "https://pvassociates.in",
+              image: "https://www.pvassociates.in/logo.png",
+              "@id": "https://www.pvassociates.in",
+              url: "https://www.pvassociates.in",
               telephone: "+91XXXXXXXXXX",
               address: {
                 "@type": "PostalAddress",

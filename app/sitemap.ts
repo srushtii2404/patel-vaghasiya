@@ -1,4 +1,4 @@
-const baseUrl = "https://pvassociates.in";
+const baseUrl = "https://www.pvassociates.in";
 
 export default function sitemap() {
   const routes = [

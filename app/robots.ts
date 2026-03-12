@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://pvassociates.in";
+  const baseUrl = "https://www.pvassociates.in";
 
   return {
     rules: {

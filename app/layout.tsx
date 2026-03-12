@@ -6,6 +6,8 @@ import WhatsAppInstagramFloat from "@/components/WhatsAppInstagramFloat";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.pvassociates.in"),
+
   title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
   description:
     "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya offers expert services in Company Registration, GST, Taxation, Audit, Loans & Subsidies in Nikol, Ahmedabad, Gujarat.",
@@ -20,25 +22,27 @@ export const metadata: Metadata = {
     "Tax consultant in Nikol Ahmedabad",
   ],
 
-  metadataBase: new URL("https://pvassociates.in"),
-
   alternates: {
-    canonical: "https://pvassociates.in/",
+    canonical: "https://www.pvassociates.in/",
   },
 
   openGraph: {
     title:
       "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+
     description:
       "Top Chartered Accountant in Nikol offering GST, Taxation, Audit & Company Registration services in Ahmedabad.",
-    url: "https://pvassociates.in",
+
+    url: "https://www.pvassociates.in",
+
     siteName: "Patel & Vaghasiya",
+
     images: [
       {
         url: "/assets/logo.png",
         width: 800,
         height: 800,
-        alt: "Best CA in Nikol Ahmedabad",
+        alt: "Patel & Vaghasiya Chartered Accountants",
       },
     ],
     type: "website",
@@ -55,11 +59,15 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/favicon.png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
@@ -71,17 +79,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Local Business Structured Data */}
+        {/* Structured Data for Local SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AccountingService",
-              name: "Patel & Vaghasiya - Chartered Accountant in Nikol Ahmedabad",
+              name: "Patel & Vaghasiya Chartered Accountants",
               description:
                 "Chartered accountants offering company registration, loans, subsidies, taxation, audit and advisory services in Ahmedabad",
-              url: "https://pvassociates.in",
+
+              url: "https://www.pvassociates.in",
+
               telephone: "+91 95109 90170",
               address: {
                 "@type": "PostalAddress",
