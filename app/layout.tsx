@@ -8,7 +8,11 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.pvassociates.in"),
 
-  title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+  title: {
+    default: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    template: "%s | Patel & Vaghasiya",
+  },
+
   description:
     "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya offers expert services in Company Registration, GST, Taxation, Audit, Loans & Subsidies in Nikol, Ahmedabad, Gujarat.",
 
@@ -27,9 +31,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
-
+    title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
       "Top Chartered Accountant in Nikol offering GST, Taxation, Audit & Company Registration services in Ahmedabad.",
 
@@ -39,35 +41,46 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/assets/logo.png",
+        url: "https://www.pvassociates.in/assets/logo.png",
         width: 800,
         height: 800,
         alt: "Patel & Vaghasiya Chartered Accountants",
       },
     ],
+
+    locale: "en_IN",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
       "Expert CA services in Nikol Ahmedabad for GST, Taxation, Audit & Company Registration.",
-    images: ["/assets/logo.png"],
+    images: ["https://www.pvassociates.in/assets/logo.png"],
   },
 
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/favicon.png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -79,20 +92,31 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Structured Data for Local SEO */}
+        {/* Local Business Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AccountingService",
+
               name: "Patel & Vaghasiya Chartered Accountants",
+
               description:
                 "Chartered accountants offering company registration, loans, subsidies, taxation, audit and advisory services in Ahmedabad",
 
               url: "https://www.pvassociates.in",
 
-              telephone: "+91 95109 90170",
+              logo: "https://www.pvassociates.in/assets/logo.png",
+
+              image: "https://www.pvassociates.in/assets/logo.png",
+
+              telephone: "+91 9510990170",
+
+              priceRange: "$$",
+
+              areaServed: "Ahmedabad",
+
               address: {
                 "@type": "PostalAddress",
                 streetAddress:
@@ -102,7 +126,9 @@ export default function RootLayout({
                 postalCode: "382350",
                 addressCountry: "IN",
               },
+
               openingHours: ["Mo-Fr 09:00-18:00"],
+
               sameAs: [
                 "https://www.instagram.com/patel_vaghasiya_ca/",
                 "https://www.facebook.com/share/1aUtwp3UPy/",
