@@ -9,20 +9,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.pvassociates.in"),
 
   title: {
-    default: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
-    template: "%s | Patel & Vaghasiya",
+    default:
+      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    template: "%s | Patel & Vaghasiya Chartered Accountants",
   },
 
   description:
-    "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya offers expert services in Company Registration, GST, Taxation, Audit, Loans & Subsidies in Nikol, Ahmedabad, Gujarat.",
+    "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya Chartered Accountants offer GST, Taxation, Audit, Company Registration, Loans and Subsidy consulting services in Nikol, Ahmedabad, Gujarat.",
 
   keywords: [
-    "CA in Nikol",
-    "Best CA in Nikol Ahmedabad",
+    "CA in Nikol Ahmedabad",
+    "Best CA in Nikol",
     "Chartered Accountant in Nikol",
     "CA firm in Nikol Gujarat",
     "GST consultant in Nikol",
-    "Company registration in Nikol",
+    "Company registration in Nikol Ahmedabad",
     "Tax consultant in Nikol Ahmedabad",
   ],
 
@@ -31,13 +32,13 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    title:
+      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
-      "Top Chartered Accountant in Nikol offering GST, Taxation, Audit & Company Registration services in Ahmedabad.",
+      "Patel & Vaghasiya Chartered Accountants provide GST, Taxation, Audit, Company Registration and Financial advisory services in Nikol, Ahmedabad.",
 
-    url: "https://www.pvassociates.in",
-
-    siteName: "Patel & Vaghasiya",
+    url: "https://www.pvassociates.in/",
+    siteName: "Patel & Vaghasiya Chartered Accountants",
 
     images: [
       {
@@ -54,9 +55,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    title:
+      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
-      "Expert CA services in Nikol Ahmedabad for GST, Taxation, Audit & Company Registration.",
+      "Expert Chartered Accountant services in Nikol Ahmedabad including GST, Audit, Taxation and Company Registration.",
     images: ["https://www.pvassociates.in/assets/logo.png"],
   },
 
@@ -74,13 +76,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -90,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         {/* Local Business Structured Data */}
         <script
@@ -102,20 +97,23 @@ export default function RootLayout({
 
               name: "Patel & Vaghasiya Chartered Accountants",
 
-              description:
-                "Chartered accountants offering company registration, loans, subsidies, taxation, audit and advisory services in Ahmedabad",
-
-              url: "https://www.pvassociates.in",
+              url: "https://www.pvassociates.in/",
 
               logo: "https://www.pvassociates.in/assets/logo.png",
 
               image: "https://www.pvassociates.in/assets/logo.png",
 
+              description:
+                "Chartered Accountant firm in Nikol Ahmedabad providing GST consulting, taxation, audit, company registration and financial advisory services.",
+
               telephone: "+91 9510990170",
 
               priceRange: "$$",
 
-              areaServed: "Ahmedabad",
+              areaServed: {
+                "@type": "City",
+                name: "Ahmedabad",
+              },
 
               address: {
                 "@type": "PostalAddress",
@@ -127,13 +125,12 @@ export default function RootLayout({
                 addressCountry: "IN",
               },
 
-              openingHours: ["Mo-Fr 09:00-18:00"],
+              openingHours: "Mo-Fr 09:00-18:00",
 
               sameAs: [
                 "https://www.instagram.com/patel_vaghasiya_ca/",
                 "https://www.facebook.com/share/1aUtwp3UPy/",
                 "https://www.linkedin.com/in/ca-vishal-vaghasiya-67a89177/",
-                "https://www.justdial.com/jd-business?source=2&wap=2&wkwebview=1&rootvc=1&city=Ahmedabad&area=Nikol%20Gam&fullpage=1&nh=1&hide_header=1&nd=1&ln=en&ver=1.0&docid=079PXX79.XX79.230609114404.B4X5",
               ],
             }),
           }}

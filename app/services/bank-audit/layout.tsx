@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Ensure accuracy, compliance & trust with our expert Bank Audit Services — statutory audits, concurrent audits, IS audits, credit & forensic audits for banks and financial institutions.",
   alternates: {
-    canonical: "https://pvassociates.in/services/bank-audit",
+    canonical: "https://www.pvassociates.in/services/bank-audit",
   },
   openGraph: {
     title: "Bank Audit Services in Ahmedabad | Patel & Vaghasiya CA",
     description:
       "Ensure accuracy, compliance & trust with our expert Bank Audit Services — statutory audits, concurrent audits, IS audits, credit & forensic audits for banks and financial institutions.",
-    url: "https://pvassociates.in/services/bank-audit",
+    url: "https://www.pvassociates.in/services/bank-audit",
     siteName: "Patel & Vaghasiya",
     type: "website",
     images: [

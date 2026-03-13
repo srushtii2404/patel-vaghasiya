@@ -110,8 +110,8 @@ export default function IPOAdvisoryPage() {
             <SEO
                 title="IPO Advisory & Support Services | Pre-IPO Consulting"
                 description="End-to-end IPO advisory including pre-IPO readiness, restructuring, valuation, DRHP support, due diligence and post-IPO compliance."
-                url="https://pvassociates.in/services/ipo-service"
-                image="https://pvassociates.in/assets/ipo-banner.jpg"
+                url="https://www.pvassociates.in/services/ipo-service"
+                image="https://www.pvassociates.in/assets/ipo-banner.jpg"
                 keywords="IPO Advisory, SME IPO, Mainboard IPO, Pre IPO Consulting, DRHP Drafting"
                 jsonLd={jsonLd}
             />

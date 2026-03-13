@@ -121,8 +121,8 @@ export default function LogisticSubsidyPage() {
             <SEO
                 title="Gujarat Government Subsidy – Logistic Park, Mega Logistic Park & Integrated Warehousing Facility | Patel & Vaghasiya CA"
                 description="End-to-End Consulting for Eligibility, DPR, Approvals & Maximum Subsidy Claim for Logistic Parks, Mega Logistic Parks & Integrated Warehousing Facilities in Gujarat."
-                url="https://pvassociates.in/services/logistic-subsidy"
-                image="https://pvassociates.in/assets/logistic-subsidy-banner.jpg"
+                url="https://www.pvassociates.in/services/logistic-subsidy"
+                image="https://www.pvassociates.in/assets/logistic-subsidy-banner.jpg"
                 keywords="Gujarat Logistic Park Subsidy, Mega Logistic Park Subsidy, Integrated Warehousing Facility Subsidy, Gujarat Infrastructure Subsidy, Government Subsidy Consultant Gujarat, DPR Preparation Gujarat, Industrial Subsidy Gujarat, Logistics Subsidy Consultant, CA for Government Subsidy, Subsidy Claim Support Gujarat"
                 jsonLd={jsonLd}
             />

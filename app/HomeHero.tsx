@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiSearch } from "react-icons/fi";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import Link from "next/link";
 
 const HomeHero = () => {
@@ -12,62 +12,58 @@ const HomeHero = () => {
 
   // Complete services list
   const allServices = [
-    // Registration
     { name: "Private Limited Company Registration", slug: "company-registration" },
     { name: "Limited Liability Partnership (LLP) Registration", slug: "llp-registration" },
     { name: "One Person Company (OPC) Registration", slug: "opc-registration" },
     { name: "Partnership Firm Registration", slug: "partnership-registration" },
     { name: "Start-up India Registration", slug: "startup-registration" },
-    
-    // Loans
+
     { name: "Project Loan", slug: "project-loan" },
     { name: "Machine Loan", slug: "machine-loan" },
     { name: "Working Capital Loan (OD / CC)", slug: "working-capital" },
     { name: "MSME Loan", slug: "msme-loan" },
     { name: "Secured Loan", slug: "secured-loan" },
     { name: "Unsecured Loan", slug: "unsecured-loan" },
-    
-    // Subsidy
+
     { name: "Government subsidy to MSME", slug: "msme-subsidy" },
     { name: "Government subsidy to Large or Thrust Sector", slug: "large-thrust-subsidy" },
     { name: "Government subsidy to Mega sector", slug: "mega-subsidy" },
     { name: "Government subsidy to IT / ITeS", slug: "it-subsidy" },
     { name: "Government subsidy to Logistic Park", slug: "logistic-subsidy" },
     { name: "Government subsidy to GCC", slug: "gcc-subsidy" },
-    
-    // Tax
+
     { name: "GST Registration, Return Filing & Litigation", slug: "gst-service" },
     { name: "ITR Filing, TDS & Litigation", slug: "itr-service" },
-    
-    // Audit
+
     { name: "Statutory Audit", slug: "statutory-service" },
     { name: "Tax Audit", slug: "tax-audit" },
     { name: "Internal Audit", slug: "internal-audit" },
     { name: "Bank Audit", slug: "bank-audit" },
-    
-    // IPO
+
     { name: "IPO Advisory & Support", slug: "ipo-service" },
   ];
 
-  // Filter services
-  const filteredServices = searchQuery.trim() === ""
-    ? []
-    : allServices.filter((service) =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  // Filter services (optimized)
+  const filteredServices = useMemo(() => {
+    if (searchQuery.trim() === "") return [];
+    return allServices.filter((service) =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleServiceClick = () => {
@@ -137,14 +133,17 @@ const HomeHero = () => {
           we manage everything with transparency and expert guidance.
         </motion.p>
 
-        {/* Search with outside click handling */}
+        {/* Search */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="flex justify-center"
         >
-          <div ref={searchContainerRef} className="relative w-full max-w-md sm:max-w-xl">
+          <div
+            ref={searchContainerRef}
+            className="relative w-full max-w-md sm:max-w-xl"
+          >
             <input
               type="text"
               placeholder="Search services like GST, Registration, Loan…"
@@ -165,31 +164,18 @@ const HomeHero = () => {
                 focus:ring-2 focus:ring-main focus:outline-none
               "
             />
+
             <FiSearch className="absolute right-4 sm:right-5 top-1/2 -translate-y-1/2 text-gray-600 text-xl sm:text-2xl" />
 
             {/* Dropdown Results */}
             {isOpen && filteredServices.length > 0 && (
-              <div className="
-                absolute top-full left-0 right-0 mt-2
-                bg-white rounded-xl shadow-lg
-                border border-gray-200
-                max-h-72 overflow-y-auto
-                z-50
-              ">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 max-h-72 overflow-y-auto z-50">
                 {filteredServices.map((service, index) => (
                   <Link
                     key={index}
                     href={`/services/${service.slug}`}
-                    className="
-                      block px-4 sm:px-5 py-2.5 sm:py-3
-                      text-left text-sm sm:text-base
-                      text-gray-900
-                      hover:bg-blue-50
-                      transition-colors duration-200
-                      border-b border-gray-100 last:border-b-0
-                      flex items-center gap-2
-                    "
                     onClick={handleServiceClick}
+                    className="block px-4 sm:px-5 py-2.5 sm:py-3 text-left text-sm sm:text-base text-gray-900 hover:bg-blue-50 border-b border-gray-100 last:border-b-0 flex items-center gap-2"
                   >
                     <FiSearch className="text-gray-400 text-base" />
                     <span>{service.name}</span>
@@ -200,14 +186,7 @@ const HomeHero = () => {
 
             {/* No Results */}
             {isOpen && filteredServices.length === 0 && searchQuery.trim() !== "" && (
-              <div className="
-                absolute top-full left-0 right-0 mt-2
-                bg-white rounded-xl shadow-lg
-                border border-gray-200
-                px-4 sm:px-5 py-3 sm:py-4
-                text-center text-sm text-gray-500
-                z-50
-              ">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 px-4 sm:px-5 py-3 sm:py-4 text-center text-sm text-gray-500 z-50">
                 No services found for "{searchQuery}"
               </div>
             )}
@@ -219,11 +198,7 @@ const HomeHero = () => {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="
-            grid grid-cols-2 md:grid-cols-4
-            gap-3 sm:gap-4
-            mt-6 sm:mt-8
-          "
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8"
         >
           {[
             { name: "Pvt Ltd Registration", href: "/services/company-registration" },
@@ -231,20 +206,20 @@ const HomeHero = () => {
             { name: "MSME Subsidy", href: "/services/msme-subsidy" },
             { name: "GST & Compliance", href: "/services/gst-service" },
           ].map((item, index) => (
-            <motion.a
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              href={item.href}
-              className="
-                py-2 sm:py-2.5 px-3
-                border font-semibold rounded-lg
-                text-white text-xs sm:text-sm
-                hover:bg-main transition-all duration-300
-                text-center
-              "
-            >
-              {item.name}
-            </motion.a>
+            <Link key={index} href={item.href}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="
+                  py-2 sm:py-2.5 px-3
+                  border font-semibold rounded-lg
+                  text-white text-xs sm:text-sm
+                  hover:bg-main transition-all duration-300
+                  text-center
+                "
+              >
+                {item.name}
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>

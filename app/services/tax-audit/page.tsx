@@ -109,8 +109,8 @@ export default function TaxAuditPage() {
             <SEO
                 title="Tax Audit Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Accurate, compliant & stress-free Tax Audit Services under Section 44AB for businesses and professionals."
-                url="https://pvassociates.in/services/tax-audit"
-                image="https://pvassociates.in/assets/tax-audit-banner.jpg"
+                url="https://www.pvassociates.in/services/tax-audit"
+                image="https://www.pvassociates.in/assets/tax-audit-banner.jpg"
                 keywords="Tax Audit Services Ahmedabad, Section 44AB Audit, IT Audit, Tax Compliance, Professional Tax Audit, Business Tax Audit, MSME Tax Audit"
                 jsonLd={jsonLd}
             />

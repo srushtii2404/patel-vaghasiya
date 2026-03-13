@@ -120,8 +120,8 @@ export default function StatutoryAuditPage() {
       <SEO
         title="Statutory Audit Services in Ahmedabad | Patel & Vaghasiya CA"
         description="Ensuring Accuracy, Transparency & Full Compliance through professional Statutory Audit Services for companies, LLPs and organizations."
-        url="https://pvassociates.in/services/statutory-service"
-        image="https://pvassociates.in/assets/statutory-audit-banner.jpg"
+        url="https://www.pvassociates.in/services/statutory-service"
+        image="https://www.pvassociates.in/assets/statutory-audit-banner.jpg"
         keywords="Statutory Audit Services Ahmedabad, Audit Compliance, Financial Statement Audit, Internal Control Evaluation, Companies Act Audit, Audit for Private Limited Company, Audit for LLP, Audit Recommendations"
         jsonLd={jsonLd}
       />

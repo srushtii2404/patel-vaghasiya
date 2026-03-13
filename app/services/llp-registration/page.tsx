@@ -146,7 +146,7 @@ export default function LLPRegistrationPage() {
       <SEO
         title="LLP Registration Services in India | Patel & Vaghasiya Associates"
         description="Professional LLP registration services in India. Limited Liability Partnership formation with expert guidance, complete documentation, and compliance support. Get your LLP registered today."
-        url="https://pvassociates.in/services/llp-registration"
+        url="https://www.pvassociates.in/services/llp-registration"
         keywords="LLP registration, Limited Liability Partnership, LLP formation India, business registration, MCA LLP registration, partnership firm registration"
         jsonLd={jsonLd}
       />

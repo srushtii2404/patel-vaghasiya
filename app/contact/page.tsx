@@ -100,7 +100,7 @@ export default function ContactUsPage() {
         "@type": "ContactPage",
         "name": "Contact Us - Patel & Vaghasiya, Chartered Accountants",
         "description": "Get in touch with Patel & Vaghasiya Chartered Accountants in Nikol, Ahmedabad for company registration, GST, tax planning, audits, loans, and subsidy advisory.",
-        "url": "https://pvassociates.in/contact",
+        "url": "https://www.pvassociates.in/contact",
         "publisher": {
             "@type": "Organization",
             "name": "Patel & Vaghasiya",
@@ -154,8 +154,8 @@ export default function ContactUsPage() {
             <SEO
                 title="Contact Best CA in Nikol Ahmedabad | Patel & Vaghasiya"
                 description="Contact Patel & Vaghasiya, Chartered Accountants in Nikol, Ahmedabad for company registration, GST, income tax, audits, loans, and subsidy advisory across Gujarat."
-                url="https://pvassociates.in/contact"
-                image="https://pvassociates.in/assets/logo.png"
+                url="https://www.pvassociates.in/contact"
+                image="https://www.pvassociates.in/assets/logo.png"
                 keywords="contact CA in Nikol, Chartered Accountant contact Ahmedabad, GST consultant Nikol, tax consultant contact Gujarat, Patel Vaghasiya Chartered Accountants contact"
                 jsonLd={jsonLd}
             />

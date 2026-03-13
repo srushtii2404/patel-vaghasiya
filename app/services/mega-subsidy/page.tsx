@@ -114,8 +114,8 @@ export default function MegaSectorSubsidyPage() {
       <SEO
         title="Government Subsidy for Mega Sector Projects | Gujarat Industrial Policy"
         description="Expert guidance for Mega Sector subsidies in Gujarat — massive capital subsidy, interest subsidy, 100% SGST reimbursement, power tariff relief, and special incentives for ultra-large projects."
-        url="https://pvassociates.in/services/mega-subsidy"
-        image="https://pvassociates.in/assets/mega-sector-subsidy-banner.jpg"
+        url="https://www.pvassociates.in/services/mega-subsidy"
+        image="https://www.pvassociates.in/assets/mega-sector-subsidy-banner.jpg"
         keywords="Mega Sector Subsidy Gujarat, Gujarat Industrial Policy Mega Projects, Capital Subsidy Mega Industries, SGST Reimbursement Mega Projects, Mega Project Incentives"
         jsonLd={jsonLd}
       />

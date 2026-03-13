@@ -172,8 +172,8 @@ export default function ITRServicePage() {
             <SEO
                 title="ITR Filing, TDS & Income Tax Litigation Services in Gujarat | Patel & Vaghasiya CA"
                 description="End-to-end ITR filing, TDS compliance, and Income Tax litigation services for individuals, businesses, and corporate entities in Gujarat."
-                url="https://pvassociates.in/services/itr-service"
-                image="https://pvassociates.in/assets/itr-services-banner.jpg"
+                url="https://www.pvassociates.in/services/itr-service"
+                image="https://www.pvassociates.in/assets/itr-services-banner.jpg"
                 keywords="ITR Filing Gujarat, TDS Compliance Ahmedabad, Income Tax Litigation Services, ITR Filing for Individuals, Corporate Tax Services"
                 jsonLd={jsonLd}
             />

@@ -119,8 +119,8 @@ export default function InternalAuditPage() {
             <SEO
                 title="Internal Audit Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Internal Audit services to strengthen controls, reduce risk, enhance efficiency & ensure compliance."
-                url="https://pvassociates.in/services/internal-audit"
-                image="https://pvassociates.in/assets/internal-audit-banner.jpg"
+                url="https://www.pvassociates.in/services/internal-audit"
+                image="https://www.pvassociates.in/assets/internal-audit-banner.jpg"
                 keywords="Internal Audit Services Ahmedabad, Operational Audit, Compliance Audit, Risk Assessment, Process Audit"
                 jsonLd={jsonLd}
             />

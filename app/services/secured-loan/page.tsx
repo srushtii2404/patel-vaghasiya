@@ -119,8 +119,8 @@ export default function SecuredLoanPage() {
             <SEO
                 title="Secured Loan Consultant Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Looking for a Secured Loan Consultant in Ahmedabad? We provide hybrid loans, machinery finance, working capital, project loans, and bank coordination support."
-                url="https://pvassociates.in/services/secured-loan"
-                image="https://pvassociates.in/assets/secured-loan-banner.jpg"
+                url="https://www.pvassociates.in/services/secured-loan"
+                image="https://www.pvassociates.in/assets/secured-loan-banner.jpg"
                 keywords="Secured Loan Consultant Ahmedabad, Hybrid Loan Consultant, CGTMSE Loan Advisory, Project Loan Consultant, Working Capital Loan, Machinery Loan, Bank Loan Documentation Support, MSME Loan Expert"
                 jsonLd={jsonLd}
             />

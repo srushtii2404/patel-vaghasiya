@@ -131,7 +131,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const imageUrl = post.mainImage?.asset?.url || '/og-default.jpg'
 
   return {
-    metadataBase: new URL('https://pvassociates.in'),
+    metadataBase: new URL('https://www.pvassociates.in'),
     title: `${post.title} | Patel & Vaghasiya CA Blog`,
     description,
     keywords: [
@@ -220,12 +220,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       name: 'Patel & Vaghasiya Chartered Accountants',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://pvassociates.in/assets/logo.png',
+        url: 'https://www.pvassociates.in/assets/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://pvassociates.in/blog/${post.slug.current}`,
+      '@id': `https://www.pvassociates.in/blog/${post.slug.current}`,
     },
     keywords: post.categories?.map((cat: { _id: string; title: string }) => cat.title).join(', '),
     articleSection: post.categories?.[0]?.title || 'General',
@@ -242,19 +242,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://pvassociates.in',
+        item: 'https://www.pvassociates.in',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://pvassociates.in/blog',
+        item: 'https://www.pvassociates.in/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://pvassociates.in/blog/${post.slug.current}`,
+        item: `https://www.pvassociates.in/blog/${post.slug.current}`,
       },
     ],
   }

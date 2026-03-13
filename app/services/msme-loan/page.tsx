@@ -110,8 +110,8 @@ export default function MSMELoanPage() {
             <SEO
                 title="MSME Loan Consultant Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Looking for MSME Loan Consultant in Ahmedabad? We provide CGTMSE loan advisory, working capital, machinery loan, and business loan documentation support."
-        url="https://pvassociates.in/services/msme-loan"
-        image="https://pvassociates.in/assets/msme-loan-banner.jpg"
+        url="https://www.pvassociates.in/services/msme-loan"
+        image="https://www.pvassociates.in/assets/msme-loan-banner.jpg"
                 keywords="MSME Loan Consultant Ahmedabad, CGTMSE Loan Advisor, Collateral Free Loan, Working Capital Loan, Machinery Loan"
                 jsonLd={jsonLd}
             />

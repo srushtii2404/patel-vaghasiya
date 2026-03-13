@@ -178,8 +178,8 @@ export default function GSTServicePage() {
             <SEO
                 title="GST Registration, Return Filing & Litigation Services in Gujarat | Patel & Vaghasiya CA"
                 description="End-to-end GST services in Gujarat including registration, return filing, ITC reconciliation, and litigation handling for businesses and MSMEs."
-                url="https://pvassociates.in/services/gst-service"
-                image="https://pvassociates.in/assets/gst-services-banner.jpg"
+                url="https://www.pvassociates.in/services/gst-service"
+                image="https://www.pvassociates.in/assets/gst-services-banner.jpg"
                 keywords="GST Registration Gujarat, GST Return Filing Ahmedabad, GST Litigation Services, MSME GST Compliance, GST E-commerce Filing, GST Notices Handling"
                 jsonLd={jsonLd}
             />

@@ -12,7 +12,7 @@ export default function AboutUsPage() {
         "@type": "AboutPage",
         "name": "About Us - Patel & Vaghasiya, Chartered Accountants",
         "description": "Leading Chartered Accountancy firm in Ahmedabad, Gujarat. Specializing in company registration, project finance, government subsidies, taxation, GST, and audit services.",
-        "url": "https://pvassociates.in/about",
+        "url": "https://www.pvassociates.in/about",
         "publisher": {
             "@type": "Organization",
             "name": "Patel & Vaghasiya, Chartered Accountants",
@@ -73,8 +73,8 @@ export default function AboutUsPage() {
             <SEO
                 title="About Us - Patel & Vaghasiya | Best CA in Nikol Ahmedabad"
                 description="About Patel & Vaghasiya, Chartered Accountants in Nikol, Ahmedabad. Expert in company registration, GST, tax planning, audit, project finance and government subsidies across Gujarat."
-                url="https://pvassociates.in/about"
-                image="https://pvassociates.in/assets/logo.png"
+                url="https://www.pvassociates.in/about"
+                image="https://www.pvassociates.in/assets/logo.png"
                 keywords="CA in Nikol, Chartered Accountant in Ahmedabad, CA firm in Gujarat, tax consultant in Nikol, GST consultant Ahmedabad, best CA for company registration, CA for business loans and subsidies"
                 jsonLd={jsonLd}
             />

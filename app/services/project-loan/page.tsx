@@ -107,8 +107,8 @@ export default function ProjectLoanPage() {
             <SEO
                 title="Project Loan Consultant Services in Ahmedabad | Patel & Vaghasiya CA"
                 description="Looking for a Project Loan Consultant in Ahmedabad? We prepare DPR, CMA data, feasibility study, loan documentation & subsidy guidance."
-                url="https://pvassociates.in/services/project-loan"
-                image="https://pvassociates.in/assets/project-loan-banner.jpg"
+                url="https://www.pvassociates.in/services/project-loan"
+                image="https://www.pvassociates.in/assets/project-loan-banner.jpg"
                 keywords="Project Loan Consultant Ahmedabad, Project Finance Consultant, DPR Preparation Chartered Accountant, CMA Data for Loan, Machinery Loan Consultant, Business Expansion Loan Advisor, MSME Project Loan, Bank Loan Documentation Support, Project Report for Bank Loan, CA for Project Finance"
                 jsonLd={jsonLd}
             />

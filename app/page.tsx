@@ -9,20 +9,19 @@ import LatestBlogs from "./LatestBlogs";
 
 export const metadata: Metadata = {
   title:
-    "Best CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants in Nikol",
+    "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
 
   description:
-    "Patel & Vaghasiya Chartered Accountants is a trusted CA firm in Nikol Ahmedabad offering GST filing, income tax return, company registration, audit, loan and subsidy consultancy services across Gujarat.",
+    "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya Chartered Accountants provide GST filing, income tax return, audit, company registration, loans and subsidy consultancy services in Ahmedabad.",
 
   keywords: [
-    "CA in Ahmedabad",
-    "Best CA in Ahmedabad",
-    "Chartered Accountant in Ahmedabad",
+    "Best CA in Nikol Ahmedabad",
+    "CA in Nikol Ahmedabad",
+    "Chartered Accountant in Nikol",
     "CA firm in Nikol Ahmedabad",
-    "GST consultant Ahmedabad",
-    "Income tax consultant Ahmedabad",
-    "Company registration Ahmedabad",
-    "Tax consultant Ahmedabad",
+    "GST consultant in Nikol",
+    "Income tax consultant Nikol Ahmedabad",
+    "Company registration in Nikol Ahmedabad",
   ],
 
   alternates: {
@@ -31,13 +30,12 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Best CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants in Nikol",
+      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
 
     description:
-      "Top Chartered Accountant firm in Ahmedabad offering GST, Income Tax, Company Registration, Audit and Loan/Subsidy consultancy services.",
+      "Patel & Vaghasiya Chartered Accountants offer GST, Taxation, Audit, Company Registration and financial consultancy services in Nikol Ahmedabad.",
 
     url: "https://www.pvassociates.in/",
-
     siteName: "Patel & Vaghasiya Chartered Accountants",
 
     images: [
@@ -55,18 +53,11 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     title:
-      "Best CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants in Nikol",
-
+      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
-      "Professional CA services in Ahmedabad including GST filing, income tax return, company registration, audit and financial consultancy.",
-
+      "Expert CA services in Nikol Ahmedabad including GST filing, income tax return, company registration and audit services.",
     images: ["https://www.pvassociates.in/assets/logo.png"],
-  },
-
-  icons: {
-    icon: "/favicon.ico",
   },
 };
 
@@ -75,7 +66,7 @@ const Page = async () => {
 
   return (
     <>
-      {/* Schema Markup */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -84,11 +75,12 @@ const Page = async () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Patel & Vaghasiya Chartered Accountants",
-              url: "https://www.pvassociates.in",
+              url: "https://www.pvassociates.in/",
               logo: "https://www.pvassociates.in/assets/logo.png",
               sameAs: [
                 "https://www.linkedin.com/",
                 "https://www.facebook.com/",
+                "https://www.instagram.com/",
               ],
             },
             {
@@ -96,8 +88,8 @@ const Page = async () => {
               "@type": "AccountingService",
               name: "Patel & Vaghasiya Chartered Accountants",
               image: "https://www.pvassociates.in/assets/logo.png",
-              "@id": "https://www.pvassociates.in",
-              url: "https://www.pvassociates.in",
+              "@id": "https://www.pvassociates.in/",
+              url: "https://www.pvassociates.in/",
               telephone: "+91XXXXXXXXXX",
               address: {
                 "@type": "PostalAddress",
@@ -107,7 +99,10 @@ const Page = async () => {
                 postalCode: "382350",
                 addressCountry: "IN",
               },
-              areaServed: "Ahmedabad",
+              areaServed: {
+                "@type": "City",
+                name: "Ahmedabad",
+              },
               priceRange: "₹₹",
             },
           ]),

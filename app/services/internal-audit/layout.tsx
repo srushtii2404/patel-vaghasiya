@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Internal Audit services to strengthen controls, reduce risk, enhance efficiency & ensure compliance.",
   alternates: {
-    canonical: "https://pvassociates.in/services/internal-audit",
+    canonical: "https://www.pvassociates.in/services/internal-audit",
   },
   openGraph: {
     title: "Internal Audit Services in Ahmedabad | Patel & Vaghasiya CA",
     description:
       "Internal Audit services to strengthen controls, reduce risk, enhance efficiency & ensure compliance.",
-    url: "https://pvassociates.in/services/internal-audit",
+    url: "https://www.pvassociates.in/services/internal-audit",
     siteName: "Patel & Vaghasiya",
     type: "website",
     images: [{ url: "/assets/internal-audit-banner.jpg" }],

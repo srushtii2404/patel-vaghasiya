@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'CA Blog | Patel & Vaghasiya Chartered Accountants',
     description:
       'Latest CA insights on GST, income tax, audits, subsidies and business finance from Patel & Vaghasiya in Nikol, Ahmedabad.',
-    url: 'https://pvassociates.in/blog',
+    url: 'https://www.pvassociates.in/blog',
     siteName: 'Patel & Vaghasiya',
     type: 'website',
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     images: ['/og-blog.jpg'],
   },
   alternates: {
-    canonical: 'https://pvassociates.in/blog',
+    canonical: 'https://www.pvassociates.in/blog',
   },
 }
 
@@ -50,16 +50,16 @@ export default async function BlogPage() {
     name: 'Patel & Vaghasiya Chartered Accountants Blog',
     description:
       'Latest CA updates and insights on GST, taxation, audit, subsidies and business finance from Patel & Vaghasiya Chartered Accountants in Nikol, Ahmedabad.',
-    url: 'https://pvassociates.in/blog',
+    url: 'https://www.pvassociates.in/blog',
     publisher: {
       '@type': 'Organization',
       name: 'Patel & Vaghasiya Chartered Accountants',
-      url: 'https://pvassociates.in',
+      url: 'https://www.pvassociates.in',
     },
     blogPost: posts.slice(0, 10).map((post: any) => ({
       '@type': 'BlogPosting',
       headline: post.title,
-      url: `https://pvassociates.in/blog/${post.slug.current}`,
+      url: `https://www.pvassociates.in/blog/${post.slug.current}`,
       datePublished: post.publishedAt,
       author: {
         '@type': 'Person',

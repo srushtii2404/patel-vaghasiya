@@ -124,8 +124,8 @@ export default function MsmeSubsidyPage() {
       <SEO
         title="MSME Subsidy & Government Incentive Services | Ahmedabad, Gujarat"
         description="Expert guidance for MSME Subsidy, capital subsidy, interest subsidy, credit guarantee, PMEGP, CLCSS, and Gujarat state incentives with complete application support."
-        url="https://pvassociates.in/services/msme-subsidy"
-        image="https://pvassociates.in/assets/msme-subsidy-banner.jpg"
+        url="https://www.pvassociates.in/services/msme-subsidy"
+        image="https://www.pvassociates.in/assets/msme-subsidy-banner.jpg"
         keywords="MSME Subsidy Ahmedabad, Government Subsidy MSME Gujarat, MSME Loan Subsidy, Credit Guarantee Scheme, Capital Subsidy MSME"
         jsonLd={jsonLd}
       />
