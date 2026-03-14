@@ -9,8 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.pvassociates.in"),
 
   title: {
-    default:
-      "Best CA in Ahmedabad | Top CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    default: "Best CA in Ahmedabad | Top CA in Ahmedabad",
     template: "%s | Patel & Vaghasiya Chartered Accountants",
   },
 
@@ -122,7 +121,9 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 
   robots: {
@@ -146,20 +147,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Local Business Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AccountingService",
-
               name: "Patel & Vaghasiya Chartered Accountants",
-
               url: "https://www.pvassociates.in/",
-
               logo: "https://www.pvassociates.in/assets/logo.png",
-
               image: "https://www.pvassociates.in/assets/logo.png",
 
               description:
@@ -170,18 +166,9 @@ export default function RootLayout({
               priceRange: "$$",
 
               areaServed: [
-                {
-                  "@type": "City",
-                  name: "Ahmedabad",
-                },
-                {
-                  "@type": "City",
-                  name: "Nikol",
-                },
-                {
-                  "@type": "State",
-                  name: "Gujarat",
-                },
+                { "@type": "City", name: "Ahmedabad" },
+                { "@type": "City", name: "Nikol" },
+                { "@type": "State", name: "Gujarat" },
               ],
 
               address: {

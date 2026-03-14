@@ -104,18 +104,9 @@ const Page = async () => {
                 addressCountry: "IN",
               },
               areaServed: [
-                {
-                  "@type": "City",
-                  name: "Ahmedabad",
-                },
-                {
-                  "@type": "City",
-                  name: "Nikol",
-                },
-                {
-                  "@type": "State",
-                  name: "Gujarat",
-                },
+                { "@type": "City", name: "Ahmedabad" },
+                { "@type": "City", name: "Nikol" },
+                { "@type": "State", name: "Gujarat" },
               ],
               priceRange: "₹₹",
               openingHours: "Mo-Fr 09:00-18:00",
@@ -124,12 +115,13 @@ const Page = async () => {
         }}
       />
 
-      {/* SEO Hidden Content */}
-      <h1 className="hidden">
-        Best CA in Ahmedabad – Patel & Vaghasiya Chartered Accountants
+      {/* SEO Content (Google ke liye strong signal) */}
+      <h1 className="sr-only">
+        Best CA in Ahmedabad | Top CA in Ahmedabad – Patel & Vaghasiya Chartered
+        Accountants
       </h1>
 
-      <p className="hidden">
+      <p className="sr-only">
         Looking for the{" "}
         <a href="https://www.pvassociates.in/">best CA in Ahmedabad</a>? Patel &
         Vaghasiya Chartered Accountants provides expert services in GST filing,
