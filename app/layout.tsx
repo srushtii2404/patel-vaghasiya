@@ -10,24 +10,74 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Best CA in Ahmedabad | Top CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+      "Best CA in Ahmedabad | Top CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     template: "%s | Patel & Vaghasiya Chartered Accountants",
   },
 
   description:
-    "Patel & Vaghasiya Chartered Accountants is a trusted CA firm in Ahmedabad located in Nikol. We provide GST filing, Income Tax Return, Audit, Company Registration, Loan and Subsidy consulting services across Ahmedabad and Gujarat.",
+    "Patel & Vaghasiya Chartered Accountants is a leading CA firm in Ahmedabad & Nikol providing GST registration, GST return filing, income tax return filing, company registration, ROC filing, audit services, project loan consulting, MSME loan consulting and Gujarat government subsidy consulting across Ahmedabad, Gujarat.",
 
   keywords: [
     "Best CA in Ahmedabad",
     "Top CA in Ahmedabad",
-    "CA in Ahmedabad",
+    "Best Chartered Accountant in Ahmedabad",
+    "CA firm in Ahmedabad",
     "Best CA in Nikol Ahmedabad",
     "Chartered Accountant in Nikol",
-    "CA firm in Nikol Gujarat",
-    "GST consultant in Ahmedabad",
+
+    "Company registration in Ahmedabad",
+    "Private limited company registration Ahmedabad",
+    "Startup company registration Ahmedabad",
+    "LLP registration in Ahmedabad",
+    "OPC company registration Ahmedabad",
+    "Online company registration Ahmedabad",
+    "Company incorporation services Ahmedabad",
+    "Business registration consultant Ahmedabad",
+
+    "GST registration consultant Ahmedabad",
+    "GST registration in Ahmedabad",
+    "GST return filing services Ahmedabad",
+    "GST consultant Ahmedabad",
+    "GST filing CA in Ahmedabad",
+    "GST audit consultant Ahmedabad",
+    "GST compliance services Ahmedabad",
+    "Online GST registration Ahmedabad",
+
+    "Income tax return filing Ahmedabad",
+    "ITR filing consultant Ahmedabad",
     "Income tax consultant Ahmedabad",
-    "Company registration Ahmedabad",
-    "Tax consultant in Ahmedabad",
+    "Income tax notice reply consultant Ahmedabad",
+    "Income tax litigation consultant Ahmedabad",
+
+    "TDS return filing services Ahmedabad",
+    "TDS consultant Ahmedabad",
+    "TDS notice reply consultant Ahmedabad",
+
+    "Project loan consultant Ahmedabad",
+    "Working capital loan consultant Ahmedabad",
+    "Business loan consultant Ahmedabad",
+    "Project finance consultant Ahmedabad",
+    "MSME loan consultant Ahmedabad",
+    "Loan project report consultant Ahmedabad",
+    "CGTMSE loan consultant Ahmedabad",
+
+    "Gujarat government subsidy consultant Ahmedabad",
+    "MSME subsidy consultant Gujarat",
+    "Capital subsidy consultant Gujarat",
+    "Interest subsidy consultant Gujarat",
+    "Industrial subsidy consultant Gujarat",
+
+    "ROC filing services Ahmedabad",
+    "ROC compliance consultant Ahmedabad",
+    "MCA filing consultant Ahmedabad",
+    "Company annual filing consultant Ahmedabad",
+    "LLP compliance consultant Ahmedabad",
+
+    "Company audit services Ahmedabad",
+    "Statutory audit consultant Ahmedabad",
+    "Tax audit consultant Ahmedabad",
+    "Internal audit consultant Ahmedabad",
+    "Audit firm in Ahmedabad",
   ],
 
   alternates: {
@@ -36,10 +86,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Best CA in Ahmedabad | Top CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+      "Best CA in Ahmedabad | Top CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants",
 
     description:
-      "Patel & Vaghasiya Chartered Accountants provide GST filing, taxation, audit, company registration and financial advisory services in Ahmedabad and Gujarat.",
+      "Leading Chartered Accountant firm in Ahmedabad & Nikol offering GST, Income Tax, Company Registration, Loan Consulting, Audit and Government Subsidy services across Gujarat.",
 
     url: "https://www.pvassociates.in/",
     siteName: "Patel & Vaghasiya Chartered Accountants",
@@ -49,7 +99,7 @@ export const metadata: Metadata = {
         url: "https://www.pvassociates.in/assets/logo.png",
         width: 800,
         height: 800,
-        alt: "Patel & Vaghasiya Chartered Accountants",
+        alt: "Patel & Vaghasiya Chartered Accountants - Best CA in Ahmedabad",
       },
     ],
 
@@ -60,9 +110,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Best CA in Ahmedabad | Top CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+      "Best CA in Ahmedabad | Top CA in Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
-      "Expert Chartered Accountant services in Ahmedabad including GST filing, taxation, audit and company registration.",
+      "Expert CA services in Ahmedabad including GST filing, ITR filing, Audit, Company Registration, Loan Consulting and Financial Advisory.",
     images: ["https://www.pvassociates.in/assets/logo.png"],
   },
 
@@ -72,9 +122,7 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 
   robots: {
@@ -115,7 +163,7 @@ export default function RootLayout({
               image: "https://www.pvassociates.in/assets/logo.png",
 
               description:
-                "Patel & Vaghasiya Chartered Accountants is a leading CA firm in Ahmedabad providing GST consulting, taxation, audit, company registration and financial advisory services.",
+                "Patel & Vaghasiya Chartered Accountants is a trusted CA firm in Ahmedabad & Nikol providing GST consulting, income tax services, company registration, audit, loan consulting and government subsidy advisory.",
 
               telephone: "+91 9510990170",
 
@@ -129,6 +177,10 @@ export default function RootLayout({
                 {
                   "@type": "City",
                   name: "Nikol",
+                },
+                {
+                  "@type": "State",
+                  name: "Gujarat",
                 },
               ],
 
