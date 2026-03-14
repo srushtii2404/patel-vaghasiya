@@ -9,12 +9,13 @@ import LatestBlogs from "./LatestBlogs";
 
 export const metadata: Metadata = {
   title:
-    "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+    "Best CA in Ahmedabad | Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
 
   description:
     "Looking for the best CA in Nikol Ahmedabad? Patel & Vaghasiya Chartered Accountants provide GST filing, income tax return, audit, company registration, loans and subsidy consultancy services in Ahmedabad.",
 
   keywords: [
+    "Best CA in Ahmedabad",
     "Best CA in Nikol Ahmedabad",
     "CA in Nikol Ahmedabad",
     "Chartered Accountant in Nikol",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+      "Best CA in Ahmedabad | Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
 
     description:
       "Patel & Vaghasiya Chartered Accountants offer GST, Taxation, Audit, Company Registration and financial consultancy services in Nikol Ahmedabad.",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
+      "Best CA in Ahmedabad | Best CA in Nikol Ahmedabad | Patel & Vaghasiya Chartered Accountants",
     description:
       "Expert CA services in Nikol Ahmedabad including GST filing, income tax return, company registration and audit services.",
     images: ["https://www.pvassociates.in/assets/logo.png"],
@@ -108,6 +109,18 @@ const Page = async () => {
           ]),
         }}
       />
+
+      {/* SEO Hidden Content (Google ranking boost) */}
+      <h1 className="hidden">
+        Best CA in Ahmedabad – Patel & Vaghasiya Chartered Accountants
+      </h1>
+
+      <p className="hidden">
+        Looking for the <a href="https://www.pvassociates.in/">best CA in Nikol
+        Ahmedabad</a>? Patel & Vaghasiya Chartered Accountants provides expert
+        services in GST filing, income tax return, audit, company registration,
+        loan consultancy and subsidy consultancy services in Ahmedabad Gujarat.
+      </p>
 
       <HomeHero />
       <Home2 />
