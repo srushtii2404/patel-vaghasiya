@@ -11,28 +11,10 @@ import FAQ from "@/components/FAQSection";
 import { allServices } from "@/lib/services";
 
 export default function BankAuditPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    name: "Bank Audit Services in Ahmedabad",
-    description:
-      "Expert Bank Audit Services to ensure accuracy, compliance with RBI guidelines, fraud detection and robust risk management for banks and financial institutions.",
-    provider: {
-      "@type": "Organization",
-      name: "Patel & Vaghasiya, Chartered Accountants",
-    },
-    areaServed: "Ahmedabad, Gujarat",
-    serviceType: "Bank Audit Services",
-    keywords: [
-      "Bank Audit Services Ahmedabad",
-      "Concurrent Audit",
-      "Statutory Bank Audit",
-      "Forensic Audit for Banks",
-      "IS Audit for Banks",
-      "Credit Audit",
-      "Stock & Book Debts Audit",
-    ],
-  };
+
+  
+
+  
 
   const otherServices = allServices.filter(s => s.href !== "/services/bank-audit");
 
@@ -109,16 +91,32 @@ export default function BankAuditPage() {
     },
   ];
 
+  const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Bank Audit Services",
+    provider: {
+      "@type": "Organization",
+      name: "Patel & Vaghasiya Chartered Accountants",
+      url: "https://www.pvassociates.in",
+    },
+    url: "https://www.pvassociates.in/services/bank-audit",
+    description:
+      "Expert Bank Audit Services including statutory, concurrent, stock, IS, credit, and forensic audits for banks and financial institutions.",
+  },
+];
+
   return (
     <>
-      <SEO
+      {/* <SEO
         title="Bank Audit Services in Ahmedabad | Patel & Vaghasiya CA"
         description="Ensure accuracy, compliance & trust with our expert Bank Audit Services — statutory audits, concurrent audits, IS audits, credit & forensic audits for banks and financial institutions."
         url="https://www.pvassociates.in/services/bank-audit"
         image="https://www.pvassociates.in/assets/bank-audit-banner.jpg"
         keywords="Bank Audit Services Ahmedabad, Bank Audit, Concurrent Audit, IS Audit, Forensic Audit, Credit Audit"
         jsonLd={jsonLd}
-      />
+      />  */}
 
       {/* ---------------- HERO SECTION ---------------- */}
       <section className="relative bg-gradient-to-r from-[#134c78] to-[#398db8] rounded-4xl mx-2 py-12 sm:py-16 md:py-20 overflow-hidden mt-20 sm:mt-24 md:mt-28">
