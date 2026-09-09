@@ -144,6 +144,45 @@ export async function getPost(slug: string) {
   return post
 }
 
+export type Author = {
+  name?: string
+  image?: {
+    asset?: {
+      url?: string
+    }
+  }
+}
+
+export async function getAuthors(): Promise<Author[]> {
+  try {
+    const authors = await client.fetch(`
+      *[_type == "author"] {
+        name,
+        image {
+          asset->{
+            url
+          }
+        }
+      }
+    `)
+    return authors || []
+  } catch (error) {
+    console.error("Error in getAuthors:", error)
+    return []
+  }
+}
+
+export function getAuthorImageUrl(
+  authors: Author[],
+  nameMatch: string,
+  fallback: string
+) {
+  const author = authors.find((item) =>
+    item.name?.toLowerCase().includes(nameMatch.toLowerCase())
+  )
+  return author?.image?.asset?.url || fallback
+}
+
 export async function getTestimonials() {
   try {
     const testimonials = await client.fetch(`
