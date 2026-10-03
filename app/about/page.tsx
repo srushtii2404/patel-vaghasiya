@@ -12,6 +12,7 @@ export default async function AboutUsPage() {
     return (
         <AboutUsClient
             kalpeshImage={getAuthorImageUrl(authors, "kalpesh", KALPESH_FALLBACK)}
+            hirenImage={getAuthorImageUrl(authors, "hiren", "")}
             vishalImage={getAuthorImageUrl(authors, "vishal", VISHAL_FALLBACK)}
         />
     );

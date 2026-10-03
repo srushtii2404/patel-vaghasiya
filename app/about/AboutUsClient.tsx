@@ -8,10 +8,11 @@ import Link from "next/link";
 
 type AboutUsClientProps = {
     kalpeshImage: string;
+    hirenImage: string;
     vishalImage: string;
 };
 
-export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClientProps) {
+export default function AboutUsClient({ kalpeshImage, hirenImage, vishalImage }: AboutUsClientProps) {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "AboutPage",
@@ -58,11 +59,23 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
     ];
 
     const kalpeshSpecializations = [
-        "Direct Tax Compliance & Advisory",
-        "Indirect Tax (GST) Compliance & Litigation Support",
-        "Income Tax & GST Appeals",
-        "Representation before Adjudicating and Appellate Authorities",
-        "Strategic Tax Planning for Businesses and Promoters"
+        "GST Compliance & Advisory",
+        "GST Notices, Scrutiny & Litigation",
+        "GST Appeals & Representation before Adjudicating/Appellate Authorities",
+        "GST Refunds & Complex Transaction Advisory",
+        "Financial Reporting & Finalization of Accounts",
+        "Financial Statements & Regulatory Compliance",
+        "Advisory on Complex GST & Accounting Matters"
+    ];
+
+    const hirenSpecializations = [
+        "Income Tax Compliance & Advisory",
+        "Tax Planning for Businesses & Promoters",
+        "Income Tax Assessments, Notices & Scrutiny",
+        "Statutory Audit & Tax Audit",
+        "Internal Audit & Assurance",
+        "Internal Financial Controls & Process Review",
+        "TDS Compliance & Advisory"
     ];
 
     const vishalSpecializations = [
@@ -85,18 +98,19 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
             />
 
             {/* Hero Section */}
-            <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden mt-16">
+            <section className="relative h-[75vh] min-h-[540px] flex items-center justify-center overflow-hidden mt-16">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/about.jpeg"
+                        src="/assets/about-team-20261003.png"
                         alt="Patel & Vaghasiya Chartered Accountants - Professional Team"
                         fill
+                        sizes="100vw"
                         className="object-cover object-top"
                         priority
                     />
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#0d1321]/85 via-[#134c78]/80 to-[#0d1321]/85"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0d1321]/55 via-[#134c78]/45 to-[#0d1321]/55"></div>
                 </div>
 
                 {/* Animated background elements - only vertical movement */}
@@ -116,18 +130,18 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                 </div>
 
                 {/* Content */}
-                <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10">
+                <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative top-10 md:top-14 z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 60 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="space-y-8"
+                        className="space-y-5"
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="space-y-4"
+                            className="space-y-3"
                         >
                             <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
                                 About <span className="block md:inline">Patel & Vaghasiya</span>
@@ -469,7 +483,7 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
 
                         {/* CA Kalpesh Patel */}
                         <motion.div
-                            className="glass-card p-8 md:p-12 relative overflow-hidden"
+                            className="glass-card bg-[#f8f8f5] p-8 md:p-12 relative overflow-hidden"
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -488,14 +502,14 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                                             whileInView={{ scale: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.6, type: "spring" }}
-                                            className="bg-gradient-to-br from-main to-mainDark rounded-2xl w-32 h-32 lg:w-40 lg:h-40 mx-auto overflow-hidden shadow-2xl hover:shadow-main/30 transition-shadow duration-300"
+                                            className="bg-[#f8f8f5] rounded-2xl w-32 h-40 lg:w-40 lg:h-48 mx-auto overflow-hidden shadow-2xl hover:shadow-main/30 transition-shadow duration-300"
                                         >
                                             <Image
                                                 src={kalpeshImage}
                                                 alt="CA Kalpesh Patel - Tax Advisor"
                                                 width={160}
                                                 height={160}
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover object-top"
                                             />
                                         </motion.div>
                                     </div>
@@ -503,16 +517,16 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                                     <div className="flex-1 text-center lg:text-left flex flex-col justify-center h-32 lg:h-40 space-y-2">
                                         <h3 className="text-2xl lg:text-3xl font-bold text-main-dark">CA Kalpesh Patel</h3>
                                         <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-2">
-                                            <p className="text-lg lg:text-xl font-semibold text-main">Tax Advisor</p>
+                                            <p className="text-lg lg:text-xl font-semibold text-main">GST, Litigation &amp; Financial Reporting Advisor</p>
                                             <span className="text-sm lg:text-base text-gray-500 font-medium">10+ Years Experience</span>
                                         </div>
-                                        <p className="text-base lg:text-lg text-gray-600">Partner – Tax Advisory & Compliance</p>
+                                        <p className="text-base lg:text-lg text-gray-600">Partner – GST Advisory, Litigation &amp; Financial Reporting</p>
                                     </div>
                                 </div>
 
                                 <div className="w-full space-y-4">
                                     <p className="text-gray-700 leading-relaxed text-lg py-3">
-                                        With over 10 years of post-qualification professional experience, our Tax Advisor brings deep expertise across Direct Tax, Indirect Tax, Audit, and Regulatory Compliance. He has advised a wide range of businesses — from startups and MSMEs to large corporates — helping them navigate India's complex and evolving tax and compliance framework with confidence.
+                                        With over 10 years of post-qualification professional experience, CA Kalpesh Patel brings extensive expertise in GST, tax litigation, regulatory representation, and financial reporting. He advises businesses across diverse sectors on complex GST matters, departmental proceedings, appeals, and financial reporting requirements, with a strong focus on practical solutions and regulatory compliance.
                                     </p>
 
                                     <div>
@@ -539,6 +553,10 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                                         </div>
                                     </div>
 
+                                    <p className="text-gray-600 text-base">
+                                        He has assisted businesses in handling GST assessments, departmental notices, appeals, reconciliations, and complex compliance matters while also supporting management in maintaining accurate and reliable financial reporting.
+                                    </p>
+
                                     <motion.div
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
@@ -547,11 +565,100 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                                         className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-main/20"
                                     >
                                         <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                                            "People don't care how much you know until they know how much you care."
+                                            &ldquo;Strong compliance is not merely about meeting regulations—it is about creating clarity, reducing risk, and building confidence in every financial decision.&rdquo;
                                         </blockquote>
-                                        <p className="text-gray-600 mt-3 text-base">
-                                            This philosophy reflects his commitment to building long-term relationships based on trust, responsiveness, and genuine concern for clients' success.
-                                        </p>
+                                    </motion.div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* CA Hiren Patel */}
+                        <motion.div
+                            className="glass-card bg-[#f8f8f5] p-8 md:p-12 relative overflow-hidden"
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 0.1 }}
+                        >
+                            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-main/5 rounded-full blur-2xl"></div>
+                                <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"></div>
+                            </div>
+
+                            <div className="flex flex-col gap-8 relative z-10">
+                                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
+                                    <div className="flex-shrink-0 text-center">
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            whileInView={{ scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6, type: "spring" }}
+                                            className="bg-[#f8f8f5] rounded-2xl w-32 h-40 lg:w-40 lg:h-48 mx-auto overflow-hidden shadow-2xl flex items-center justify-center text-main text-4xl lg:text-5xl font-bold"
+                                        >
+                                            {hirenImage ? (
+                                                <Image
+                                                    src={hirenImage}
+                                                    alt="CA Hiren Patel"
+                                                    width={160}
+                                                    height={160}
+                                                    className="w-full h-full object-cover object-top"
+                                                />
+                                            ) : (
+                                                <span role="img" aria-label="CA Hiren Patel">HP</span>
+                                            )}
+                                        </motion.div>
+                                    </div>
+
+                                    <div className="flex-1 text-center lg:text-left flex flex-col justify-center min-h-32 lg:min-h-40 space-y-2">
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-main-dark">CA Hiren Patel</h3>
+                                        <p className="text-lg lg:text-xl font-semibold text-main">Income Tax, Audit &amp; Assurance Advisor</p>
+                                        <p className="text-base lg:text-lg text-gray-600">Partner – Income Tax, Audit &amp; Assurance</p>
+                                    </div>
+                                </div>
+
+                                <div className="w-full space-y-4">
+                                    <p className="text-gray-700 leading-relaxed text-lg py-3">
+                                        CA Hiren Patel specializes in Income Tax, Audit and Assurance, advising businesses, promoters, and professionals on taxation, audit requirements, financial controls, and regulatory compliance. His approach combines technical knowledge with a practical understanding of business operations to help clients maintain strong compliance and reliable financial systems.
+                                    </p>
+
+                                    <div>
+                                        <h4 className="text-xl font-semibold text-main-dark mb-3 flex items-center gap-2">
+                                            <div className="w-6 h-6 bg-main rounded-md flex items-center justify-center">
+                                                <span className="text-white text-xs font-bold">✓</span>
+                                            </div>
+                                            Core Areas of Specialization
+                                        </h4>
+                                        <div className="grid md:grid-cols-2 gap-3">
+                                            {hirenSpecializations.map((spec, idx) => (
+                                                <motion.div
+                                                    key={idx}
+                                                    initial={{ opacity: 0, y: 30 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.5, delay: idx * 0.05 }}
+                                                    className="flex items-start gap-3 p-3 rounded-xl bg-gray-50 hover:bg-main/5 transition-colors"
+                                                >
+                                                    <HiCheckCircle className="text-main text-lg mt-1 flex-shrink-0" />
+                                                    <span className="text-gray-700 font-medium">{spec}</span>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <p className="text-gray-700 leading-relaxed py-3">
+                                        His work focuses on identifying tax and compliance risks at an early stage, strengthening internal controls, improving financial discipline, and ensuring that businesses remain audit-ready and compliant as they grow.
+                                    </p>
+
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-main/20"
+                                    >
+                                        <blockquote className="text-gray-700 italic text-lg leading-relaxed">
+                                            &ldquo;A good audit should go beyond compliance—it should provide management with greater clarity, stronger controls, and confidence in the financial information they rely upon.&rdquo;
+                                        </blockquote>
                                     </motion.div>
                                 </div>
                             </div>
@@ -559,7 +666,7 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
 
                         {/* CA Vishal Vaghasiya */}
                         <motion.div
-                            className="glass-card p-8 md:p-12 relative overflow-hidden"
+                            className="glass-card bg-[#f8f8f5] p-8 md:p-12 relative overflow-hidden"
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -578,14 +685,14 @@ export default function AboutUsClient({ kalpeshImage, vishalImage }: AboutUsClie
                                             whileInView={{ scale: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.6, type: "spring", delay: 0.2 }}
-                                            className="bg-gradient-to-br from-mainDark to-main rounded-2xl w-32 h-32 lg:w-40 lg:h-40 mx-auto overflow-hidden shadow-2xl hover:shadow-mainDark/30 transition-shadow duration-300"
+                                            className="bg-[#f8f8f5] rounded-2xl w-32 h-40 lg:w-40 lg:h-48 mx-auto overflow-hidden shadow-2xl hover:shadow-mainDark/30 transition-shadow duration-300"
                                         >
                                             <Image
                                                 src={vishalImage}
                                                 alt="CA Vishal Vaghasiya - Business Advisory & Project Finance"
                                                 width={160}
                                                 height={160}
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover object-top"
                                             />
                                         </motion.div>
                                     </div>
